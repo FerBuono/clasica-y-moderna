@@ -1,7 +1,8 @@
-import { AccountCircle, ErrorOutline, Explore, FavoriteBorder, Home, Mail } from '@mui/icons-material';
+import { AccountCircle, Explore, FavoriteBorder, Home, Info, Mail } from '@mui/icons-material';
 import styled from 'styled-components';
 
 const Container = styled.div`
+    padding-top: .5rem;
     height: 2rem;
     width: 100%;
     display: flex;
@@ -68,7 +69,7 @@ const Topbar = () => {
                         <Text>Contact Us</Text>
                     </Link>
                     <Link>
-                        <ErrorOutline />
+                        <Info />
                         <Text>Help</Text>
                     </Link>
                 </Left>
