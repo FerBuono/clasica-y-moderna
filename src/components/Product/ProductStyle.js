@@ -10,7 +10,7 @@ export const Info = styled.div`
     justify-content: flex-end;
     background-color: #00000028;
     opacity: 0;
-    transition: opacity .2s ease;
+    transition: opacity .3s ease;
 `;
 
 export const Container = styled.div`

@@ -7,7 +7,7 @@ const CartWidget = () => {
             <Total>US$ 0.00</Total>
             <Divisor></Divisor>
             <Amount>0</Amount>
-            <ShoppingCart />
+            <ShoppingCart style={{cursor:'pointer'}}/>
         </Cart>
     )
 }

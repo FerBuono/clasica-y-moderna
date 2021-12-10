@@ -4,7 +4,7 @@ export const Container = styled.div`
     width: 100%;
     height: 2.5rem;
     background-color: white;
-  
+    color: #111111;
 `;
 
 export const Wrapper = styled.div`
@@ -23,15 +23,15 @@ export const Left = styled.div`
     justify-content: flex-start;
 `;
 
-export const Nav = styled.p`
+export const Nav = styled.div`
     position: relative;
     height: 100%;
     display: flex;
     align-items: center;
-    font-weight: 600;
+    font-weight: 500;
     margin-right: 1.5rem;
     cursor: pointer;
-    transition: all .2s ease;
+    transition: all .3s ease;
 
     &::after {
         content: '';
@@ -42,7 +42,7 @@ export const Nav = styled.p`
         left: 0;
         background-color: #050814;
         opacity: 0;
-        transition: all .2s ease;
+        transition: all .3s ease;
     }
 
     &:hover {
@@ -52,13 +52,6 @@ export const Nav = styled.p`
     }
 `;
 
-export const Categories = styled.ul`
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-`;
-
 export const Right = styled.div`
     height: 100%;
     display: flex;
@@ -66,15 +59,9 @@ export const Right = styled.div`
     justify-content: flex-end;
 `;
 
-export const Languages = styled.ul`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-`;
-
 export const Currencies = styled.select`
     height: 100%;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
     border: none;
     margin-right: 1.5rem;

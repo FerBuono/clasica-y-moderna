@@ -1,23 +1,20 @@
-import { KeyboardArrowDown } from '@mui/icons-material';
 import CartWidget from '../CartWidget/CartWidget';
-import { Container, Wrapper, Left, Right, Nav, Categories, Languages, Currency, Currencies } from './BottombarStyle';
+import Categories from '../Categories/Categories';
+import Languages from '../Languages/Languages';
+import { Container, Wrapper, Left, Right, Nav, Currency, Currencies } from './BottombarStyle';
 
 const Bottombar = () => {
     return (
         <Container>
             <Wrapper>
                 <Left>
-                    <Nav>
-                        <Categories>Categories <KeyboardArrowDown /></Categories>
-                    </Nav>
+                    <Categories />
                     <Nav>Bestsellers</Nav>
                     <Nav>New Releases</Nav>
-                    <Nav>FAQ</Nav>
+                    <Nav>FAQs</Nav>
                 </Left>
                 <Right>
-                    <Nav>
-                        <Languages>English <KeyboardArrowDown /></Languages>
-                    </Nav>
+                    <Languages />
                     <Currencies>
                         <Currency>$ AUD</Currency>
                         <Currency>€ EUR</Currency>

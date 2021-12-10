@@ -52,9 +52,16 @@ export const MainButton = styled.button`
     border-radius: 20px;
     padding: 1rem 2rem;
     margin: 0 1rem;
-    color: white;
+    color: #eeeeee;
     font-size: 15px;
     cursor: pointer;
+    transition: all .3s ease;
+
+    &:hover {
+        background-color: #81b9e0;
+        border-color: #81b9e0;
+        color: white;
+    }
 `;
 
 export const SecButton = styled.button`
@@ -64,4 +71,11 @@ export const SecButton = styled.button`
     color: #85aac5;
     font-size: 15px;
     cursor: pointer;
+    transition: all .3s ease;
+
+    &:hover {
+        background-color: #ffffff2b;
+        color: #81b9e0;
+        border-color: #81b9e0;
+    }
 `;

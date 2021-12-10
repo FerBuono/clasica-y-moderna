@@ -25,7 +25,7 @@ export const Button = styled.div`
     border: 1px solid white;
     background-color: white;
     cursor: pointer;
-    transition: all .2s ease;
+    transition: all .3s ease;
 
     &:hover {
         color: white;
