@@ -16,7 +16,6 @@ const ItemList = () => {
         })
     }, []);
     
-    console.log(API);
     return (
         <Container>
             {list.map(item => (
