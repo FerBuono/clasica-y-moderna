@@ -1,17 +1,12 @@
 import { StarBorder } from '@mui/icons-material';
-import { products } from '../../assets/data/data';
-import Product from '../Product/Product';
-import { Container, Title, Books } from './ItemListContainerStyle';
+import ItemList from '../ItemList/ItemList';
+import { Container, Title } from './ItemListContainerStyle';
 
 const ItemListContainer = () => {
     return (
         <Container>
             <Title><StarBorder /> Most Popular Books <StarBorder /></Title>
-            <Books>
-                {products.map(item => (
-                    <Product item={item} key={item.id} />
-                ))}
-            </Books>
+            <ItemList />
         </Container>
     )
 }

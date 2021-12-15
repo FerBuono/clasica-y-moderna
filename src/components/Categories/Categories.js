@@ -17,7 +17,30 @@ import {
     Section
 } from './CategoriesStyle';
 
+
 const Categories = () => {
+
+    let books = []
+
+    const handleFetch = (category) => {
+        // console.log(category.replace(/\s&\s/g, '+'))
+        console.log(category)
+
+        const key = 'AIzaSyDnANj49e_aWs8dNmrgp6WcqjIszCENzKQ';
+
+        const url = `https://www.googleapis.com/books/v1/volumes?q=subject:"${category}"&key=${key}`;
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                books = [data.items]
+            })
+        setTimeout(() => {
+            
+            console.log(books)
+        }, 1000);    
+    }
+
 
     return (
         <Container>
@@ -29,7 +52,7 @@ const Categories = () => {
                         <TopCategories>
                             {
                                 topCategories.map(category => (
-                                    <Category>{category}</Category>
+                                    <Category onClick={() => handleFetch(category)}>{category}</Category>
                                 ))
                             }
                         </TopCategories>

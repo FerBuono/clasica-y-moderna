@@ -1,5 +1,14 @@
 import styled from 'styled-components';
 
+
+export const Image = styled.img`
+    height: 75%;
+    transition: all .2s ease;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+`;
+
 export const Info = styled.div`
     position: absolute;
     width: 100%;
@@ -10,7 +19,6 @@ export const Info = styled.div`
     justify-content: flex-end;
     background-color: #00000028;
     opacity: 0;
-    transition: opacity .3s ease;
 `;
 
 export const Container = styled.div`
@@ -25,10 +33,26 @@ export const Container = styled.div`
     background-color: #85aac516;
 
     &:hover ${Info} {
+        transition: opacity .4s ease;
         opacity: 1;
+    }
+
+    &:hover ${Image} {
+        height: 50%;
+        transform: translateY(-40%);
     }
 `;
 
-export const Image = styled.img`
-    height: 75%;
+export const Title = styled.h3`
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 10px 0;
 `;
+
+export const Author = styled.p`
+    text-align: center;
+    padding: 0 20px;
+    margin: 10px 0;
+`;
+
+

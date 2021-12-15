@@ -10,10 +10,4 @@ export const Title = styled.h2`
     align-items: center;
 `;
 
-export const Books = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border-top: 1px solid lightgrey;
-    border-bottom: 1px solid lightgrey;
-`;
+    

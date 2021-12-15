@@ -36,5 +36,4 @@ export const Button = styled.div`
 export const Count = styled.div`
     font-weight: 600;
     font-size: 20px;
-    color: white;
 `;
