@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ItemCount } from '../ItemCount/ItemCount';
-import { Container, Title, Author, Image, Info } from './ItemStyle';
+import { Container, Title, Author, Year, Image, Info, BookInfo } from './ItemStyle';
 
 const Product = ({item}) => {
 
@@ -15,10 +15,16 @@ const Product = ({item}) => {
         <Container>
             <Image src={item.img} />
             <Info>
-                <Title>{item.title}</Title>
-                <Author>{item.author}</Author>
-                <ItemCount stock={productStock} initial={0} onAdd={onAdd}/>
+                <BookInfo>
+                    <Title>{item.title}</Title>
+                    <Author>{item.author}</Author>
+                    <Year>{item.year}</Year>
+                </BookInfo>
             </Info>
+            {/* <Buttons>
+                <Button></Button>
+                <Button></Button>
+            </Buttons> */}
         </Container>
     )
 }

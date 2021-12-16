@@ -1,58 +1,71 @@
 import styled from 'styled-components';
 
 
-export const Image = styled.img`
-    height: 75%;
-    transition: all .2s ease;
+
+export const Container = styled.div`
+    flex: 1;    
+    margin: .5rem;
+    min-width: 180px;
+    padding: 0 10px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     position: relative;
-    z-index: 10;
+    background-color: #85aac516;
+`;
+
+export const Image = styled.img`
+    height: 50%;
+    margin: 10px 0;
+    position: relative;
     cursor: pointer;
 `;
 
 export const Info = styled.div`
-    position: absolute;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+`;
+
+export const BookInfo = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    background-color: #00000028;
-    opacity: 0;
+    align-items: flex-start;
 `;
 
-export const Container = styled.div`
-    flex: 1;
-    margin: .5rem;
-    min-width: 280px;
-    height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background-color: #85aac516;
+export const Title = styled.p`
+    height: 2.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    overflow: hidden;
+    margin-bottom: 10px;
+    text-align: left;
 
-    &:hover ${Info} {
-        transition: opacity .4s ease;
-        opacity: 1;
+    &:hover {
+        text-decoration: underline;
     }
-
-    &:hover ${Image} {
-        height: 50%;
-        transform: translateY(-40%);
-    }
-`;
-
-export const Title = styled.h3`
-    text-align: center;
-    padding: 0 20px;
-    margin-top: 10px 0;
 `;
 
 export const Author = styled.p`
-    text-align: center;
-    padding: 0 20px;
-    margin: 10px 0;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-bottom: 1px dotted grey;
+    font-size: 15px;
+
+    &:hover {
+        border-bottom: 1px solid #333333;
+    }
 `;
 
+export const Year = styled.p`
+    color: grey;
+    font-size: 15px;
+
+`;
 
