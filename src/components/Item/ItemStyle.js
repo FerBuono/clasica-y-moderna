@@ -1,22 +1,19 @@
 import styled from 'styled-components';
 
-
-
 export const Container = styled.div`
     flex: 1;    
-    margin: .5rem;
     min-width: 180px;
-    padding: 0 10px;
+    margin: 0 .5rem;
+    padding: 1rem 10px;
     height: 420px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     position: relative;
-    background-color: #85aac516;
 `;
 
 export const Image = styled.img`
-    height: 50%;
+    height: 60%;
     margin: 10px 0;
     position: relative;
     cursor: pointer;
@@ -66,6 +63,26 @@ export const Author = styled.p`
 export const Year = styled.p`
     color: grey;
     font-size: 15px;
-
+    margin-bottom: 10px;
 `;
 
+export const Buttons = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+`;
+
+export const Button = styled.button`
+    margin-right: 10px;
+    display: flex;
+    padding: 4px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    outline: #85aac5 solid 2px;
+    color: #85aac5;
+    background-color: white;
+    cursor: pointer;
+`;

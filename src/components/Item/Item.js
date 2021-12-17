@@ -1,6 +1,7 @@
+import { AddShoppingCart, FavoriteBorder, Add } from '@mui/icons-material';
 import { useState } from 'react';
 import { ItemCount } from '../ItemCount/ItemCount';
-import { Container, Title, Author, Year, Image, Info, BookInfo } from './ItemStyle';
+import { Container, Title, Author, Year, Image, Info, BookInfo, Buttons, Button } from './ItemStyle';
 
 const Product = ({item}) => {
 
@@ -21,10 +22,15 @@ const Product = ({item}) => {
                     <Year>{item.year}</Year>
                 </BookInfo>
             </Info>
-            {/* <Buttons>
-                <Button></Button>
-                <Button></Button>
-            </Buttons> */}
+            <Buttons>
+                <Button
+                    style={{outline:'#85aac5 solid 2px', color:'white', backgroundColor:'#85aac5'}}
+                >
+                    <AddShoppingCart />
+                </Button>
+                <Button><FavoriteBorder /></Button>
+                <Button><Add /></Button>
+            </Buttons>
         </Container>
     )
 }

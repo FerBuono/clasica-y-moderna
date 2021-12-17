@@ -1,6 +1,7 @@
 import { StarBorder } from '@mui/icons-material';
 import { useEffect, useState } from 'react';
 import { products } from '../../assets/data/data';
+import ItemDetail from '../ItemDetail/ItemDetail';
 import ItemList from '../ItemList/ItemList';
 import { Container, Title } from './ItemListContainerStyle';
 
@@ -30,10 +31,11 @@ const ItemListContainer = () => {
 
     return (
         <Container>
-            <Title><StarBorder /> Most Popular Books <StarBorder /></Title>
+            <Title>Most Popular Books</Title>
             {
                 list ? <ItemList list={list}/> : <p>Cargando...</p>
             }
+            <ItemDetail />
         </Container>
     )
 }

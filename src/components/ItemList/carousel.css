@@ -1,0 +1,31 @@
+.rec.rec-pagination {
+    display: none;
+}
+
+.rec.rec-arrow {
+    height: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+    color: black;
+}
+
+.rec.rec-arrow:focus:enabled {
+    box-shadow: none;
+    background-color: transparent;
+    color: black;
+}
+
+.rec.rec-arrow:hover:enabled {
+    box-shadow: none;
+    background-color: #96969676;
+    color: black;
+}
+
+.rec.rec-arrow:disabled {
+    visibility: hidden;
+}
+
+.rec.rec-slider-container {
+    margin: 0;
+}

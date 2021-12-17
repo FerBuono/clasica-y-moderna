@@ -4,6 +4,6 @@ export const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border-top: 1px solid lightgrey;
-    border-bottom: 1px solid lightgrey;
+    background-color: white;
+    box-shadow: 0 0 5px 1px lightgray;
 `;
