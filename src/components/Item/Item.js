@@ -1,15 +1,15 @@
-import { AddShoppingCart, FavoriteBorder, Add } from '@mui/icons-material';
+import { AddShoppingCart, FavoriteBorder, Add, Favorite } from '@mui/icons-material';
 import { useState } from 'react';
 import { ItemCount } from '../ItemCount/ItemCount';
 import { Container, Title, Author, Year, Image, Info, BookInfo, Buttons, Button } from './ItemStyle';
+import './animation.css';
 
 const Product = ({item}) => {
 
-    const [productStock, setProductStock] = useState(item.stock);
-
-    const onAdd = (count, setCount) => {
-        setProductStock(productStock - count);
-        productStock > 0 && setCount(0);
+    const [liked, setLiked] = useState(false);
+    
+    const handleLike = () => {
+        setLiked(!liked);
     }
 
     return (
@@ -28,7 +28,11 @@ const Product = ({item}) => {
                 >
                     <AddShoppingCart />
                 </Button>
-                <Button><FavoriteBorder /></Button>
+                <Button onClick={handleLike}>
+                    {
+                        liked === false ? <FavoriteBorder /> : <Favorite style={{color: '#efd091', animation: 'like 1s'}} />
+                    }
+                </Button>
                 <Button><Add /></Button>
             </Buttons>
         </Container>

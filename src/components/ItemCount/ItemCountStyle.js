@@ -4,17 +4,14 @@ export const Container = styled.div`
     width: 50%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
-    `;
+    margin-left: 1rem;
+`;
 
 export const Counter = styled.div`
     width: 100%;
-    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 20px;
-    background-color: #ffffff3d;
 `;
 
 export const Button = styled.div`
@@ -22,14 +19,13 @@ export const Button = styled.div`
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    border: 1px solid white;
+    border: 1px solid #EFEFEF;
     background-color: white;
     cursor: pointer;
     transition: all .3s ease;
 
     &:hover {
-        color: white;
-        background-color: #ba7735;
+        background-color: #EFEFEF;
     }
 `;
 

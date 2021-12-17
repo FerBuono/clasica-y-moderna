@@ -5,3 +5,13 @@
     font-family: 'Urbanist', sans-serif;
 
 }
+
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: #ba7735;
+}
+  
+::selection {
+    color: white;
+    background: #ba7735;
+}

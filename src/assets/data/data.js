@@ -6,6 +6,11 @@ export const products = [
         year: 2015,
         img: "https://images-na.ssl-images-amazon.com/images/I/8101rnqy0HL.jpg",
         stock: 5,
+        desc: [
+            "Imagine if The Hitchhiker's Guide to the Galaxy were a real, practical book about the mysteries of the universe . . .",
+            "The Universe in Your Hand takes us on a wonder-filled journey to the surface of our dying sun, shrinks us to the size of an atom and puts us in the deathly grip of distant black holes. Along the way you might come to understand, really understand, the mind-bending science that underpins modern life, from quantum mechanics to Einstein's theory of general relativity.",
+            "Through brilliant storytelling and humour rather than graphs and equations, internationally renowned astrophysicist Christophe Galfard has written an instant classic that brings the astonishing beauty of the universe to life - and takes us deep into questions about the beginning of time and the future of humanity."
+        ],
     },
     {
         id: 2,

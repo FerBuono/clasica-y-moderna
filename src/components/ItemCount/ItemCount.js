@@ -1,10 +1,7 @@
 import { Add, AddShoppingCart, Remove } from '@mui/icons-material';
-import { useState } from 'react';
 import { Container, Counter, Button, Count} from './ItemCountStyle';
 
-export const ItemCount = ({stock, initial, onAdd}) => {
-
-    const [count, setCount] = useState(initial);
+const ItemCount = ({stock, count, setCount}) => {
 
     const handleAdd = () => {
         if(count < stock) {
@@ -29,9 +26,8 @@ export const ItemCount = ({stock, initial, onAdd}) => {
                     <Add />
                 </Button>
             </Counter>
-            <Button onClick={() => onAdd(count, setCount)}>
-                Add to Cart <AddShoppingCart />
-            </Button>
         </Container>
     )
 }
+
+export default ItemCount;
