@@ -1,6 +1,5 @@
 import { AddShoppingCart, FavoriteBorder, Add, Favorite } from '@mui/icons-material';
 import { useState } from 'react';
-import { ItemCount } from '../ItemCount/ItemCount';
 import { Container, Title, Author, Year, Image, Info, BookInfo, Buttons, Button } from './ItemStyle';
 import './animation.css';
 

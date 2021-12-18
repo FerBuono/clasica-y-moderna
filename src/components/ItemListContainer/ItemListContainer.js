@@ -1,8 +1,7 @@
-import { StarBorder } from '@mui/icons-material';
 import { useEffect, useState } from 'react';
 import { products } from '../../assets/data/data';
-import ItemDetail from '../ItemDetail/ItemDetail';
 import ItemList from '../ItemList/ItemList';
+import Spinner from '../Spinner/Spinner';
 import { Container, Title } from './ItemListContainerStyle';
 
 const ItemListContainer = () => {
@@ -33,9 +32,8 @@ const ItemListContainer = () => {
         <Container>
             <Title>Most Popular Books</Title>
             {
-                list ? <ItemList list={list}/> : <p>Cargando...</p>
+                list ? <ItemList list={list}/> : <Spinner />
             }
-            <ItemDetail />
         </Container>
     )
 }

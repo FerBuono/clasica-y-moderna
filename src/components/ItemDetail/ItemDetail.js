@@ -1,21 +1,18 @@
 import styled from 'styled-components';
 import { useState } from 'react';
-import { products } from '../../assets/data/data';
 import ItemCount from '../ItemCount/ItemCount';
 
 export const Container = styled.div`
-    margin-top:3rem;
     width: 100%;
-    height: 500px;
     display: flex;
     align-items: flex-start;
 `;
 
 export const Book = styled.div`
-    height: 100%;
+    /* height: 100%; */
     flex: 3;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     background-color: white;
     padding: 1rem 2rem;
     box-shadow: 0 0 5px 1px lightgray;
@@ -23,7 +20,7 @@ export const Book = styled.div`
 `;
 
 export const Img = styled.img`
-    height: 100%;
+    height: 450px;
 `;
 
 export const Info = styled.div`
@@ -45,7 +42,7 @@ export const Author = styled.p`
     font-weight: 400;
 `;
 
-export const Link = styled.p`
+export const Link = styled.span`
     display: inline-block;
     cursor: pointer;
     border-bottom: 1px dotted grey;
@@ -129,9 +126,9 @@ export const WishButton = styled.button`
 `;
 
 
-const ItemDetail = () => {
+const ItemDetail = ({item}) => {
 
-    const {id, title, author, year, img, stock, desc } = products[0];
+    const {id, title, author, year, img, stock, desc} = item;
 
     const [productStock, setProductStock] = useState(stock);
     
@@ -141,7 +138,6 @@ const ItemDetail = () => {
         setProductStock(productStock - count);
         setCount(0);
     };
-    
 
     return (
         <Container>
@@ -162,6 +158,7 @@ const ItemDetail = () => {
             </Book>
             <Buy>
                 <Price>U$D 100</Price>
+                <p>Stock: {productStock}</p>
                 <Amount>Amount: <ItemCount stock={productStock} count={count} setCount={setCount} /></Amount>
                 <Buttons>
                     <BuyButton onClick={() => onAdd(count, setCount)}>

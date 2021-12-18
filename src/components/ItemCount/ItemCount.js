@@ -1,4 +1,4 @@
-import { Add, AddShoppingCart, Remove } from '@mui/icons-material';
+import { Add, Remove } from '@mui/icons-material';
 import { Container, Counter, Button, Count} from './ItemCountStyle';
 
 const ItemCount = ({stock, count, setCount}) => {

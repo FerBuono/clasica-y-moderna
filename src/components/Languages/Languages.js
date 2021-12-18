@@ -29,7 +29,7 @@ const Languages = () => {
                     <LangList>
                         {
                             languages.map(lang => (
-                                <Lang onClick={() => handleLang(lang)}>{lang}</Lang>
+                                <Lang onClick={() => handleLang(lang)} key={lang}>{lang}</Lang>
                             ))
                         }
                     </LangList>

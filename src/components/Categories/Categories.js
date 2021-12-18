@@ -52,7 +52,7 @@ const Categories = () => {
                         <TopCategories>
                             {
                                 topCategories.map(category => (
-                                    <Category onClick={() => handleFetch(category)}>{category}</Category>
+                                    <Category onClick={() => handleFetch(category)} key={category}>{category}</Category>
                                 ))
                             }
                         </TopCategories>
@@ -62,7 +62,7 @@ const Categories = () => {
                         <MoreCategories>
                             {
                                 moreCategories.map(category => (
-                                    <Category style={{width:'50%'}}>{category}</Category>
+                                    <Category style={{width:'50%'}} key={category}>{category}</Category>
                                 ))
                             }
                         </MoreCategories>
@@ -73,10 +73,10 @@ const Categories = () => {
                             <TopAuthors>
                                 {
                                     topAuthors.map(author => (
-                                        <Category>{author}</Category>
+                                        <Category key={author}>{author}</Category>
                                     ))
                                 }
-                                <Category style={{textDecoration:'underline'}}>See all</Category>
+                                <Category style={{textDecoration:'underline'}} key="See all">See all</Category>
                             </TopAuthors>
                         </RLeft>
                         <RRight>
@@ -84,7 +84,7 @@ const Categories = () => {
                             <Section>
                                 {
                                     bestselling.map(serie => (
-                                        <Category>{serie}</Category>
+                                        <Category key={serie}>{serie}</Category>
                                     ))
                                 }
                             </Section>
@@ -92,7 +92,7 @@ const Categories = () => {
                             <Section>
                                 {
                                     languages.map(language => (
-                                        <Category>Books in {language}</Category>
+                                        <Category key={language}>Books in {language}</Category>
                                     ))
                                 }
                             </Section>
