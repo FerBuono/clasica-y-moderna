@@ -25,7 +25,7 @@ export const Left = styled.div`
     align-items: center;
 `;
 
-export const Link = styled.div`
+export const Nav = styled.div`
     align-items: center;
     border-right: 2px solid #050814;
     color: lightgray;

@@ -1,134 +1,27 @@
-import styled from 'styled-components';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { handleLike, handleWishlist, isLiked } from '../../helpers/likeHelpers';
 import ItemCount from '../ItemCount/ItemCount';
-
-export const Container = styled.div`
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-`;
-
-export const Book = styled.div`
-    /* height: 100%; */
-    flex: 3;
-    display: flex;
-    align-items: flex-start;
-    background-color: white;
-    padding: 1rem 2rem;
-    box-shadow: 0 0 5px 1px lightgray;
-    margin-right: 2rem;
-`;
-
-export const Img = styled.img`
-    height: 450px;
-`;
-
-export const Info = styled.div`
-    height: 100%;
-    margin: 0 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-`;
-
-export const Title = styled.h1`
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-`;
-
-export const Author = styled.p`
-    margin-bottom: 10px;
-    font-weight: 400;
-`;
-
-export const Link = styled.span`
-    display: inline-block;
-    cursor: pointer;
-    border-bottom: 1px dotted grey;
-
-    &:hover {
-        border-bottom: 1px solid #333333;
-    }
-`;
-
-export const Year = styled.p`
-    font-weight: 400;
-    margin-bottom: 30px;
-`;
-
-export const Desc = styled.p`
-    margin-bottom: 20px;
-`;
-
-export const Buy = styled.div`
-    flex: 1;
-    background-color: white;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    box-shadow: 0 0 5px 1px lightgray;
-    padding: 1rem 2rem;
-`;
-
-export const Price = styled.h1`
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    font-weight: 500;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    `;
-
-export const Amount = styled.div`
-    display: flex;
-    width: 100%;
-    align-items: center;
-    margin-bottom: 20px;
-`;
-
-export const Buttons = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-`;
-
-export const BuyButton = styled.button`
-    margin-bottom: 10px;
-    padding: 10px 20px;
-    font-size: 15px;
-    font-weight: 800;
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
-    background-color: #85aac5;
-    color: white;
-    transition: background-color .3s ease;
-
-    &:hover {
-        background-color: #81b9e0;
-    }
-`;
-
-export const WishButton = styled.button`
-    padding: 10px 20px;
-    font-size: 15px;
-    font-weight: 800;
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
-    color: #85aac5;
-    transition: all .3s ease;
-
-    &:hover {
-        color: white;
-        background-color: #efd091;
-    }
-`;
-
+import { 
+    Container, 
+    Book, 
+    Img, 
+    Info, 
+    Title, 
+    Author,
+    Year, 
+    Desc, 
+    Buy, 
+    Price, 
+    Amount, 
+    Buttons, 
+    BuyButton, 
+    WishButton 
+} from './ItemDetailStyle';
 
 const ItemDetail = ({item}) => {
 
-    const {id, title, author, year, img, stock, desc} = item;
+    const {title, author, year, img, stock, desc, price} = item;
 
     const [productStock, setProductStock] = useState(stock);
     
@@ -139,13 +32,27 @@ const ItemDetail = ({item}) => {
         setCount(0);
     };
 
+    const [liked, setLiked] = useState(false);
+
+    useEffect(() => {
+        isLiked(item, setLiked);
+    }, [])
+
     return (
         <Container>
             <Book>
                 <Img src={img} />
                 <Info>
                     <Title>{title}</Title>
-                    <Author>By (author) <Link>{author}</Link></Author>
+                    <Author>
+                        By (author) 
+                        <NavLink
+                            to={`/author/${item.author}`}
+                            style={{color: 'black', textDecoration: 'none', borderBottom: '1px dotted grey', marginLeft:'5px'}} 
+                        >
+                            {author}
+                        </NavLink>
+                    </Author>
                     <Year>First edition: {year}</Year>
                     {
                         desc.map(desc => (
@@ -157,14 +64,34 @@ const ItemDetail = ({item}) => {
                 </Info>
             </Book>
             <Buy>
-                <Price>U$D 100</Price>
+                <Price>U$D {price}</Price>
                 <p>Stock: {productStock}</p>
                 <Amount>Amount: <ItemCount stock={productStock} count={count} setCount={setCount} /></Amount>
                 <Buttons>
                     <BuyButton onClick={() => onAdd(count, setCount)}>
                         Add to Cart ({count})
                     </BuyButton>
-                    <WishButton>Add to Wishlist</WishButton>
+                    {
+                        liked === false 
+                            ? <WishButton
+                                onClick={() => {
+                                    handleLike(liked, setLiked);
+                                    handleWishlist(item);
+                                }}
+                            >
+                                Add to Wishlist
+                            </WishButton>
+                            : <WishButton 
+                                style={{backgroundColor:'#F4F8FA', color:'#85aac5'}}
+                                onClick={() => {
+                                    handleLike(liked, setLiked);
+                                    handleWishlist(item);
+                                }}
+                            >
+                                Remove from Wishlist
+                            </WishButton>
+                    }
+                    
                 </Buttons>
             </Buy>
         </Container>

@@ -15,10 +15,10 @@ const Bottombar = () => {
                 </Left>
                 <Right>
                     <Languages />
-                    <Currencies>
+                    <Currencies defaultValue={"$ USD"}>
                         <Currency>$ AUD</Currency>
                         <Currency>€ EUR</Currency>
-                        <Currency selected>$ USD</Currency>
+                        <Currency>$ USD</Currency>
                         <Currency>£ GBP</Currency>
                         <Currency>$ ARS</Currency>
                     </Currencies>

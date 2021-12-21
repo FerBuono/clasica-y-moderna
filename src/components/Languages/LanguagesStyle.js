@@ -9,10 +9,11 @@ export const LanguagesContainer = styled.div`
     background-color: white;
     width: 100%;
     text-align: left;
-    z-index: 10;
+    z-index: -1;
     border: 1px solid rgba(0,0,0,0.1);
     border-top: 4px solid #85aac5;
     cursor: default;
+    box-shadow: 0 0 5px 0 grey;
 `;
 
 export const Container = styled.div`

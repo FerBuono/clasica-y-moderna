@@ -11,6 +11,7 @@ export const Cart = styled.div`
 `;
 
 export const Total = styled.p`
+    margin-bottom: 0;
 `;
 
 export const CartContainer = styled.div`

@@ -1,16 +1,10 @@
-import { useEffect } from "react";
-import { useState } from "react"
+import { useEffect, useState } from "react";
 import { products } from "../../assets/data/data";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import styled from 'styled-components';
 import Spinner from "../Spinner/Spinner";
+import { Container } from './ItemDetailContainerStyle';
 
-const Container = styled.div`
-    padding: 2rem;  
-    background-color: #85aac516;
-`;
-
-const ItemDetailContainer = () => {
+const ItemDetailContainer = ({id}) => {
 
     const [item, setItem] = useState(null);
 
@@ -18,9 +12,9 @@ const ItemDetailContainer = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 products
-                ? resolve(products[Math.floor(Math.random() * products.length)])
+                ? resolve(products.find(product => product.id === Number(id)))
                 : reject(new Error('No se pudo cargar el item'))
-            }, 2000);
+            }, 0);
         });
     };
 

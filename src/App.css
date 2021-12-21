@@ -6,6 +6,11 @@
 
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
 ::-moz-selection { /* Code for Firefox */
     color: white;
     background: #ba7735;

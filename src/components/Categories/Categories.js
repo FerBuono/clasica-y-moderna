@@ -1,5 +1,6 @@
 import { KeyboardArrowDown } from '@mui/icons-material';
-import { topCategories, moreCategories, topAuthors, bestselling, languages } from '../../assets/data/data';
+import { NavLink } from 'react-router-dom';
+import { topCategories, topAuthors, bestselling } from '../../assets/data/data';
 import { 
     Container,
     Nav, 
@@ -9,38 +10,13 @@ import {
     TopCategories, 
     Category, 
     Center, 
-    MoreCategories, 
     Right, 
-    RLeft, 
     TopAuthors, 
-    RRight,
-    Section
+    Bestsellers,
 } from './CategoriesStyle';
 
 
 const Categories = () => {
-
-    let books = []
-
-    const handleFetch = (category) => {
-        // console.log(category.replace(/\s&\s/g, '+'))
-        console.log(category)
-
-        const key = 'AIzaSyDnANj49e_aWs8dNmrgp6WcqjIszCENzKQ';
-
-        const url = `https://www.googleapis.com/books/v1/volumes?q=subject:"${category}"&key=${key}`;
-
-        fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                books = [data.items]
-            })
-        setTimeout(() => {
-            
-            console.log(books)
-        }, 1000);    
-    }
-
 
     return (
         <Container>
@@ -52,51 +28,37 @@ const Categories = () => {
                         <TopCategories>
                             {
                                 topCategories.map(category => (
-                                    <Category onClick={() => handleFetch(category)} key={category}>{category}</Category>
+                                    <NavLink to={`/category/${category.id}`} style={{width: '100%'}}>
+                                        <Category 
+                                            key={category.id}
+                                        >
+                                            {category.category}
+                                        </Category>
+                                    </NavLink>
                                 ))
                             }
                         </TopCategories>
                     </Left>
                     <Center>
-                        <Title>More Categories</Title>
-                        <MoreCategories>
+                        <Title>Top Authors</Title>
+                        <TopAuthors>
                             {
-                                moreCategories.map(category => (
-                                    <Category style={{width:'50%'}} key={category}>{category}</Category>
+                                topAuthors.map(author => (
+                                    <Category key={author}>{author}</Category>
                                 ))
                             }
-                        </MoreCategories>
+                            <Category style={{textDecoration:'underline'}} key="See all">See all</Category>
+                        </TopAuthors>
                     </Center>
                     <Right>
-                        <RLeft>
-                            <Title>Top Authors</Title>
-                            <TopAuthors>
-                                {
-                                    topAuthors.map(author => (
-                                        <Category key={author}>{author}</Category>
-                                    ))
-                                }
-                                <Category style={{textDecoration:'underline'}} key="See all">See all</Category>
-                            </TopAuthors>
-                        </RLeft>
-                        <RRight>
-                            <Title>Bestselling Series</Title>
-                            <Section>
-                                {
-                                    bestselling.map(serie => (
-                                        <Category key={serie}>{serie}</Category>
-                                    ))
-                                }
-                            </Section>
-                            <Title>Books by Language</Title>
-                            <Section>
-                                {
-                                    languages.map(language => (
-                                        <Category key={language}>Books in {language}</Category>
-                                    ))
-                                }
-                            </Section>
-                        </RRight>
+                        <Title>Bestselling Series</Title>
+                        <Bestsellers>
+                            {
+                                bestselling.map(serie => (
+                                    <Category key={serie}>{serie}</Category>
+                                ))
+                            }
+                        </Bestsellers>
                     </Right>
                 </CategoriesContainer>
             </Nav>

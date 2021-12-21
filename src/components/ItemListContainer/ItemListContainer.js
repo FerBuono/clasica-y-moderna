@@ -1,20 +1,19 @@
 import { useEffect, useState } from 'react';
-import { products } from '../../assets/data/data';
 import ItemList from '../ItemList/ItemList';
 import Spinner from '../Spinner/Spinner';
 import { Container, Title } from './ItemListContainerStyle';
 
-const ItemListContainer = () => {
-
+const ItemListContainer = ({title, prod}) => {
+    
     const [list, setList] = useState(null);
-
+    
     const getProducts = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                products
-                ? resolve([...products])
+                prod
+                ? resolve([...prod])
                 : reject(new Error('No se pudo cargar la lista'))
-            }, 2000);
+            }, 0);
         });
     };
 
@@ -26,11 +25,11 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         setProductPromise();
-    }, []);
+    }, [prod]);
 
     return (
         <Container>
-            <Title>Most Popular Books</Title>
+            <Title>{title}</Title>
             {
                 list ? <ItemList list={list}/> : <Spinner />
             }

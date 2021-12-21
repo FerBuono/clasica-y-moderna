@@ -1,8 +1,10 @@
 import styled from 'styled-components';
+import pattern from '../../assets/images/patterns/home.png';
 
 export const Container = styled.div`
     padding: 2rem;  
-    background-color: #85aac516;
+    background-image: url(${pattern});
+    background-size: 150%;
 `;
 
 export const Title = styled.h2`
@@ -11,7 +13,7 @@ export const Title = styled.h2`
     display: flex;
     align-items: center;
     background-color: white;
-    box-shadow: 0 0 5px 1px lightgray;
+    box-shadow: 0 0 5px 0 grey;
 `;
 
     

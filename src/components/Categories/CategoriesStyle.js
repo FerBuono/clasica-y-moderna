@@ -7,13 +7,13 @@ export const CategoriesContainer = styled.div`
     padding: 4px 0;
     left: 0;
     background-color: white;
-    width: 720px;
-    height: 400px;
+    width: 500px;
     text-align: left;
-    z-index: 10;
+    z-index: -1;
     border: 1px solid rgba(0,0,0,0.1);
     border-top: 4px solid #85aac5;
     cursor: default;
+    box-shadow: 0 0 5px 0 grey;
 `;
 
 export const Container = styled.div`
@@ -66,7 +66,7 @@ export const Title = styled.h3`
 `;
 
 export const Left = styled.div`
-    width: 20%;
+    width: 33%;
     height: 100%;
     border-right: 1px solid rgba(0,0,0,0.1);
 `;
@@ -95,29 +95,9 @@ export const Category = styled.li`
 `;
 
 export const Center = styled.div`
-    width: 40%;
+    width: 33%;
     height: 100%;
     border-right: 1px solid rgba(0,0,0,0.1);
-`;
-
-export const MoreCategories = styled.ul`
-    height: 85%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
-    list-style-type: none;
-`;
-
-export const Right = styled.div`
-    width: 40%;
-    height: 100%;
-    display: flex;
-`;
-
-export const RLeft = styled.div`
-    width: 50%;
 `;
 
 export const TopAuthors = styled.ul`
@@ -128,15 +108,13 @@ export const TopAuthors = styled.ul`
     justify-content: flex-start;
 `;
 
-export const RRight = styled.div`
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+export const Right = styled.div`
+    width: 33%;
+    height: 100%;
 `;
 
-export const Section = styled.ul`
+
+export const Bestsellers = styled.ul`
     display: flex;
     width: 100%;
     flex-direction: column;
