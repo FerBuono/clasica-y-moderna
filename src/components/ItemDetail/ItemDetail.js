@@ -9,6 +9,8 @@ import {
     Info, 
     Title, 
     Author,
+    Category,
+    Categories,   
     Year, 
     Desc, 
     Buy, 
@@ -19,9 +21,11 @@ import {
     WishButton 
 } from './ItemDetailStyle';
 
+
+
 const ItemDetail = ({item}) => {
 
-    const {title, author, year, img, stock, desc, price} = item;
+    const {title, author, categories, year, img, stock, desc, price} = item;
 
     const [productStock, setProductStock] = useState(stock);
     
@@ -45,14 +49,29 @@ const ItemDetail = ({item}) => {
                 <Info>
                     <Title>{title}</Title>
                     <Author>
-                        By (author) 
+                        By (author):
                         <NavLink
-                            to={`/author/${item.author}`}
-                            style={{color: 'black', textDecoration: 'none', borderBottom: '1px dotted grey', marginLeft:'5px'}} 
+                            to={`/author/${author}`}
+                            style={{color: 'black', textDecoration: 'none', marginLeft: '10px', borderBottom: '1px dotted grey'}} 
                         >
                             {author}
                         </NavLink>
                     </Author>
+                    <Category>
+                        Categories:  
+                        {
+                            categories.map(category => (
+                                <Categories>
+                                    <NavLink
+                                        to={`/category/${category}`}
+                                        style={{color: 'black', textDecoration: 'none', borderBottom: '1px dotted grey'}} 
+                                    >
+                                        {category}
+                                    </NavLink>
+                                </Categories>
+                            ))
+                        }
+                    </Category>
                     <Year>First edition: {year}</Year>
                     {
                         desc.map(desc => (

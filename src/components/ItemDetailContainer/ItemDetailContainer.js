@@ -26,6 +26,7 @@ const ItemDetailContainer = ({id}) => {
 
     useEffect(() => {
         setItemPromise();
+        window.scrollTo(0, 0)
     }, [])
 
     return (

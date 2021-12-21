@@ -28,7 +28,7 @@ const Categories = () => {
                         <TopCategories>
                             {
                                 topCategories.map(category => (
-                                    <NavLink to={`/category/${category.id}`} style={{width: '100%'}}>
+                                    <NavLink to={`/category/${category.category}`} style={{width: '100%'}}>
                                         <Category 
                                             key={category.id}
                                         >

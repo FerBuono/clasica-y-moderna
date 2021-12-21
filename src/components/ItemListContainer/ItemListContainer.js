@@ -26,12 +26,20 @@ const ItemListContainer = ({title, prod}) => {
     useEffect(() => {
         setProductPromise();
     }, [prod]);
+    
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     return (
         <Container>
             <Title>{title}</Title>
             {
-                list ? <ItemList list={list}/> : <Spinner />
+                prod.length > 0 
+                    ? list 
+                        ? <ItemList list={list}/> 
+                        : <Spinner />
+                    : <Title>No hay libros</Title>
             }
         </Container>
     )

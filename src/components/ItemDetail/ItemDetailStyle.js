@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -30,22 +31,37 @@ export const Info = styled.div`
 
 export const Title = styled.h1`
     border-bottom: 1px solid rgba(0,0,0,0.1);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding-bottom: 10px;
 `;
 
 export const Author = styled.p`
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-weight: 400;
 `;
 
-export const Link = styled.span`
-    display: inline-block;
-    cursor: pointer;
-    border-bottom: 1px dotted grey;
+export const Category = styled.ul`
+    margin-bottom: 10px;
+    font-weight: 400;
+    width: 100%;
+`;
 
-    &:hover {
-        border-bottom: 1px solid #333333;
+export const Categories = styled.li`
+    list-style-type: none;
+    display: inline-block;
+    padding-bottom: 5px;
+
+    &::before {
+        content: '|';
+        margin: 0 5px;
+        border-bottom: none;
+    }
+
+    &:first-child {
+        &::before {
+            content: '';
+            border-bottom: none;
+        }
     }
 `;
 

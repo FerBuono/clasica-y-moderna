@@ -5,9 +5,7 @@ import ItemListContainer from '../components/ItemListContainer/ItemListContainer
 
 const Category = () => {
 
-    const {categoryId} = useParams();
-
-    const category = topCategories.find(category => category.id === Number(categoryId)).category;
+    const {category} = useParams();
 
     const booksByCategory = products.filter(book => book.categories.includes(category));
 

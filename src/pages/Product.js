@@ -7,7 +7,7 @@ const Product = () => {
     const {productId} = useParams()
 
     useEffect(() => {
-        console.log(productId);
+        // console.log(productId);
     }, [productId])
 
     return (

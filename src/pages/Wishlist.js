@@ -2,7 +2,7 @@ import ItemListContainer from '../components/ItemListContainer/ItemListContainer
 
 const Wishlist = () => {
 
-    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
     return (
         <>
