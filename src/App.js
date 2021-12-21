@@ -24,6 +24,8 @@ const App = () => {
         <Route exact path="/product/:productId" element={<Product />} />
         <Route exact path="/category/:categoryId" element={<Category />} />
         <Route exact path="/author/:author" element={<Author />} />
+
+        <Route path="/*" element={<Home />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -36,7 +36,9 @@ const FooterInfo = () => {
             </Left>
             <Center>
                 <Logo>
-                    <img src={logo} style={{height:'100%'}} alt="Clasica y Moderna"/>
+                    <Link to={'/'}>
+                        <img src={logo} style={{height:'100%'}} alt="Clasica y Moderna"/>
+                    </Link>
                 </Logo>
                 <SocialContainer>
                     <Link to={"facebook.com/Clasica-y-Moderna"}>

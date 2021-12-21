@@ -7,9 +7,11 @@ const Topbar = () => {
         <Container>
             <Wrapper>
                 <Left>
-                    <Nav style={{paddingLeft: "0"}}>
-                        <Home />
-                    </Nav>
+                    <Link to={'/'}>
+                        <Nav style={{paddingLeft: "0"}}>
+                            <Home />
+                        </Nav>
+                    </Link>
                     <Nav>
                         <Mail />
                         <Text>Contact Us</Text>
