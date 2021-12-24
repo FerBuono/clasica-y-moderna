@@ -11,12 +11,12 @@ const Item = ({item}) => {
 
     useEffect(() => {
         isLiked(item, setLiked);
-    }, [])
+    }, [liked]) 
 
     return (
         <Container>
             <NavLink 
-                to={`/product/${item.id}`} 
+                to={`/products/${item.id}`} 
                 style={{height: '50%', margin: '10px 0'}}
             >
                 <Image src={item.img} alt={item.title}/>
@@ -25,7 +25,7 @@ const Item = ({item}) => {
                 <BookInfo>
                     <Title>
                         <NavLink 
-                            to={`/product/${item.id}`}
+                            to={`/products/${item.id}`}
                             style={{color: 'black', textDecoration: 'none'}} 
                         >
                             {item.title}
@@ -33,7 +33,7 @@ const Item = ({item}) => {
                     </Title>
                     <Author>
                         <NavLink
-                            to={`/author/${item.author}`}
+                            to={`/authors/${item.author}`}
                             style={{color: 'black', textDecoration: 'none', borderBottom: '1px dotted grey'}} 
                         >
                             {item.author}

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { products } from '../assets/data/data';
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
+import { sort } from '../helpers/sortHelper';
 
 const Author = () => {
 
@@ -9,9 +10,9 @@ const Author = () => {
 
     useEffect(() => {
         console.log(author)
-    }, [author])
+    }, [author]);
 
-    const booksByAuthor = products.filter(book => book.author === author);
+    const booksByAuthor = sort(products.filter(book => book.author === author));
 
 
     return (

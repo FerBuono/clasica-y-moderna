@@ -1,12 +1,11 @@
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
-
+import { sort } from '../helpers/sortHelper';
+import { wishlist } from '../helpers/likeHelpers';
 const Wishlist = () => {
-
-    const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
     return (
         <>
-            <ItemListContainer title="Your Wishlist" prod={wishlist} />
+            <ItemListContainer title="Your Wishlist" prod={sort(wishlist)} />
         </>
     )
 }

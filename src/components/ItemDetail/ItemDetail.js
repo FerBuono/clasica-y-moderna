@@ -51,7 +51,7 @@ const ItemDetail = ({item}) => {
                     <Author>
                         By (author):
                         <NavLink
-                            to={`/author/${author}`}
+                            to={`/authors/${author}`}
                             style={{color: 'black', textDecoration: 'none', marginLeft: '10px', borderBottom: '1px dotted grey'}} 
                         >
                             {author}
@@ -60,10 +60,10 @@ const ItemDetail = ({item}) => {
                     <Category>
                         Categories:  
                         {
-                            categories.map(category => (
+                            categories.sort().map(category => (
                                 <Categories>
                                     <NavLink
-                                        to={`/category/${category}`}
+                                        to={`/categories/${category}`}
                                         style={{color: 'black', textDecoration: 'none', borderBottom: '1px dotted grey'}} 
                                     >
                                         {category}

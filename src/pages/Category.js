@@ -1,13 +1,13 @@
-import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom'
-import { products, topCategories } from '../assets/data/data';
+import { products } from '../assets/data/data';
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer'
+import { sort } from '../helpers/sortHelper';
 
 const Category = () => {
 
     const {category} = useParams();
 
-    const booksByCategory = products.filter(book => book.categories.includes(category));
+    const booksByCategory = sort(products.filter(book => book.categories.includes(category)));
 
     return (
         <>

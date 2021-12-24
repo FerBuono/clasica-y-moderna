@@ -1,4 +1,4 @@
-let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+export let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
 export const handleLike = (liked, setLiked) => {
     setLiked(!liked);

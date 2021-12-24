@@ -25,11 +25,8 @@ const ItemListContainer = ({title, prod}) => {
 
     useEffect(() => {
         setProductPromise();
-    }, [prod]);
-    
-    useEffect(() => {
         window.scrollTo(0, 0);
-    }, [])
+    }, [prod]);
 
     return (
         <Container>

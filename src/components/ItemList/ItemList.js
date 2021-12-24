@@ -1,7 +1,9 @@
+import { useEffect } from 'react';
 import Item from '../Item/Item';
 import { Container } from './ItemListStyle';
 
 const ItemList = ({list}) => {
+
     return (
         <Container>
             {list.map(item => (

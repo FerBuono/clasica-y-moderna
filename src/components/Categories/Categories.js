@@ -28,15 +28,16 @@ const Categories = () => {
                         <TopCategories>
                             {
                                 topCategories.map(category => (
-                                    <NavLink to={`/category/${category.category}`} style={{width: '100%'}}>
-                                        <Category 
-                                            key={category.id}
-                                        >
+                                    <NavLink to={`/categories/${category.category}`} style={{width: '100%'}}>
+                                        <Category key={category.id}>
                                             {category.category}
                                         </Category>
                                     </NavLink>
                                 ))
                             }
+                            <NavLink to={'/categories'} style={{width: '100%'}}>
+                                <Category style={{textDecoration:'underline'}} key="See all">See all</Category>
+                            </NavLink>
                         </TopCategories>
                     </Left>
                     <Center>
@@ -44,10 +45,16 @@ const Categories = () => {
                         <TopAuthors>
                             {
                                 topAuthors.map(author => (
-                                    <Category key={author}>{author}</Category>
+                                    <NavLink to={`/authors/${author}`} style={{width: '100%'}}>
+                                        <Category key={author}>
+                                            {author}
+                                        </Category>
+                                    </NavLink>
                                 ))
                             }
-                            <Category style={{textDecoration:'underline'}} key="See all">See all</Category>
+                            <NavLink to={'/authors'} style={{width: '100%'}}>
+                                <Category style={{textDecoration:'underline'}} key="See all">See all</Category>
+                            </NavLink>
                         </TopAuthors>
                     </Center>
                     <Right>

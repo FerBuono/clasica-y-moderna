@@ -9,6 +9,8 @@ import Products from "./pages/Products";
 import Product from "./pages/Product";
 import Author from "./pages/Author";
 import Category from "./pages/Category";
+import Categories from "./pages/Categories";
+import Authors from "./pages/Authors";
 
 import './App.css';
 
@@ -21,9 +23,11 @@ const App = () => {
         <Route exact path="/wishlist" element={<Wishlist />} />
         <Route exact path="/cart" element={<Cart />} />
         <Route exact path="/products" element={<Products />} />
-        <Route exact path="/product/:productId" element={<Product />} />
-        <Route exact path="/category/:category" element={<Category />} />
-        <Route exact path="/author/:author" element={<Author />} />
+        <Route exact path="/categories" element={<Categories />} />
+        <Route exact path="/authors" element={<Authors />} />
+        <Route exact path="/products/:productId" element={<Product />} />
+        <Route exact path="/categories/:category" element={<Category />} />
+        <Route exact path="/authors/:author" element={<Author />} />
 
         <Route path="/*" element={<Home />} />
       </Routes>
