@@ -15,6 +15,7 @@ export const Book = styled.div`
     padding: 1rem 2rem;
     box-shadow: 0 0 5px 0 grey;
     margin-right: 2rem;
+    position: relative;
 `;
 
 export const Img = styled.img`
@@ -34,6 +35,7 @@ export const Title = styled.h1`
     margin-bottom: 15px;
     padding-bottom: 10px;
 `;
+
 
 export const Author = styled.p`
     margin-bottom: 15px;
@@ -74,6 +76,19 @@ export const Desc = styled.p`
     margin-bottom: 20px;
 `;
 
+export const Button = styled.button`
+    display: flex;
+    padding: 4px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    outline: #85aac5 solid 2px;
+    color: #85aac5;
+    background-color: white;
+    cursor: pointer;
+`;
+
 export const Buy = styled.div`
     flex: 1;
     background-color: white;
@@ -101,12 +116,13 @@ export const Amount = styled.div`
 
 export const Buttons = styled.div`
     display: flex;
-    flex-direction: column;
     width: 100%;
+    align-items: center;
 `;
 
 export const BuyButton = styled.button`
-    margin-bottom: 10px;
+    width: 100%;
+    margin-right: 10px;
     padding: 10px 20px;
     font-size: 15px;
     font-weight: 800;

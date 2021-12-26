@@ -7,7 +7,7 @@ const Category = () => {
 
     const {category} = useParams();
 
-    const booksByCategory = sort(products.filter(book => book.categories.includes(category)));
+    const booksByCategory = sort(products.filter(book => book.categories.includes(category)), "title");
 
     return (
         <>

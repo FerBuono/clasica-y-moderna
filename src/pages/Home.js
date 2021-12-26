@@ -5,7 +5,7 @@ import { sort } from '../helpers/sortHelper';
 const Home = () => {
     return (
         <>
-            <ItemListContainer title="Books" prod={sort(products)} />
+            <ItemListContainer title="Books" prod={sort(products, "title")} />
         </>
     )
 }

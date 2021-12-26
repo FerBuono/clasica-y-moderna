@@ -3,7 +3,7 @@ import ItemList from '../ItemList/ItemList';
 import Spinner from '../Spinner/Spinner';
 import { Container, Title } from './ItemListContainerStyle';
 
-const ItemListContainer = ({title, prod}) => {
+const ItemListContainer = ({title, prod, name, from}) => {
     
     const [list, setList] = useState(null);
     
@@ -16,13 +16,13 @@ const ItemListContainer = ({title, prod}) => {
             }, 0);
         });
     };
-
+    
     const setProductPromise = () => {
         getProducts()
-            .then(setList)
-            .catch(console.error)
+        .then(setList)
+        .catch(console.error);
     };
-
+    
     useEffect(() => {
         setProductPromise();
         window.scrollTo(0, 0);

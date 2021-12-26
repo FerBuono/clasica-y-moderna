@@ -24,13 +24,13 @@ const Categories = () => {
                 Shop by category <KeyboardArrowDown />
                 <CategoriesContainer>
                     <Left>
-                        <Title>Top Categories</Title>
+                        <Title>Categories</Title>
                         <TopCategories>
                             {
                                 topCategories.map(category => (
-                                    <NavLink to={`/categories/${category.category}`} style={{width: '100%'}}>
+                                    <NavLink to={`/categories/${category.name}`} style={{width: '100%'}}>
                                         <Category key={category.id}>
-                                            {category.category}
+                                            {category.name}
                                         </Category>
                                     </NavLink>
                                 ))
@@ -41,13 +41,13 @@ const Categories = () => {
                         </TopCategories>
                     </Left>
                     <Center>
-                        <Title>Top Authors</Title>
+                        <Title>Authors</Title>
                         <TopAuthors>
                             {
                                 topAuthors.map(author => (
-                                    <NavLink to={`/authors/${author}`} style={{width: '100%'}}>
-                                        <Category key={author}>
-                                            {author}
+                                    <NavLink to={`/authors/${author.name}`} style={{width: '100%'}}>
+                                        <Category key={author.id}>
+                                            {author.name}
                                         </Category>
                                     </NavLink>
                                 ))

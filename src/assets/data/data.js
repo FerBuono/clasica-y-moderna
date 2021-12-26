@@ -966,76 +966,118 @@ export const products = [
 export const topCategories = [
     {
         id: 101,
-        category: 'Art & Photography',
+        name: 'Art & Photography',
+        img: 'https://theartwolf.com/wp-content/uploads/2021/05/Van_Gogh_-_Starry_-_1920-1080.jpg',
     },
     {
         id: 102,
-        category: 'Biography & Memoirs',
+        name: 'Biography & Memoirs',
+        img: 'https://wallpapercave.com/wp/w1b92nT.jpg',
     },
     {
         id: 103,
-        category: 'Crime & Thriller',
+        name: 'Crime & Thriller',
+        img: 'https://i1.wp.com/www.hachettebookgroup.com/wp-content/uploads/2021/06/The-Latest-in-Psychological-Suspense.png?resize=1024%2C512&ssl=1',
     },
     {
         id: 104,
-        category: 'Environmentalism',
+        name: 'Environmentalism',
+        img: 'https://images.unsplash.com/photo-1498925008800-019c7d59d903?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZW52aXJvbm1lbnR8ZW58MHx8MHx8&w=1000&q=80',
     },
     {
         id: 105,
-        category: 'Fantasy',
+        name: 'Fantasy',
+        img: 'https://images8.alphacoders.com/110/thumb-1920-1102284.jpg',
     },
     {
         id: 106,
-        category: 'Fiction',
+        name: 'Fiction',
+        img: 'https://i.pinimg.com/474x/2d/f4/99/2df499c6cb19c50ca4a0bf162d29a5d1--fiction-movies-science-fiction.jpg',
     },
     {
         id: 107,
-        category: 'History & Archaeology',
+        name: 'History & Archaeology',
+        img: 'https://images2.alphacoders.com/659/thumb-1920-659390.jpg',
     },
     {
         id: 108,
-        category: 'Horror',
+        name: 'Horror',
+        img: 'https://i.pinimg.com/originals/6a/87/e6/6a87e60efdaf6747d5d065a0ae3dc722.jpg',
     },
     {
         id: 109,
-        category: 'Mind, Body & Spirit',
+        name: 'Mind, Body & Spirit',
+        img: 'https://cdn.wallpapersafari.com/5/24/UB30fx.jpg',
     },
     {
         id: 110,
-        category: 'Romance',
+        name: 'Science',
+        img: 'http://cdn.shopify.com/s/files/1/0153/0623/products/Astronomy_Wallpaper_in_Blue_from_the_Eclectic_Collection_by_Mind_the_Gap-1.jpg?v=1571712872',
     },
     {
         id: 111,
-        category: 'Science',
+        name: 'Science Fiction',
+        img: 'https://scontent.faep17-1.fna.fbcdn.net/v/t31.18172-8/15994728_1828287580761514_7115477698436389648_o.jpg?_nc_cat=109&ccb=1-5&_nc_sid=6e5ad9&_nc_ohc=_b8JYMBkTVcAX9cQRgi&_nc_ht=scontent.faep17-1.fna&oh=dc1196f752cb3962db36473252f4f8d0&oe=61CCE04C',
     },
     {
         id: 112,
-        category: 'Science Fiction',
+        name: 'Society & Social Sciences',
+        img: 'https://wallpapercave.com/wp/wp8948651.jpg',
     },
     {
         id: 113,
-        category: 'Society & Social Sciences',
-    },
-    {
-        id: 114,
-        category: 'Technology & Engineering',
+        name: 'Technology & Engineering',
+        img: 'https://wallpaperaccess.com/full/561827.jpg',
     },
 
 ];
 
 export const topAuthors = [
-    'J.K. Rowling',
-    'Roadl Dahl',
-    'Julia Donaldson',
-    'Stephen King',
-    'David Walliams',
-    'Dr. Seuss',
-    'Andy Griffiths',
-    'James Patterson',
-    'Sarah J. Maas',
-    'Enid Blyton',
-    'John Green',
-    'Brandon Sanderson',
+    {
+        id: 1001,
+        name: 'J.K. Rowling',
+        img: 'https://cloudfront-us-east-1.images.arcpublishing.com/copesa/HJENPANR7VBIBMKOCS4ZWXYVUI.jpg'
+    },
+    {
+        id: 1002,
+        name: 'Stephen King',
+        img: 'https://www.latercera.com/resizer/NCXgvBGfnPbyZHK_0UyLT2VPiC0=/900x600/smart/cloudfront-us-east-1.images.arcpublishing.com/copesa/LAGOZGASXVGWPASNWYYP3IAPV4.jpg'
+    },
+    {
+        id: 1003,
+        name: 'Vaclav Smil',
+        img: 'https://resizer.glanacion.com/resizer/Wrxa0dRfT6zW0fEcQwqgSh4olTM=/768x0/filters:quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/CEMALR3GMBFRLKQO37XAKXJZSM.jpg'
+    },
+    {
+        id: 1004,
+        name: 'Michio Kaku',
+        img: 'https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2014/04/15/13975278901917.jpg'
+    },
+    {
+        id: 1005,
+        name: 'Yuval Noah Harari',
+        img: 'https://ichef.bbci.co.uk/news/640/cpsprodpb/159B7/production/_104330588_yuval.jpg'
+    },
+    {
+        id: 1006,
+        name: 'George Orwell',
+        img: 'https://resizer.glanacion.com/resizer/Rl9jNlfFStitVU5dZWlO6RfIoKQ=/768x0/filters:quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/PGBLAFVTZ5EIRJL3RGBLWWLXCY.jpg'
+    },
+    {
+        id: 1007,
+        name: 'Borja Vilaseca',
+        img: 'https://borjavilaseca.com/wp-content/uploads/2018/07/foto-tocar-fondo-bv.jpg'
+    },
+    {
+        id: 1008,
+        name: 'Walter Isaacson',
+        img: 'https://imagenes.elpais.com/resizer/D7wUFBfdArqFEmHSjwgE0gOxKJE=/414x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/ZKE67IAG7RHZXPZLHSS36RTJPA.jpg'
+    },
+    {
+        id: 1009,
+        name: 'Douglas Adams',
+        img: 'https://revistavaho.files.wordpress.com/2019/06/douglas_adams-1-e1561097595987.jpg'
+    },
 ];
 
 export const bestselling = [

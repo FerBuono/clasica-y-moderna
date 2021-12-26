@@ -1,7 +1,7 @@
-export const sort = (array) => {
+export const sort = (array, sortBy) => {
     array.sort((a, b) => {
-        let x = a.title;
-        let y = b.title;
+        let x = a[sortBy];
+        let y = b[sortBy];
         return x < y ? -1 : (x > y ? 1 : 0);
     });
     

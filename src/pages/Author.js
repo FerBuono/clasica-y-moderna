@@ -12,7 +12,7 @@ const Author = () => {
         console.log(author)
     }, [author]);
 
-    const booksByAuthor = sort(products.filter(book => book.author === author));
+    const booksByAuthor = sort(products.filter(book => book.author === author), "title");
 
 
     return (

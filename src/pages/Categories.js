@@ -1,10 +1,10 @@
-import React from 'react'
+import CardListContainer from "../components/CardListContainer/CardListContainer";
+import { topCategories } from '../assets/data/data';
+import { sort } from "../helpers/sortHelper";
 
 const Categories = () => {
     return (
-        <div>
-            categories
-        </div>
+        <CardListContainer title={'All Categories'} list={sort(topCategories, "name")} name={'categories'}/>
     )
 }
 

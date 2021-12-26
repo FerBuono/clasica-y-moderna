@@ -1,7 +1,8 @@
 export let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
-export const handleLike = (liked, setLiked) => {
+export const handleLike = (liked, setLiked, handleClick) => {
     setLiked(!liked);
+    !liked && handleClick();
 };
 
 export const isLiked = (item, setLiked) => {
@@ -16,4 +17,5 @@ export const handleWishlist = (item) => {
         : wishlist.filter(product => product.id !== item.id);
 
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    
 };
