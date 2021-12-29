@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import Item from '../Item/Item';
 import { Container } from './ItemListStyle';
 

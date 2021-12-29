@@ -93,7 +93,7 @@ export const BuyButton = styled.button`
     font-size: 16px;
 `;
 
-export const Button = styled.button`
+export const Btn = styled.button`
     display: flex;
     padding: 4px;
     align-items: center;

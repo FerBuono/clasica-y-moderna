@@ -16,11 +16,9 @@ const Bottombar = () => {
                 <Right>
                     <Languages />
                     <Currencies defaultValue={"$ USD"}>
-                        <Currency>$ AUD</Currency>
+                        <Currency>$ ARS</Currency>
                         <Currency>€ EUR</Currency>
                         <Currency>$ USD</Currency>
-                        <Currency>£ GBP</Currency>
-                        <Currency>$ ARS</Currency>
                     </Currencies>
                     <CartWidget />
                 </Right>

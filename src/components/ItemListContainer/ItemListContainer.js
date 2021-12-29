@@ -3,17 +3,15 @@ import ItemList from '../ItemList/ItemList';
 import Spinner from '../Spinner/Spinner';
 import { Container, Title } from './ItemListContainerStyle';
 
-const ItemListContainer = ({title, prod, name, from}) => {
-    
+const ItemListContainer = ({title, prod}) => {
+
     const [list, setList] = useState(null);
     
     const getProducts = () => {
         return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                prod
-                ? resolve([...prod])
-                : reject(new Error('No se pudo cargar la lista'))
-            }, 0);
+            prod
+            ? resolve([...prod])
+            : reject(new Error('No se pudo cargar la lista'))
         });
     };
     
@@ -25,9 +23,13 @@ const ItemListContainer = ({title, prod, name, from}) => {
     
     useEffect(() => {
         setProductPromise();
-        window.scrollTo(0, 0);
     }, [prod]);
+    
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
+    
     return (
         <Container>
             <Title>{title}</Title>

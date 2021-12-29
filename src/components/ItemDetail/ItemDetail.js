@@ -1,9 +1,9 @@
 import { Favorite, FavoriteBorder, ShoppingCart } from '@mui/icons-material';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { CartContext, WishlistContext } from '../../contexts';
 import { handleLike, handleWishlist, isLiked } from '../../helpers/likeHelpers';
 import ItemCount from '../ItemCount/ItemCount';
-import Snackbar from '../Snackbar/Snackbar';
 import { 
     Container, 
     Book, 
@@ -21,7 +21,6 @@ import {
     Amount, 
     Buttons, 
     BuyButton, 
-    WishButton 
 } from './ItemDetailStyle';
 
 
@@ -30,41 +29,33 @@ const ItemDetail = ({item}) => {
 
     const {title, author, categories, year, img, stock, desc, price} = item;
 
-    const [cart, setCart] = useState([]);
-
     const [productStock, setProductStock] = useState(stock);
     
     const [count, setCount] = useState(0);
     
     const [liked, setLiked] = useState(false);
 
-    const [open, setOpen] = useState(false);
+    const {cart, setCart} = useContext(CartContext);
 
-    const [link, setLink] = useState('');
+    const {wishlist, setWishlist} = useContext(WishlistContext);
 
-    const [color, setColor] = useState('');
+    const addToCart = (item, count, setCount) => {
+        if (count > 0) {
+            if(cart.some(product => product.title === item.title)) {
+                cart.find(product => product.title === item.title).c += count;
+                setCart([...cart]);
+            } else {
+                setCart([...cart, {...item, c: count}]);
+            };
+        };
 
-    const onAdd = (count, setCount) => {
-        count > 0 && setCart([...cart, {...item, c: count}]);
         setProductStock(productStock - count);
         setCount(0);
     };
-
-    useEffect(() => {
-        isLiked(item, setLiked);
-    }, []);
-
-    const handleClick = () => {
-      setOpen(true);
-    };
-
-    const handleClose = (event, reason) => {
-        if (reason === 'clickaway') {
-          return;
-        };
     
-        setOpen(false);
-    };
+    useEffect(() => {
+        isLiked(item, setLiked, wishlist);
+    }, []);
 
     return (
         <Container>
@@ -107,10 +98,8 @@ const ItemDetail = ({item}) => {
                 </Info>
                 <Button 
                     onClick={() => {
-                        handleLike(liked, setLiked, handleClick);
-                        handleWishlist(item);
-                        setLink('wishlist');
-                        setColor('#BA7735');
+                        handleLike(liked, setLiked);
+                        handleWishlist(item, wishlist, setWishlist);
                     }}
                     title="Add to Your Wishlist"
                 >
@@ -126,12 +115,7 @@ const ItemDetail = ({item}) => {
                 <Buttons>
                     <BuyButton 
                         onClick={() => {
-                            onAdd(count, setCount);
-                            count > 0 && 
-                                handleClick();
-                                setLink('cart');
-                                setColor('#024f94');
-                            
+                            addToCart(item, count, setCount);
                         }}
                     >
                         Add to Cart ({count})
@@ -146,7 +130,6 @@ const ItemDetail = ({item}) => {
                     }
                 </Buttons>
             </Buy>
-            <Snackbar handleClose={handleClose} open={open} link={link} bgColor={color}/>
         </Container>
     )
 }

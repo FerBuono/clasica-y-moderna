@@ -1,8 +1,11 @@
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
 import { sort } from '../helpers/sortHelper';
-import { wishlist } from '../helpers/likeHelpers';
+import { useContext } from 'react';
+import { WishlistContext } from '../contexts';
 
 const Wishlist = () => {
+
+    const {wishlist} = useContext(WishlistContext)
 
     return (
         <>

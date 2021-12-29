@@ -1,36 +1,30 @@
 import { FavoriteBorder, Favorite } from '@mui/icons-material';
-import { useEffect, useState } from 'react';
-import { Container, Title, Author, Year, Image, Info, BookInfo, Price, Buttons, BuyButton, Button } from './ItemStyle';
+import { useContext, useEffect, useState } from 'react';
+import { Container, Title, Author, Year, Image, Info, BookInfo, Price, Buttons, BuyButton, Btn } from './ItemStyle';
 import { NavLink } from 'react-router-dom'
 import { handleWishlist, isLiked, handleLike } from '../../helpers/likeHelpers';
-import Snackbar from '../Snackbar/Snackbar';
+import { CartContext, WishlistContext } from '../../contexts';
 
 const Item = ({item}) => {
 
+    const {cart, setCart} = useContext(CartContext);
+
+    const {wishlist, setWishlist} = useContext(WishlistContext);
+
     const [liked, setLiked] = useState(false);
+
+    const addToCart = (item) => {
+        if(cart.some(product => product.title === item.title)) {
+            cart.find(product => product.title === item.title).c += 1;
+            setCart([...cart]);
+        } else {
+            setCart([...cart, {...item, c: 1}]);
+        }
+    };
     
-    const [open, setOpen] = useState(false);
-
-    const [link, setLink] = useState('');
-
-    const [color, setColor] = useState('');
-
     useEffect(() => {
-        isLiked(item, setLiked);
+        isLiked(item, setLiked, wishlist);
     }, []);
-
-
-    const handleClick = () => {
-      setOpen(true);
-    };
-
-    const handleClose = (event, reason) => {
-        if (reason === 'clickaway') {
-          return;
-        };
-    
-        setOpen(false);
-    };
 
     return (
         <Container>
@@ -63,30 +57,24 @@ const Item = ({item}) => {
                 <Price>US$ {item.price}</Price>
             </Info>
             <Buttons>
-                <BuyButton 
-                    onClick={() => {
-                        handleClick();
-                        setLink('cart');
-                        setColor('#024f94');
-                    }}
-                >
+                <BuyButton onClick={(e) => {
+                    e.preventDefault();
+                    addToCart(item);
+                }}>
                     Add to Cart
                 </BuyButton>
-                <Button 
+                <Btn 
                     onClick={() => {
-                        handleLike(liked, setLiked, handleClick);
-                        handleWishlist(item);
-                        setLink('wishlist');
-                        setColor('#BA7735');
+                        handleLike(liked, setLiked);
+                        handleWishlist(item, wishlist, setWishlist);
                     }}
                     title="Add to Your Wishlist"
                 >
                     {
                         liked === false ? <FavoriteBorder /> : <Favorite style={{color: '#efd091'}} />
                     }
-                </Button>
+                </Btn>
             </Buttons>
-            <Snackbar handleClose={handleClose} open={open} link={link} bgColor={color}/>
         </Container>
     )
 }

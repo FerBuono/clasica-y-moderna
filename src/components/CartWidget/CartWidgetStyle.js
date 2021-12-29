@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Cart = styled.div`
     display: flex;
     height: 100%;
+    width: 200px;
     align-items: center;
     padding: 0 1rem;
     background-color: #ba7735;
@@ -12,6 +13,9 @@ export const Cart = styled.div`
 
 export const Total = styled.p`
     margin-bottom: 0;
+    width: 60%;
+    display: flex;
+    justify-content: center;
 `;
 
 export const CartContainer = styled.div`
