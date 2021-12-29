@@ -1,7 +1,7 @@
 import { Favorite, FavoriteBorder, ShoppingCart } from '@mui/icons-material';
 import { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { CartContext, WishlistContext } from '../../contexts';
+import { CartContext, CurrencyContext, WishlistContext } from '../../contexts';
 import { handleLike, handleWishlist, isLiked } from '../../helpers/likeHelpers';
 import ItemCount from '../ItemCount/ItemCount';
 import { 
@@ -36,6 +36,8 @@ const ItemDetail = ({item}) => {
     const [liked, setLiked] = useState(false);
 
     const {cart, setCart} = useContext(CartContext);
+
+    const {currency} = useContext(CurrencyContext);
 
     const {wishlist, setWishlist} = useContext(WishlistContext);
 
@@ -109,7 +111,20 @@ const ItemDetail = ({item}) => {
                 </Button>
             </Book>
             <Buy>
-                <Price>U$D {price}</Price>
+                <Price>
+                    {currency} {(() => {
+                        switch (currency) {
+                            case 'ARS$': 
+                                return (Number(item.price) * 200).toFixed(0);
+                            case 'US$': 
+                                return Number(item.price);
+                            case '€':
+                                return (Number(item.price) * 0.88).toFixed(2);
+                            default:
+                                return;
+                        };
+                    })()}
+                </Price>
                 <p>Stock: {productStock}</p>
                 <Amount>Amount: <ItemCount stock={productStock} count={count} setCount={setCount} /></Amount>
                 <Buttons>

@@ -8,6 +8,7 @@ export const CategoriesContainer = styled.div`
     left: 0;
     background-color: white;
     width: 500px;
+    height: 400px;
     text-align: left;
     z-index: -1;
     border: 1px solid rgba(0,0,0,0.1);

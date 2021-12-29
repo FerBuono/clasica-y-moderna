@@ -5,7 +5,7 @@ export const products = [
         author: 'Christophe Galfard',
         year: 2015,
         categories: ['Science'],
-        price: 24,
+        price: 24.50,
         img: "https://images-na.ssl-images-amazon.com/images/I/8101rnqy0HL.jpg",
         stock: 5,
         desc: [
@@ -20,7 +20,7 @@ export const products = [
         author: 'Walter Isaacson',
         year: 2007,
         categories: ['Science', 'Biography & Memoirs'],
-        price: 36,
+        price: 36.20,
         img: "https://images-na.ssl-images-amazon.com/images/I/71e7d9fm8ZL.jpg",
         stock: 35,
         desc: [
@@ -36,7 +36,7 @@ export const products = [
         author: 'Douglas Adams',
         year: 1979,
         categories: ['Science Fiction', 'Fantasy'],
-        price: 15,
+        price: 15.20,
         img: "https://images-na.ssl-images-amazon.com/images/I/81XSN3hA5gL.jpg",
         stock: 40,
         desc: [
@@ -53,7 +53,7 @@ export const products = [
         author: 'Winston S. Churchill',
         year: 1953,
         categories: ['History & Archaeology', 'Biography & Memoirs'],
-        price: 60,
+        price: 60.00,
         img: "https://editorialelateneo.com.ar/productos/temp/La_Segunda_Guerra_Mundial.png",
         stock: 10,
         desc: [
@@ -68,7 +68,7 @@ export const products = [
         author: 'Borja Vilaseca',
         year: 2013,
         categories: ['Mind, Body & Spirit', 'Society & Social Sciences'],
-        price: 25,
+        price: 25.60,
         img: "https://m.media-amazon.com/images/I/41GbQ8JQgTL.jpg",
         stock: 25,
         desc: [
@@ -84,7 +84,7 @@ export const products = [
         author: 'Yuval Noah Harari',
         categories: ['Society & Social Sciences'],
         year: 2015,
-        price: 30,
+        price: 30.15,
         img: "https://images-na.ssl-images-amazon.com/images/I/911U2U7brxL.jpg",
         stock: 15,
         desc: [
@@ -100,7 +100,7 @@ export const products = [
         author: 'Nick Bostrom',
         year: 2014,
         categories: ['Science', 'Technology & Engineering'],
-        price: 20,
+        price: 20.65,
         img: "https://images-na.ssl-images-amazon.com/images/I/814sKOe+BcL.jpg",
         stock: 30,
         desc: [
@@ -117,13 +117,12 @@ export const products = [
         author: 'George Orwell',
         year: 1949,
         categories: ['Fiction', 'Society & Social Sciences'],
-        price: 12,
+        price: 12.20,
         img: "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9780/1410/9780141036144.jpg",
         stock: 10,
         desc: [
             "Winston Smith works for the Ministry of Truth in London, chief city of Airstrip One. Big Brother stares out from every poster, the Thought Police uncover every act of betrayal. When Winston finds love with Julia, he discovers that life does not have to be dull and deadening, and awakens to new possibilities. Despite the police helicopters that hover and circle overhead, Winston and Julia begin to question the Party; they are drawn towards conspiracy. Yet Big Brother will not tolerate dissent - even in the mind. For those with original thoughts they invented Room 101. . .",
             "First published in 1949, 1984 is George Orwell's terrifying vision of a totalitarian future in which everything and everyone is slave to a tyrannical regime.",
-            "Through brilliant storytelling and humour rather than graphs and equations, internationally renowned astrophysicist Christophe Galfard has written an instant classic that brings the astonishing beauty of the universe to life - and takes us deep into questions about the beginning of time and the future of humanity."
         ],
     },
     {
@@ -132,7 +131,7 @@ export const products = [
         author: 'Christophe Galfard',
         year: 2017,
         categories: ['Science'],
-        price: 16,
+        price: 16.90,
         img: "https://images-na.ssl-images-amazon.com/images/I/61RksG9DNQL.jpg",
         stock: 20,
         desc: [
@@ -147,7 +146,7 @@ export const products = [
         author: 'Walter Isaacson',
         year: 2015,
         categories: ['Biography & Memoirs', 'Technology & Engineering'],
-        price: 40,
+        price: 40.00,
         img: "https://m.media-amazon.com/images/I/41kbx7BGEKL.jpg",
         stock: 55,
         desc: [
@@ -165,7 +164,7 @@ export const products = [
         author: 'Douglas Adams',
         year: 1980,
         categories: ['Science Fiction', 'Fantasy'],
-        price: 17,
+        price: 17.80,
         img: "https://upload.wikimedia.org/wikipedia/en/9/98/RestaurantAtTheEndOfTheUniverse.jpg",
         stock: 25,
         desc: [
@@ -180,7 +179,7 @@ export const products = [
         author: 'Douglas Adams',
         year: 1982,
         categories: ['Science Fiction', 'Fantasy'],
-        price: 13,
+        price: 13.50,
         img: "https://files.abovetopsecret.com/files/img/yx5da675ba.jpg",
         stock: 20,
         desc: [
@@ -195,7 +194,7 @@ export const products = [
         author: 'Douglas Adams',
         year: 1984,
         categories: ['Science Fiction', 'Fantasy'],
-        price: 13,
+        price: 13.50,
         img: "https://m.media-amazon.com/images/I/51cCNyXHRdL.jpg",
         stock: 15,
         desc: [
@@ -209,7 +208,7 @@ export const products = [
         author: 'Douglas Adams',
         year: 1992,
         categories: ['Science Fiction', 'Fantasy'],
-        price: 13,
+        price: 13.50,
         img: "https://bookmafiya.com/wp-content/uploads/2021/05/Mostly-Harmless.jpg",
         stock: 30,
         desc: [
@@ -224,7 +223,7 @@ export const products = [
         author: 'Walter Isaacson',
         year: 2021,
         categories: ['Science', 'Biography & Memoirs'],
-        price: 45,
+        price: 45.00,
         img: "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781982115852/the-code-breaker-9781982115852_hr.jpg",
         stock: 60,
         desc: [
@@ -242,7 +241,7 @@ export const products = [
         author: 'Walter Isaacson',
         year: 2003,
         categories: ['Science', 'Biography & Memoirs', 'History & Archaeology', 'Technology & Engineering'],
-        price: 28,
+        price: 28.90,
         img: "https://images-na.ssl-images-amazon.com/images/I/A1yfTyslOOL.jpg",
         stock: 30,
         desc: [
@@ -255,7 +254,7 @@ export const products = [
         author: 'Walter Isaacson',
         year: 2017,
         categories: ['Science', 'Biography & Memoirs', 'History & Archaeology', 'Technology & Engineering', 'Art & Photography'],
-        price: 35,
+        price: 35.90,
         img: "https://images-na.ssl-images-amazon.com/images/I/91Ey0+6N-LL.jpg",
         stock: 50,
         desc: [
@@ -270,7 +269,7 @@ export const products = [
         author: 'Walter Isaacson',
         year: 2014,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Biography & Memoirs'],
-        price: 20,
+        price: 20.50,
         img: "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4711/9781471138805.jpg",
         stock: 65,
         desc: [
@@ -287,7 +286,7 @@ export const products = [
         author: 'Borja Vilaseca',
         year: 2008,
         categories: ['Mind, Body & Spirit', 'Society & Social Sciences'],
-        price: 17,
+        price: 17.20,
         img: "https://m.media-amazon.com/images/I/41l2Mzi-iqL.jpg",
         stock: 55,
         desc: [
@@ -304,7 +303,7 @@ export const products = [
         author: 'Borja Vilaseca',
         year: 2021,
         categories: ['Mind, Body & Spirit', 'Society & Social Sciences'],
-        price: 31,
+        price: 31.20,
         img: "https://images-na.ssl-images-amazon.com/images/I/71CvZcWMpHL.jpg",
         stock: 100,
         desc: [
@@ -322,7 +321,7 @@ export const products = [
         categories: ['Mind, Body & Spirit', 'Society & Social Sciences'],
         price: 17,
         img: "https://www.penguinlibros.com/ar/923549/el-principito-se-pone-la-corbata.jpg",
-        stock: 50,
+        stock: 50.00,
         desc: [
             "Un libro que cambiará tu manera de vivir el trabajo. Una historia que revolucionará tu forma de concebir las empresas. Un personaje inolvidable que transformará tu visión de la vida para siempre.",
             "Esta fábula basada en hechos reales narra la historia de Pablo Príncipe, un joven inconformista y visionario que tras padecer una crisis existencial descubre su propósito de vida. Después de regresar de un viaje épico por Madagascar, se convierte en el nuevo responsable de personas y valores de una empresa marcada por el conflicto y el sufrimiento. Y nada más llegar, imparte un curso de crecimiento personal para desarrollar el potencial, el talento y la creatividad de todos los trabajadores.",
@@ -336,7 +335,7 @@ export const products = [
         author: 'Borja Vilaseca',
         year: 2011,
         categories: ['Mind, Body & Spirit', 'Society & Social Sciences'],
-        price: 17,
+        price: 17.60,
         img: "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9788/4663/9788466354523.jpg",
         stock: 30,
         desc: [
@@ -351,7 +350,7 @@ export const products = [
         author: 'Yuval Noah Harari',
         categories: ['Society & Social Sciences', 'History & Archaeology',],
         year: 2011,
-        price: 23,
+        price: 23.90,
         img: "https://upload.wikimedia.org/wikipedia/commons/1/1f/Sapiens-uma-breve-historia-da-humanidade-livro-yuval-harari-320001-MLB20265211115_032015-O.jpg",
         stock: 45,
         desc: [
@@ -367,7 +366,7 @@ export const products = [
         author: 'Yuval Noah Harari',
         categories: ['Society & Social Sciences'],
         year: 2018,
-        price: 36,
+        price: 36.20,
         img: "https://images-na.ssl-images-amazon.com/images/I/811iZOA9+8L.jpg",
         stock: 45,
         desc: [
@@ -383,7 +382,7 @@ export const products = [
         author: 'George Orwell',
         year: 1945,
         categories: ['Fiction', 'Society & Social Sciences'],
-        price: 12,
+        price: 12.30,
         img: "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9780/1410/9780141036137.jpg",
         stock: 15,
         desc: [
@@ -398,7 +397,7 @@ export const products = [
         author: 'George Orwell',
         year: 1933,
         categories: ['Biography & Memoirs', 'Society & Social Sciences'],
-        price: 11,
+        price: 11.90,
         img: "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9780/1410/9780141042701.jpg",
         stock: 17,
         desc: [
@@ -412,7 +411,7 @@ export const products = [
         author: 'Vaclav Smil',
         year: 2020,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
-        price: 20,
+        price: 20.00,
         img: "https://m.media-amazon.com/images/I/41eTnCaDnYL.jpg",
         stock: 37,
         desc: [
@@ -426,7 +425,7 @@ export const products = [
         author: 'Vaclav Smil',
         year: 2017,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
-        price: 33,
+        price: 33.20,
         img: "https://images-na.ssl-images-amazon.com/images/I/81LOgtK5HoL.jpg",
         stock: 30,
         desc: [
@@ -441,7 +440,7 @@ export const products = [
         author: 'Vaclav Smil',
         year: 2015,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
-        price: 37,
+        price: 37.90,
         img: "https://http2.mlstatic.com/D_NQ_NP_667468-MLA42619250108_072020-O.jpg",
         stock: 20,
         desc: [
@@ -455,7 +454,7 @@ export const products = [
         author: 'Vaclav Smil',
         year: 2013,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
-        price: 25,
+        price: 25.60,
         img: "https://images-na.ssl-images-amazon.com/images/I/81FHxxa2JxL.jpg",
         stock: 24,
         desc: [
@@ -471,7 +470,7 @@ export const products = [
         author: 'Vaclav Smil',
         year: 2013,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
-        price: 41,
+        price: 41.70,
         img: "https://images-na.ssl-images-amazon.com/images/I/71GjRdiN02L.jpg",
         stock: 50,
         desc: [
@@ -485,7 +484,7 @@ export const products = [
         author: 'Vaclav Smil',
         year: 2013,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
-        price: 32,
+        price: 32.20,
         img: "https://http2.mlstatic.com/D_NQ_NP_999217-MLA29445919051_022019-O.jpg",
         stock: 40,
         desc: [
@@ -500,7 +499,7 @@ export const products = [
         author: 'Vaclav Smil',
         year: 2010,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
-        price: 30,
+        price: 30.90,
         img: "https://http2.mlstatic.com/D_NQ_NP_889412-MLA30986622161_062019-O.jpg",
         stock: 54,
         desc: [
@@ -514,7 +513,7 @@ export const products = [
         author: 'Vaclav Smil',
         year: 2010,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
-        price: 45,
+        price: 45.00,
         img: "https://images-na.ssl-images-amazon.com/images/I/41OC0tIKm-L.jpg",
         stock: 32,
         desc: [
@@ -530,7 +529,7 @@ export const products = [
         author: 'Vaclav Smil',
         year: 2010,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
-        price: 50,
+        price: 50.10,
         img: "https://images-na.ssl-images-amazon.com/images/I/71IP8oFWMgL.jpg",
         stock: 22,
         desc: [
@@ -545,7 +544,7 @@ export const products = [
         author: 'Vaclav Smil',
         year: 2006,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
-        price: 17,
+        price: 17.20,
         img: "https://http2.mlstatic.com/D_NQ_NP_839755-MLA48032514494_102021-O.jpg",
         stock: 52,
         desc: [
@@ -560,7 +559,7 @@ export const products = [
         author: 'Vaclav Smil',
         year: 2008,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
-        price: 15,
+        price: 15.80,
         img: "https://http2.mlstatic.com/D_NQ_NP_996375-MLA41410550852_042020-O.jpg",
         stock: 52,
         desc: [
@@ -574,7 +573,7 @@ export const products = [
         author: 'Vaclav Smil',
         year: 2019,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
-        price: 30,
+        price: 30.40,
         img: "https://images-na.ssl-images-amazon.com/images/I/71tqWPBSrnL.jpg",
         stock: 52,
         desc: [
@@ -589,7 +588,7 @@ export const products = [
         author: 'Vaclav Smil',
         year: 2015,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
-        price: 35,
+        price: 35.50,
         img: "https://http2.mlstatic.com/D_NQ_NP_881685-MLA42680962097_072020-O.jpg",
         stock: 52,
         desc: [
@@ -605,7 +604,7 @@ export const products = [
         author: 'Vaclav Smil',
         year: 2013,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
-        price: 42,
+        price: 42.90,
         img: "https://images-na.ssl-images-amazon.com/images/I/41mCrM-rn1L.jpg",
         stock: 52,
         desc: [
@@ -619,7 +618,7 @@ export const products = [
         author: 'Vaclav Smil',
         year: 2021,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
-        price: 40,
+        price: 40.00,
         img: "https://images-na.ssl-images-amazon.com/images/I/91QoItU73uL.jpg",
         stock: 52,
         desc: [
@@ -634,7 +633,7 @@ export const products = [
         author: 'Stephen King',
         year: 1974,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
-        price: 14,
+        price: 14.20,
         img: "https://images-na.ssl-images-amazon.com/images/I/91P7rIp-ayL.jpg",
         stock: 52,
         desc: [
@@ -648,7 +647,7 @@ export const products = [
         author: 'Stephen King',
         year: 1975,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
-        price: 18,
+        price: 18.60,
         img: "https://cdn.waterstones.com/bookjackets/large/9781/4447/9781444708141.jpg",
         stock: 52,
         desc: [
@@ -661,7 +660,7 @@ export const products = [
         author: 'Stephen King',
         year: 1977,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
-        price: 16,
+        price: 16.50,
         img: "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4736/9781473695498.jpg",
         stock: 52,
         desc: [
@@ -674,7 +673,7 @@ export const products = [
         author: 'Stephen King',
         year: 1978,
         categories: ['Horror', 'Fiction', 'Science Fiction'],
-        price: 20,
+        price: 20.20,
         img: "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4447/9781444720730.jpg",
         stock: 52,
         desc: [
@@ -691,7 +690,7 @@ export const products = [
         author: 'Stephen King',
         year: 1979,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
-        price: 19,
+        price: 19.20,
         img: "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4447/9781444708097.jpg",
         stock: 52,
         desc: [
@@ -706,7 +705,7 @@ export const products = [
         author: 'Stephen King',
         year: 1980,
         categories: ['Horror', 'Fiction', 'Crime & Thriller', 'Science Fiction'],
-        price: 19,
+        price: 19.20,
         img: "https://images-na.ssl-images-amazon.com/images/I/81OuF5l5ZRL.jpg",
         stock: 52,
         desc: [
@@ -722,7 +721,7 @@ export const products = [
         author: 'Stephen King',
         year: 1981,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
-        price: 17,
+        price: 17.50,
         img: "https://www.cemeterydance.com/extras/wp-content/uploads/2020/08/cujo.jpg",
         stock: 52,
         desc: [
@@ -737,7 +736,7 @@ export const products = [
         author: 'Stephen King',
         year: 1982,
         categories: ['Horror', 'Fiction', 'Crime & Thriller', 'Fantasy'],
-        price: 14,
+        price: 14.00,
         img: "http://prodimage.images-bn.com/pimages/9781501143519_p0_v5_s1200x630.jpg",
         stock: 52,
         desc: [
@@ -752,7 +751,7 @@ export const products = [
         author: 'Stephen King',
         year: 1983,
         categories: ['Horror', 'Fiction', 'Crime & Thriller', 'Fantasy'],
-        price: 21,
+        price: 21.20,
         img: "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4736/9781473695511.jpg",
         stock: 52,
         desc: [
@@ -768,7 +767,7 @@ export const products = [
         author: 'Stephen King',
         year: 1983,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
-        price: 18,
+        price: 18.60,
         img: "https://upload.wikimedia.org/wikipedia/en/5/52/StephenKingPetSematary.jpg",
         stock: 52,
         desc: [
@@ -785,7 +784,7 @@ export const products = [
         author: 'Stephen King',
         year: 1986,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
-        price: 27,
+        price: 27.90,
         img: "https://images-na.ssl-images-amazon.com/images/I/71tFhdcC0XL.jpg",
         stock: 52,
         desc: [
@@ -801,7 +800,7 @@ export const products = [
         author: 'Stephen King',
         year: 1987,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
-        price: 16,
+        price: 16.80,
         img: "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4447/9781444720716.jpg",
         stock: 52,
         desc: [
@@ -817,7 +816,7 @@ export const products = [
         author: 'Stephen King',
         year: 2011,
         categories: ['Horror', 'Fiction', 'Crime & Thriller', 'Science Fiction'],
-        price: 35,
+        price: 35.00,
         img: "https://images-na.ssl-images-amazon.com/images/I/81R-ADdDatL.jpg",
         stock: 52,
         desc: [
@@ -833,7 +832,7 @@ export const products = [
         author: 'Stephen King',
         year: 1996,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
-        price: 17,
+        price: 17.10,
         img: "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9780/5750/9780575084346.jpg",
         stock: 52,
         desc: [
@@ -847,7 +846,7 @@ export const products = [
         author: 'Stephen King',
         year: 2000,
         categories: ['Biography & Memoirs'],
-        price: 23,
+        price: 23.30,
         img: "https://http2.mlstatic.com/D_NQ_NP_713948-MLA42645171864_072020-O.webp",
         stock: 52,
         desc: [
@@ -861,7 +860,7 @@ export const products = [
         author: 'Stephen King',
         year: 1987,
         categories: ['Horror', 'Fiction', 'Crime & Thriller', 'Fantasy'],
-        price: 18,
+        price: 18.00,
         img: "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/5011/9781501143533.jpg",
         stock: 52,
         desc: [
@@ -876,7 +875,7 @@ export const products = [
         author: 'Stephen King',
         year: 1982,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
-        price: 23,
+        price: 23.50,
         img: "https://images-na.ssl-images-amazon.com/images/I/717YXVZAG1L.gif",
         stock: 52,
         desc: [
@@ -892,7 +891,7 @@ export const products = [
         author: 'Stephen King',
         year: 2009,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
-        price: 23,
+        price: 23.30,
         img: "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4391/9781439149034.jpg",
         stock: 52,
         desc: [
@@ -907,7 +906,7 @@ export const products = [
         author: 'Stephen King',
         year: 1991,
         categories: ['Horror', 'Fiction', 'Crime & Thriller', 'Fantasy'],
-        price: 20,
+        price: 20.10,
         img: "https://prodimage.images-bn.com/pimages/9781501143540_p0_v4_s550x406.jpg",
         stock: 52,
         desc: [
@@ -922,7 +921,7 @@ export const products = [
         author: 'Stephen King',
         year: 2014,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
-        price: 17,
+        price: 17.90,
         img: "https://http2.mlstatic.com/D_NQ_NP_999353-MLA26255944426_102017-O.jpg",
         stock: 52,
         desc: [
@@ -937,7 +936,7 @@ export const products = [
         author: 'Stephen King',
         year: 1997,
         categories: ['Horror', 'Fiction', 'Crime & Thriller', 'Fantasy'],
-        price: 22,
+        price: 22.00,
         img: "https://m.media-amazon.com/images/I/51JuKQu60xL.jpg",
         stock: 52,
         desc: [
@@ -952,7 +951,7 @@ export const products = [
         author: 'Stephen King',
         year: 2013,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
-        price: 18,
+        price: 18.40,
         img: "https://m.media-amazon.com/images/I/41biWTWGx+L.jpg",
         stock: 52,
         desc: [
@@ -1077,6 +1076,16 @@ export const topAuthors = [
         id: 1009,
         name: 'Douglas Adams',
         img: 'https://revistavaho.files.wordpress.com/2019/06/douglas_adams-1-e1561097595987.jpg'
+    },
+    {
+        id: 1010,
+        name: 'Nick Bostrom',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/3/3a/Prof_Nick_Bostrom_324-1.jpg'
+    },
+    {
+        id: 1011,
+        name: 'Winston S. Churchill',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/b/bc/Sir_Winston_Churchill_-_19086236948.jpg'
     },
 ];
 

@@ -1,9 +1,17 @@
+import { useContext } from 'react';
+import { CurrencyContext } from '../../contexts';
 import CartWidget from '../CartWidget/CartWidget';
 import Categories from '../Categories/Categories';
-import Languages from '../Languages/Languages';
 import { Container, Wrapper, Left, Right, Nav, Currency, Currencies } from './BottombarStyle';
 
 const Bottombar = () => {
+
+    const {setCurrency} = useContext(CurrencyContext);
+
+    const handleSelect = (e) => {
+        setCurrency(e.target.value)
+    };
+
     return (
         <Container>
             <Wrapper>
@@ -14,11 +22,10 @@ const Bottombar = () => {
                     <Nav>FAQs</Nav>
                 </Left>
                 <Right>
-                    <Languages />
-                    <Currencies defaultValue={"$ USD"}>
-                        <Currency>$ ARS</Currency>
-                        <Currency>€ EUR</Currency>
-                        <Currency>$ USD</Currency>
+                    <Currencies defaultValue={"US$"} onChange={handleSelect}>
+                        <Currency value='ARS$'>$ ARS</Currency>
+                        <Currency value='€'>€ EUR</Currency>
+                        <Currency value='US$'>$ USD</Currency>
                     </Currencies>
                     <CartWidget />
                 </Right>

@@ -3,11 +3,13 @@ import { useContext, useEffect, useState } from 'react';
 import { Container, Title, Author, Year, Image, Info, BookInfo, Price, Buttons, BuyButton, Btn } from './ItemStyle';
 import { NavLink } from 'react-router-dom'
 import { handleWishlist, isLiked, handleLike } from '../../helpers/likeHelpers';
-import { CartContext, WishlistContext } from '../../contexts';
+import { CartContext, CurrencyContext, WishlistContext } from '../../contexts';
 
 const Item = ({item}) => {
 
     const {cart, setCart} = useContext(CartContext);
+
+    const {currency} = useContext(CurrencyContext);
 
     const {wishlist, setWishlist} = useContext(WishlistContext);
 
@@ -54,7 +56,20 @@ const Item = ({item}) => {
                     </Author>
                     <Year>{item.year}</Year>
                 </BookInfo>
-                <Price>US$ {item.price}</Price>
+                <Price>
+                    {currency} {(() => {
+                        switch (currency) {
+                            case 'ARS$': 
+                                return (Number(item.price) * 200).toFixed(0);
+                            case 'US$': 
+                                return Number(item.price);
+                            case '€':
+                                return (Number(item.price) * 0.88).toFixed(2);
+                            default:
+                                return;
+                        };
+                    })()}
+                </Price>
             </Info>
             <Buttons>
                 <BuyButton onClick={(e) => {
