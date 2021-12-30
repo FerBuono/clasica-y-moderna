@@ -12,11 +12,22 @@ import Category from "./pages/Category";
 import Categories from "./pages/Categories";
 import Authors from "./pages/Authors";
 import Search from './pages/Search';
+import BestsellingSerie from './pages/BestsellingSerie';
 import { CartContext, CurrencyContext, WishlistContext } from './contexts';
+import { SnackbarProvider } from 'notistack';
+import { makeStyles } from '@mui/styles';
 
 import './App.css';
 
+const useStyles = makeStyles(() => ({
+  success: {
+    backgroundColor: "#BA7735 !important",
+  }
+}));
+
 const App = () => {
+
+  const classes = useStyles()
 
   const [cart, setCart] = useState([]);
 
@@ -25,30 +36,35 @@ const App = () => {
   const [currency, setCurrency] = useState('US$');
 
   return (
-    <CartContext.Provider value={{cart, setCart}}>
-      <WishlistContext.Provider value={{wishlist, setWishlist}}>
-        <CurrencyContext.Provider value={{currency, setCurrency}}>
-          <BrowserRouter>
-            <Navbar />
-            <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route exact path="/wishlist" element={<Wishlist />} />
-              <Route exact path="/cart" element={<Cart />} />
-              <Route exact path="/products" element={<Products />} />
-              <Route exact path="/categories" element={<Categories />} />
-              <Route exact path="/authors" element={<Authors />} />
-              <Route exact path="/products/:productId" element={<Product />} />
-              <Route exact path="/categories/:category" element={<Category />} />
-              <Route exact path="/authors/:author" element={<Author />} />
-              <Route exact path="/search=:input" element={<Search />} />
-
-              <Route path="/*" element={<Home />} />
-            </Routes>
-            <Footer />
-          </BrowserRouter>
-        </CurrencyContext.Provider>
-      </WishlistContext.Provider>
-    </CartContext.Provider>
+    <SnackbarProvider 
+      maxSnack={3}
+      classes={{variantSuccess: classes.success}}
+    >
+      <CartContext.Provider value={{cart, setCart}}>
+        <WishlistContext.Provider value={{wishlist, setWishlist}}>
+          <CurrencyContext.Provider value={{currency, setCurrency}}>
+            <BrowserRouter>
+              <Navbar />
+              <Routes>
+                <Route exact path="/" element={<Home />} />
+                <Route exact path="/wishlist" element={<Wishlist />} />
+                <Route exact path="/cart" element={<Cart />} />
+                <Route exact path="/products" element={<Products />} />
+                <Route exact path="/categories" element={<Categories />} />
+                <Route exact path="/authors" element={<Authors />} />
+                <Route exact path="/products/:productId" element={<Product />} />
+                <Route exact path="/categories/:category" element={<Category />} />
+                <Route exact path="/authors/:author" element={<Author />} />
+                <Route exact path="/series/:serie" element={<BestsellingSerie />} />
+                <Route exact path="/search=:input" element={<Search />} />
+                <Route path="/*" element={<Home />} />
+              </Routes>
+              <Footer />
+            </BrowserRouter>
+          </CurrencyContext.Provider>
+        </WishlistContext.Provider>
+      </CartContext.Provider>
+    </SnackbarProvider>
   )
 }
 

@@ -3,7 +3,7 @@ import ItemList from '../ItemList/ItemList';
 import Spinner from '../Spinner/Spinner';
 import { Container, Title } from './ItemListContainerStyle';
 
-const ItemListContainer = ({title, prod}) => {
+const ItemListContainer = ({title, prod, results}) => {
 
     const [list, setList] = useState(null);
     
@@ -32,7 +32,7 @@ const ItemListContainer = ({title, prod}) => {
     
     return (
         <Container>
-            <Title>{title}</Title>
+            <Title>{title}<span style={{fontWeight: 400, fontSize:'20px', marginLeft: '1rem'}}>({results} {results === 1 ? 'result': 'results'})</span></Title>
             {
                 prod.length > 0 
                     ? list 

@@ -4,6 +4,8 @@ import { Container, Title, Author, Year, Image, Info, BookInfo, Price, Buttons, 
 import { NavLink } from 'react-router-dom'
 import { handleWishlist, isLiked, handleLike } from '../../helpers/likeHelpers';
 import { CartContext, CurrencyContext, WishlistContext } from '../../contexts';
+import { useSnackbar } from 'notistack';
+
 
 const Item = ({item}) => {
 
@@ -27,6 +29,15 @@ const Item = ({item}) => {
     useEffect(() => {
         isLiked(item, setLiked, wishlist);
     }, []);
+
+    const { enqueueSnackbar, closeSnackbar } = useSnackbar();
+
+    const handleClick = () => {
+        enqueueSnackbar(`1 item added to the Cart`, {
+            variant: 'success',
+        });
+    };
+
 
     return (
         <Container>
@@ -75,6 +86,7 @@ const Item = ({item}) => {
                 <BuyButton onClick={(e) => {
                     e.preventDefault();
                     addToCart(item);
+                    handleClick();
                 }}>
                     Add to Cart
                 </BuyButton>

@@ -9,9 +9,11 @@ const Category = () => {
 
     const booksByCategory = sort(products.filter(book => book.categories.includes(category)), "title");
 
+    const results = booksByCategory.length;
+
     return (
         <>
-            <ItemListContainer title={`Category: ${category}`} prod={booksByCategory}/>
+            <ItemListContainer title={`Category: ${category}`} results={results} prod={booksByCategory}/>
         </>
     )
 }

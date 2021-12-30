@@ -6,7 +6,7 @@ import { Container, Wrapper, Logo, SearchContainer, InputContainer, Input, Butto
 
 const Midbar = () => {
 
-    const [search, setSearch] = useState();
+    const [search, setSearch] = useState('');
 
     const navigate = useNavigate();
 

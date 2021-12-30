@@ -5,11 +5,13 @@ import { WishlistContext } from '../contexts';
 
 const Wishlist = () => {
 
-    const {wishlist} = useContext(WishlistContext)
+    const {wishlist} = useContext(WishlistContext);
+
+    const results = wishlist.length;
 
     return (
         <>
-            <ItemListContainer title="Your Wishlist" prod={sort(wishlist)} />
+            <ItemListContainer title="Your Wishlist" results={results} prod={sort(wishlist)} />
         </>
     )
 }

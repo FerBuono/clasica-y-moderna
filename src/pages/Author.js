@@ -9,9 +9,11 @@ const Author = () => {
 
     const booksByAuthor = sort(products.filter(book => book.author === author), "title");
 
+    const results = booksByAuthor.length;
+
     return (
         <>
-            <ItemListContainer title={`Books by ${author}`} prod={booksByAuthor}/>
+            <ItemListContainer title={`Books by: ${author}`} results={results} prod={booksByAuthor}/>
         </>
     )
 }

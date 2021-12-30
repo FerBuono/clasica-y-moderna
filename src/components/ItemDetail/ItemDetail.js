@@ -4,6 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { CartContext, CurrencyContext, WishlistContext } from '../../contexts';
 import { handleLike, handleWishlist, isLiked } from '../../helpers/likeHelpers';
 import ItemCount from '../ItemCount/ItemCount';
+import { useSnackbar } from 'notistack';
 import { 
     Container, 
     Book, 
@@ -59,6 +60,15 @@ const ItemDetail = ({item}) => {
         isLiked(item, setLiked, wishlist);
     }, []);
 
+    const { enqueueSnackbar, closeSnackbar } = useSnackbar();
+
+    const handleClick = () => {
+        count > 0 &&
+            enqueueSnackbar(`${count} ${count > 1 ? 'items' : 'item'} added to the Cart`, {
+                variant: 'success',
+            });
+    };
+
     return (
         <Container>
             <Book>
@@ -69,7 +79,7 @@ const ItemDetail = ({item}) => {
                         By (author):
                         <NavLink
                             to={`/authors/${author}`}
-                            style={{color: 'black', textDecoration: 'none', marginLeft: '10px', borderBottom: '1px dotted grey'}} 
+                            style={{color: 'black', textDecoration: 'none', marginLeft: '10px', borderBottom: '1px dotted grey'}}
                         >
                             {author}
                         </NavLink>
@@ -131,6 +141,7 @@ const ItemDetail = ({item}) => {
                     <BuyButton 
                         onClick={() => {
                             addToCart(item, count, setCount);
+                            handleClick();
                         }}
                     >
                         Add to Cart ({count})

@@ -62,7 +62,11 @@ const Categories = () => {
                         <Bestsellers>
                             {
                                 bestselling.map(serie => (
-                                    <Category key={serie}>{serie}</Category>
+                                    <NavLink to ={`/series/${serie}`} style={{width: '100%'}}>
+                                        <Category key={serie}>
+                                            {serie}
+                                        </Category>
+                                    </NavLink>
                                 ))
                             }
                         </Bestsellers>

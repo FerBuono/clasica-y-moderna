@@ -91,6 +91,12 @@ export const BuyButton = styled.button`
     cursor: pointer;
     color: white;
     font-size: 16px;
+    transition: all .3s ease;
+
+    &:hover {
+        background-color: #81B9E0;
+        border-color: #81B9E0;
+    }
 `;
 
 export const Btn = styled.button`

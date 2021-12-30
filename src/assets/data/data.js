@@ -2,6 +2,7 @@ export const products = [
     {
         id: 1,
         title: 'The Universe in Your Hand',
+        series: [],
         author: 'Christophe Galfard',
         year: 2015,
         categories: ['Science'],
@@ -17,6 +18,7 @@ export const products = [
     {
         id: 2,
         title: 'Einstein',
+        series: [],
         author: 'Walter Isaacson',
         year: 2007,
         categories: ['Science', 'Biography & Memoirs'],
@@ -33,6 +35,7 @@ export const products = [
     {
         id: 3,
         title: "The Hitchhiker's Guide to the Galaxy",
+        series: ["The Hitchhiker's Guide to the Galaxy"],
         author: 'Douglas Adams',
         year: 1979,
         categories: ['Science Fiction', 'Fantasy'],
@@ -50,6 +53,7 @@ export const products = [
     {
         id: 4,
         title: 'La Segunda Guerra Mundial',
+        series: [],
         author: 'Winston S. Churchill',
         year: 1953,
         categories: ['History & Archaeology', 'Biography & Memoirs'],
@@ -65,6 +69,7 @@ export const products = [
     {
         id: 5,
         title: 'Que harías si no tuvieras miedo',
+        series: [],
         author: 'Borja Vilaseca',
         year: 2013,
         categories: ['Mind, Body & Spirit', 'Society & Social Sciences'],
@@ -81,6 +86,7 @@ export const products = [
     {
         id: 6,
         title: 'Homo Deus',
+        series: ['Sapiens'],
         author: 'Yuval Noah Harari',
         categories: ['Society & Social Sciences'],
         year: 2015,
@@ -97,6 +103,7 @@ export const products = [
     {
         id: 7,
         title: 'Superintelligence',
+        series: [],
         author: 'Nick Bostrom',
         year: 2014,
         categories: ['Science', 'Technology & Engineering'],
@@ -114,6 +121,7 @@ export const products = [
     {
         id: 8,
         title: '1984',
+        series: [],
         author: 'George Orwell',
         year: 1949,
         categories: ['Fiction', 'Society & Social Sciences'],
@@ -128,6 +136,7 @@ export const products = [
     {
         id: 9,
         title: 'How To Understand E=mc(2)',
+        series: [],
         author: 'Christophe Galfard',
         year: 2017,
         categories: ['Science'],
@@ -143,6 +152,7 @@ export const products = [
     {
         id: 10,
         title: 'Steve Jobs',
+        series: [],
         author: 'Walter Isaacson',
         year: 2015,
         categories: ['Biography & Memoirs', 'Technology & Engineering'],
@@ -161,6 +171,7 @@ export const products = [
     {
         id: 11,
         title: 'The Restaurant at the End of the Universe',
+        series: ["The Hitchhiker's Guide to the Galaxy"],
         author: 'Douglas Adams',
         year: 1980,
         categories: ['Science Fiction', 'Fantasy'],
@@ -176,6 +187,7 @@ export const products = [
     {
         id: 12,
         title: 'Life, the Universe and Everything',
+        series: ["The Hitchhiker's Guide to the Galaxy"],
         author: 'Douglas Adams',
         year: 1982,
         categories: ['Science Fiction', 'Fantasy'],
@@ -191,6 +203,7 @@ export const products = [
     {
         id: 13,
         title: 'So Long, and Thanks for All the Fish',
+        series: ["The Hitchhiker's Guide to the Galaxy"],
         author: 'Douglas Adams',
         year: 1984,
         categories: ['Science Fiction', 'Fantasy'],
@@ -205,6 +218,7 @@ export const products = [
     {
         id: 14,
         title: 'Mostly Harmless',
+        series: ["The Hitchhiker's Guide to the Galaxy"],
         author: 'Douglas Adams',
         year: 1992,
         categories: ['Science Fiction', 'Fantasy'],
@@ -220,6 +234,7 @@ export const products = [
     {
         id: 15,
         title: 'The Code Breaker',
+        series: [],
         author: 'Walter Isaacson',
         year: 2021,
         categories: ['Science', 'Biography & Memoirs'],
@@ -238,6 +253,7 @@ export const products = [
     {
         id: 16,
         title: 'Benjamin Franklin',
+        series: [],
         author: 'Walter Isaacson',
         year: 2003,
         categories: ['Science', 'Biography & Memoirs', 'History & Archaeology', 'Technology & Engineering'],
@@ -251,6 +267,7 @@ export const products = [
     {
         id: 17,
         title: 'Leonardo da Vinci',
+        series: [],
         author: 'Walter Isaacson',
         year: 2017,
         categories: ['Science', 'Biography & Memoirs', 'History & Archaeology', 'Technology & Engineering', 'Art & Photography'],
@@ -266,6 +283,7 @@ export const products = [
     {
         id: 18,
         title: 'Innovators',
+        series: [],
         author: 'Walter Isaacson',
         year: 2014,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Biography & Memoirs'],
@@ -283,6 +301,7 @@ export const products = [
     {
         id: 19,
         title: 'Encantado de conocerme',
+        series: [],
         author: 'Borja Vilaseca',
         year: 2008,
         categories: ['Mind, Body & Spirit', 'Society & Social Sciences'],
@@ -300,6 +319,7 @@ export const products = [
     {
         id: 20,
         title: 'Las casualidades no existen',
+        series: [],
         author: 'Borja Vilaseca',
         year: 2021,
         categories: ['Mind, Body & Spirit', 'Society & Social Sciences'],
@@ -316,6 +336,7 @@ export const products = [
     {
         id: 21,
         title: 'El principito se pone la corbata',
+        series: [],
         author: 'Borja Vilaseca',
         year: 2010,
         categories: ['Mind, Body & Spirit', 'Society & Social Sciences'],
@@ -332,6 +353,7 @@ export const products = [
     {
         id: 22,
         title: 'El sinsentido comun',
+        series: [],
         author: 'Borja Vilaseca',
         year: 2011,
         categories: ['Mind, Body & Spirit', 'Society & Social Sciences'],
@@ -347,6 +369,7 @@ export const products = [
     {
         id: 23,
         title: 'Sapiens',
+        series: ['Sapiens'],
         author: 'Yuval Noah Harari',
         categories: ['Society & Social Sciences', 'History & Archaeology',],
         year: 2011,
@@ -363,6 +386,7 @@ export const products = [
     {
         id: 24,
         title: '21 Lessons for the 21st Century',
+        series: ['Sapiens'],
         author: 'Yuval Noah Harari',
         categories: ['Society & Social Sciences'],
         year: 2018,
@@ -379,6 +403,7 @@ export const products = [
     {
         id: 25,
         title: 'Animal Farm',
+        series: [],
         author: 'George Orwell',
         year: 1945,
         categories: ['Fiction', 'Society & Social Sciences'],
@@ -394,6 +419,7 @@ export const products = [
     {
         id: 26,
         title: 'Down and Out in Paris and London',
+        series: [],
         author: 'George Orwell',
         year: 1933,
         categories: ['Biography & Memoirs', 'Society & Social Sciences'],
@@ -408,6 +434,7 @@ export const products = [
     {
         id: 27,
         title: "Numbers Don't Lie",
+        series: [],
         author: 'Vaclav Smil',
         year: 2020,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
@@ -422,6 +449,7 @@ export const products = [
     {
         id: 28,
         title: "Energy and Civilization",
+        series: [],
         author: 'Vaclav Smil',
         year: 2017,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
@@ -437,6 +465,7 @@ export const products = [
     {
         id: 29,
         title: "Natural Gas",
+        series: [],
         author: 'Vaclav Smil',
         year: 2015,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
@@ -451,6 +480,7 @@ export const products = [
     {
         id: 30,
         title: "Made in the USA",
+        series: [],
         author: 'Vaclav Smil',
         year: 2013,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
@@ -467,6 +497,7 @@ export const products = [
     {
         id: 31,
         title: "Should We Eat Meat?",
+        series: [],
         author: 'Vaclav Smil',
         year: 2013,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
@@ -481,6 +512,7 @@ export const products = [
     {
         id: 32,
         title: "Harvesting the Biosphere",
+        series: [],
         author: 'Vaclav Smil',
         year: 2013,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
@@ -496,6 +528,7 @@ export const products = [
     {
         id: 33,
         title: "Prime Movers of Globalization",
+        series: [],
         author: 'Vaclav Smil',
         year: 2010,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
@@ -510,6 +543,7 @@ export const products = [
     {
         id: 34,
         title: "Energy Myths and Realities",
+        series: [],
         author: 'Vaclav Smil',
         year: 2010,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
@@ -526,6 +560,7 @@ export const products = [
     {
         id: 35,
         title: "Energy Transitions",
+        series: [],
         author: 'Vaclav Smil',
         year: 2010,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
@@ -541,6 +576,7 @@ export const products = [
     {
         id: 36,
         title: "Energy",
+        series: [],
         author: 'Vaclav Smil',
         year: 2006,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
@@ -556,6 +592,7 @@ export const products = [
     {
         id: 37,
         title: "Oil",
+        series: [],
         author: 'Vaclav Smil',
         year: 2008,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
@@ -570,6 +607,7 @@ export const products = [
     {
         id: 38,
         title: "Growth",
+        series: [],
         author: 'Vaclav Smil',
         year: 2019,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
@@ -585,6 +623,7 @@ export const products = [
     {
         id: 39,
         title: "Power Density",
+        series: [],
         author: 'Vaclav Smil',
         year: 2015,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
@@ -601,6 +640,7 @@ export const products = [
     {
         id: 40,
         title: "Making the Modern World",
+        series: [],
         author: 'Vaclav Smil',
         year: 2013,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
@@ -615,6 +655,7 @@ export const products = [
     {
         id: 41,
         title: "Grand Transitions",
+        series: [],
         author: 'Vaclav Smil',
         year: 2021,
         categories: ['Science', 'History & Archaeology', 'Technology & Engineering', 'Environmentalism', 'Society & Social Sciences'],
@@ -630,6 +671,7 @@ export const products = [
     {
         id: 42,
         title: "Carrie",
+        series: [],
         author: 'Stephen King',
         year: 1974,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
@@ -644,6 +686,7 @@ export const products = [
     {
         id: 43,
         title: "'Salem's Lot",
+        series: [],
         author: 'Stephen King',
         year: 1975,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
@@ -657,6 +700,7 @@ export const products = [
     {
         id: 44,
         title: "The Shining",
+        series: [],
         author: 'Stephen King',
         year: 1977,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
@@ -670,6 +714,7 @@ export const products = [
     {
         id: 45,
         title: "The Stand",
+        series: [],
         author: 'Stephen King',
         year: 1978,
         categories: ['Horror', 'Fiction', 'Science Fiction'],
@@ -687,6 +732,7 @@ export const products = [
     {
         id: 46,
         title: "The Dead Zone",
+        series: [],
         author: 'Stephen King',
         year: 1979,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
@@ -702,6 +748,7 @@ export const products = [
     {
         id: 47,
         title: "Firestarter",
+        series: [],
         author: 'Stephen King',
         year: 1980,
         categories: ['Horror', 'Fiction', 'Crime & Thriller', 'Science Fiction'],
@@ -718,6 +765,7 @@ export const products = [
     {
         id: 48,
         title: "Cujo",
+        series: [],
         author: 'Stephen King',
         year: 1981,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
@@ -733,6 +781,7 @@ export const products = [
     {
         id: 49,
         title: "The Dark Tower I: The Gunslinger",
+        series: ['The Dark Tower'],
         author: 'Stephen King',
         year: 1982,
         categories: ['Horror', 'Fiction', 'Crime & Thriller', 'Fantasy'],
@@ -748,6 +797,7 @@ export const products = [
     {
         id: 50,
         title: "Christine",
+        series: [],
         author: 'Stephen King',
         year: 1983,
         categories: ['Horror', 'Fiction', 'Crime & Thriller', 'Fantasy'],
@@ -764,6 +814,7 @@ export const products = [
     {
         id: 51,
         title: "Pet Sematary",
+        series: [],
         author: 'Stephen King',
         year: 1983,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
@@ -781,6 +832,7 @@ export const products = [
     {
         id: 52,
         title: "It",
+        series: [],
         author: 'Stephen King',
         year: 1986,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
@@ -797,6 +849,7 @@ export const products = [
     {
         id: 53,
         title: "Misery",
+        series: [],
         author: 'Stephen King',
         year: 1987,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
@@ -813,6 +866,7 @@ export const products = [
     {
         id: 54,
         title: "11/22/63",
+        series: [],
         author: 'Stephen King',
         year: 2011,
         categories: ['Horror', 'Fiction', 'Crime & Thriller', 'Science Fiction'],
@@ -829,6 +883,7 @@ export const products = [
     {
         id: 55,
         title: "The Green Mile",
+        series: [],
         author: 'Stephen King',
         year: 1996,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
@@ -843,6 +898,7 @@ export const products = [
     {
         id: 56,
         title: "On Writing",
+        series: [],
         author: 'Stephen King',
         year: 2000,
         categories: ['Biography & Memoirs'],
@@ -857,6 +913,7 @@ export const products = [
     {
         id: 57,
         title: "The Dark Tower II: The Drawing Of The Three",
+        series: ['The Dark Tower'],
         author: 'Stephen King',
         year: 1987,
         categories: ['Horror', 'Fiction', 'Crime & Thriller', 'Fantasy'],
@@ -872,6 +929,7 @@ export const products = [
     {
         id: 58,
         title: "Different Seasons",
+        series: [],
         author: 'Stephen King',
         year: 1982,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
@@ -888,6 +946,7 @@ export const products = [
     {
         id: 59,
         title: "Under the Dome",
+        series: [],
         author: 'Stephen King',
         year: 2009,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
@@ -903,6 +962,7 @@ export const products = [
     {
         id: 60,
         title: "The Dark Tower III: The Waste Lands",
+        series: ['The Dark Tower'],
         author: 'Stephen King',
         year: 1991,
         categories: ['Horror', 'Fiction', 'Crime & Thriller', 'Fantasy'],
@@ -918,6 +978,7 @@ export const products = [
     {
         id: 61,
         title: "Mr Mercedes",
+        series: [],
         author: 'Stephen King',
         year: 2014,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
@@ -933,6 +994,7 @@ export const products = [
     {
         id: 62,
         title: "The Dark Tower IV: Wizard and Glasss",
+        series: ['The Dark Tower'],
         author: 'Stephen King',
         year: 1997,
         categories: ['Horror', 'Fiction', 'Crime & Thriller', 'Fantasy'],
@@ -948,6 +1010,7 @@ export const products = [
     {
         id: 63,
         title: "Doctor Sleep",
+        series: [],
         author: 'Stephen King',
         year: 2013,
         categories: ['Horror', 'Fiction', 'Crime & Thriller'],
@@ -958,6 +1021,400 @@ export const products = [
             "Following a childhood haunted by terrifying events at the Overlook Hotel, Dan Torrance has been drifting for decades. Finally, he settles into a job at a nursing home where he draws on his remnant 'shining' power to provide crucial comfort to the dying. Aided by a prescient cat, he becomes 'Doctor Sleep'.",
             "Then he meets Abra Stone, a girl with 'the brightest shining' ever seen. But her gift is attracting the beautiful yet merciless Rose the Hat and her followers The True Knot. They may look harmless, the sort of people who are devoted to their campers and RVs, but they live off the 'steam' that children like Abra produce.",
             "Now Dan must call upon his powers once more as he battles for Abra's soul and survival - facing his fears and reawakening ghosts from his past.",
+        ],
+    },
+    {
+        id: 64,
+        title: "Physics of the Future",
+        series: [],
+        author: 'Michio Kaku',
+        year: 2011,
+        categories: ['Science', 'Technology & Engineering'],
+        price: 24.50,
+        img: "https://images-na.ssl-images-amazon.com/images/I/81rcro9zTML.jpg",
+        stock: 52,
+        desc: [
+            "Space elevators. Internet-enabled contact lenses. Cars that fly by floating on magnetic fields. This is the stuff of science fiction--it's also daily life in the year 2100.",
+            "Renowned theoretical physicist Michio Kaku details the developments in computer technology, artificial intelligence, medicine, space travel, and more, that are poised to happen over the next hundred years. He also considers how these inventions will affect the world economy, addressing the key questions: Who will have jobs? Which nations will prosper? Kaku interviews three hundred of the world's top scientists--working in their labs on astonishing prototypes. He also takes into account the rigorous scientific principles that regulate how quickly, how safely, and how far technologies can advance. In Physics of the Future, Kaku forecasts a century of earthshaking advances in technology that could make even the last centuries' leaps and bounds seem insignificant.",
+        ],
+    },
+    {
+        id: 65,
+        title: "Hyperspace",
+        series: [],
+        author: 'Michio Kaku',
+        year: 1994,
+        categories: ['Science'],
+        price: 21.10,
+        img: "https://images-na.ssl-images-amazon.com/images/I/81aSgaRLIkL.jpg",
+        stock: 52,
+        desc: [
+            "Are there other dimensions beyond our own? Is time travel possible? Can we change the past? Are there gateways to parallel universes? All of us have pondered such questions, but there was a time when scientists dismissed these notions as outlandish speculations. Not any more. Today, they are the focus of the most intense scientific activity in recent memory. In Hyperspace, Michio Kaku, author of the widely acclaimed Beyond Einstein and a leading theoretical physicist, offers the first book-length tour of the most exciting (and perhaps most bizarre) work in modern physics, work which includes research on the tenth dimension, time warps, black holes, and multiple universes. The theory of hyperspace (or higher dimensional space) - and its newest wrinkle, superstring theory - stand at the center of this revolution, with adherents in every major research laboratory in the world, including several Nobel laureates. Beginning where Hawking's Brief History of Time left off, Kaku paints a vivid portrayal of the breakthroughs now rocking the physics establishment. Why all the excitement? As the author points out, for over half a century, scientists have puzzled over why the basic forces of the cosmos - gravity, electromagnetism, and the strong and weak nuclear forces - require markedly different mathematical descriptions. But if we see these forces as vibrations in a higher dimensional space, their field equations suddenly fit together like pieces in a jigsaw puzzle, perfectly snug, in an elegant, astonishingly simple form. This may thus be our leading candidate for the Theory of Everything. If so, it would be the crowning achievement of 2,000 years of scientific investigation into matter and itsforces. Already, the theory has inspired several thousand research papers, and has been the focus of over 200 international conferences. Many leading scientists believe the theory will unlock the deepest secrets of creation and answer some of the most intriguing questions of all.",
+        ],
+    },
+    {
+        id: 66,
+        title: "Beyond Einstein",
+        series: [],
+        author: 'Michio Kaku',
+        year: 1995,
+        categories: ['Science'],
+        price: 19.30,
+        img: "https://images-na.ssl-images-amazon.com/images/I/81w8dHKtODL.jpg",
+        stock: 52,
+        desc: [
+            "Beyond Einstein takes readers on an exciting excursion into the discoveries that have led scientists to the brightest new prospect in theoretical physics today -- superstring theory. What is superstring theory and why is it important? This revolutionary breakthrough may well be the fulfillment of Albert Einstein's lifelong dream of a Theory of Everything, uniting the laws of physics into a single description explaining all the known forces in the universe. Co-authored by one of the leading pioneers in superstrings, Michio Kaku, the book approaches scientific questions with the excitement of a detective story, offering a fascinating look at the new science that may make the impossible possible.",
+        ],
+    },
+    {
+        id: 67,
+        title: "The Future of Humanity",
+        series: [],
+        author: 'Michio Kaku',
+        year: 2018,
+        categories: ['Science', 'Technology & Engineering'],
+        price: 18.80,
+        img: "https://images-na.ssl-images-amazon.com/images/I/91ffZP-UOXL.jpg",
+        stock: 52,
+        desc: [
+            "Human civilization is on the verge of living beyond Earth. But how will it happen? World-renowned physicist Michio Kaku takes us on a journey to the future, introducing the mind-boggling developments in robotics, nanotechnology and biotechnology that will one day enable us to make our homes among the stars.",
+            "'With admirable clarity and ease, Kaku explains how we might colonize not only Mars but some of the rocky moons of the gas giants Jupiter and Saturn . . . The book has an infectious, can-do enthusiasm' Steven Poole, The Wall Street Journal.",
+            "'Kaku grounds his readers in science happening right now, while throwing open the windows to imagine where it might lead in a thousand years' Adam Frank, The New York Times Book Review.",
+            "'Kaku is an international treasure and a man of infectious enthusiasm' The Times.",
+        ],
+    },
+    {
+        id: 68,
+        title: "Harry Potter and the Philosopher's Stone",
+        series: ['Harry Potter'],
+        author: 'J. K. Rowling',
+        year: 1997,
+        categories: ['Science Fiction', 'Fantasy'],
+        price: 27.20,
+        img: "https://images-na.ssl-images-amazon.com/images/I/5160dwNeqSL._SX323_BO1,204,203,200_.jpg",
+        stock: 52,
+        desc: [
+            "When a letter arrives for unhappy but ordinary Harry Potter, a decade-old secret is revealed to him that apparently he's the last to know. His parents were wizards, killed by a Dark Lord's curse when Harry was just a baby, and which he somehow survived. Leaving his unsympathetic aunt and uncle for Hogwarts School of Witchcraft and Wizardry, Harry stumbles upon a sinister mystery when he finds a three-headed dog guarding a room on the third floor. Then he hears of a missing stone with astonishing powers, which could be valuable, dangerous - or both. An incredible adventure is about to begin!",
+        ],
+    },
+    {
+        id: 69,
+        title: "Harry Potter and the Chamber of Secrets",
+        series: ['Harry Potter'],
+        author: 'J. K. Rowling',
+        year: 1998,
+        categories: ['Science Fiction', 'Fantasy'],
+        price: 27.20,
+        img: "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4088/9781408855669.jpg",
+        stock: 52,
+        desc: [
+            "Harry Potter's summer has included the worst birthday ever, doomy warnings from a house-elf called Dobby, and rescue from the Dursleys by his friend Ron Weasley in a magical flying car! Back at Hogwarts School of Witchcraft and Wizardry for his second year, Harry hears strange whispers echo through empty corridors - and then the attacks start. Students are found as though turned to stone ... Dobby's sinister predictions seem to be coming true.",
+        ],
+    },
+    {
+        id: 70,
+        title: "Harry Potter and the Prisoner of Azkaban",
+        series: ['Harry Potter'],
+        author: 'J. K. Rowling',
+        year: 1999,
+        categories: ['Science Fiction', 'Fantasy'],
+        price: 27.20,
+        img: "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4088/9781408855676.jpg",
+        stock: 52,
+        desc: [
+            "When the Knight Bus crashes through the darkness and screeches to a halt in front of him, it's the start of another far from ordinary year at Hogwarts for Harry Potter. Sirius Black, escaped mass-murderer and follower of Lord Voldemort, is on the run - and they say he is coming after Harry. In his first ever Divination class, Professor Trelawney sees an omen of death in Harry's tea leaves ... But perhaps most terrifying of all are the Dementors patrolling the school grounds, with their soul-sucking kiss.",
+        ],
+    },
+    {
+        id: 71,
+        title: "Harry Potter and the Goblet of Fire",
+        series: ['Harry Potter'],
+        author: 'J. K. Rowling',
+        year: 2000,
+        categories: ['Science Fiction', 'Fantasy'],
+        price: 27.20,
+        img: "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4088/9781408855683.jpg",
+        stock: 52,
+        desc: [
+            "The Triwizard Tournament is to be held at Hogwarts. Only wizards who are over seventeen are allowed to enter - but that doesn't stop Harry dreaming that he will win the competition. Then at Hallowe'en, when the Goblet of Fire makes its selection, Harry is amazed to find his name is one of those that the magical cup picks out. He will face death-defying tasks, dragons and Dark wizards, but with the help of his best friends, Ron and Hermione, he might just make it through - alive!",
+        ],
+    },
+    {
+        id: 72,
+        title: "Harry Potter and the Order of the Phoenix",
+        series: ['Harry Potter'],
+        author: 'J. K. Rowling',
+        year: 2003,
+        categories: ['Science Fiction', 'Fantasy'],
+        price: 27.20,
+        img: "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4088/9781408855690.jpg",
+        stock: 52,
+        desc: [
+            "Dark times have come to Hogwarts. After the Dementors' attack on his cousin Dudley, Harry Potter knows that Voldemort will stop at nothing to find him. There are many who deny the Dark Lord's return, but Harry is not alone: a secret order gathers at Grimmauld Place to fight against the Dark forces. Harry must allow Professor Snape to teach him how to protect himself from Voldemort's savage assaults on his mind. But they are growing stronger by the day and Harry is running out of time.",
+        ],
+    },
+    {
+        id: 73,
+        title: "Harry Potter and the Half-Blood Prince",
+        series: ['Harry Potter'],
+        author: 'J. K. Rowling',
+        year: 2005,
+        categories: ['Science Fiction', 'Fantasy'],
+        price: 27.20,
+        img: "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4088/9781408855706.jpg",
+        stock: 52,
+        desc: [
+            "When Dumbledore arrives at Privet Drive one summer night to collect Harry Potter, his wand hand is blackened and shrivelled, but he does not reveal why. Secrets and suspicion are spreading through the wizarding world, and Hogwarts itself is not safe. Harry is convinced that Malfoy bears the Dark Mark: there is a Death Eater amongst them. Harry will need powerful magic and true friends as he explores Voldemort's darkest secrets, and Dumbledore prepares him to face his destiny.",
+        ],
+    },
+    {
+        id: 74,
+        title: "Harry Potter and the Deathly Hallows",
+        series: ['Harry Potter'],
+        author: 'J. K. Rowling',
+        year: 2007,
+        categories: ['Science Fiction', 'Fantasy'],
+        price: 27.20,
+        img: "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4088/9781408855713.jpg",
+        stock: 52,
+        desc: [
+            "As he climbs into the sidecar of Hagrid's motorbike and takes to the skies, leaving Privet Drive for the last time, Harry Potter knows that Lord Voldemort and the Death Eaters are not far behind. The protective charm that has kept Harry safe until now is now broken, but he cannot keep hiding. The Dark Lord is breathing fear into everything Harry loves, and to stop him Harry will have to find and destroy the remaining Horcruxes. The final battle must begin - Harry must stand and face his enemy.",
+        ],
+    },
+    {
+        id: 75,
+        title: "A Game of Thrones",
+        series: ['Game of Thrones'],
+        author: 'George R. R. Martin',
+        year: 1996,
+        categories: ['Science Fiction', 'Fantasy', 'Fiction'],
+        price: 23.20,
+        img: "https://i.harperapps.com/hcanz/covers/9780006479888/x293.jpg",
+        stock: 52,
+        desc: [
+            "The first volume of A Song of Ice and Fire, the greatest fantasy epic of the modern age. Summers span decades. Winter can last a lifetime. And the struggle for the Iron Throne has begun. As Warden of the north, Lord Eddard Stark counts it a curse when King Robert bestows on him the office of the Hand. His honour weighs him down at court where a true man does what he will, not what he must ...and a dead enemy is a thing of beauty. The old gods have no power in the south, Stark's family is split and there is treachery at court. Worse, the vengeance-mad heir of the deposed Dragon King has grown to maturity in exile in the Free Cities. He claims the Iron Throne.",
+        ],
+    },
+    {
+        id: 76,
+        title: "A Clash of Kings",
+        series: ['Game of Thrones'],
+        author: 'George R. R. Martin',
+        year: 1998,
+        categories: ['Science Fiction', 'Fantasy', 'Fiction'],
+        price: 20.20,
+        img: "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9780/0064/9780006479895.jpg",
+        stock: 52,
+        desc: [
+            "Throughout Westeros, the cold winds are rising.",
+            "From the ancient citadel of Dragonstone to the forbidding lands of Winterfell, chaos reigns as pretenders to the Iron Throne of the Seven Kingdoms stake their claims through tempest, turmoil and war.",
+            "As a prophecy of doom cuts across the sky - a comet the colour of blood and flame - five factions struggle for control of a divided land. Brother plots against brother and the dead rise to walk in the night.",
+            "Against a backdrop of incest, fratricide, alchemy and murder, the price of glory is measured in blood.",
+        ],
+    },
+    {
+        id: 77,
+        title: "A Storm of Swords",
+        series: ['Game of Thrones'],
+        author: 'George R. R. Martin',
+        year: 2000,
+        categories: ['Science Fiction', 'Fantasy', 'Fiction'],
+        price: 15.10,
+        img: "https://images-na.ssl-images-amazon.com/images/I/91-KBK-9K2L.jpg",
+        stock: 52,
+        desc: [
+            "Here is the third volume in George R. R. Martin's magnificent cycle of novels that includes A Game of Thrones and A Clash of Kings. As a whole, this series comprises a genuine masterpiece of modern fantasy, bringing together the best the genre has to offer. Magic, mystery, intrigue, romance, and adventure fill these pages and transport us to a world unlike any we have ever experienced. Already hailed as a classic, George R. R. Martin's stunning series is destined to stand as one of the great achievements of imaginative fiction. A STORM OF SWORDS Of the five contenders for power, one is dead, another in disfavor, and still the wars rage as violently as ever, as alliances are made and broken. Joffrey, of House Lannister, sits on the Iron Throne, the uneasy ruler of the land of the Seven Kingdoms. His most bitter rival, Lord Stannis, stands defeated and disgraced, the victim of the jealous sorceress who holds him in her evil thrall. But young Robb, of House Stark, still rules the North from the fortress of Riverrun. Robb plots against his despised Lannister enemies, even as they hold his sister hostage at King's Landing, the seat of the Iron Throne. Meanwhile, making her way across a blood-drenched continent is the exiled queen, Daenerys, mistress of the only three dragons still left in the world. . . . But as opposing forces maneuver for the final titanic showdown, an army of barbaric wildlings arrives from the outermost line of civilization. In their vanguard is a horde of mythical Others--a supernatural army of the living dead whose animated corpses are unstoppable. As the future of the land hangs in the balance, no one will rest until the Seven Kingdoms have exploded in a veritable storm of swords. . . .",
+        ],
+    },
+    {
+        id: 78,
+        title: "A Feast for Crows",
+        series: ['Game of Thrones'],
+        author: 'George R. R. Martin',
+        year: 2005,
+        categories: ['Science Fiction', 'Fantasy', 'Fiction'],
+        price: 19.70,
+        img: "https://awoiaf.westeros.org/images/a/a3/AFeastForCrows.jpg",
+        stock: 52,
+        desc: [
+            "The Lannisters are in power on the Iron Throne.",
+            "The war in the Seven Kingdoms has burned itself out, but in its bitter aftermath new conflicts spark to life. The Martells of Dorne and the Starks of Winterfell seek vengeance for their dead. Euron Crow's Eye, as black a pirate as ever raised a sail, returns from the smoking ruins of Valyria to claim the Iron Isles.",
+            "From the icy north, where Others threaten the Wall, apprentice Maester Samwell Tarly brings a mysterious babe in arms to the Citadel. As plots, intrigue and battle threaten to engulf Westeros, victory will go to the men and women possessed of the coldest steel and the coldest hearts.",
+        ],
+    },
+    {
+        id: 79,
+        title: "A Dance with Dragons",
+        series: ['Game of Thrones'],
+        author: 'George R. R. Martin',
+        year: 2011,
+        categories: ['Science Fiction', 'Fantasy', 'Fiction'],
+        price: 21.70,
+        img: "https://images-na.ssl-images-amazon.com/images/I/71WH290madL.jpg",
+        stock: 52,
+        desc: [
+            "The future of the Seven Kingdoms hangs in the balance.",
+            "In the east, Daenerys, last scion of House Targaryen, her dragons grown to terrifying maturity, rules as queen of a city built on dust and death, beset by enemies.",
+            "Now that her whereabouts are known many are seeking Daenerys and her dragons. Among them the dwarf, Tyrion Lannister, who has escaped King's Landing with a price on his head, wrongfully condemned to death for the murder of his nephew, King Joffrey. But not before killing his hated father, Lord Tywin.",
+            "To the north lies the great Wall of ice and stone - a structure only as strong as those guarding it. Eddard Stark's bastard son Jon Snow has been elected the 998th Lord Commander of the Night's Watch, but he has enemies both in the Watch and beyond the Wall, where the wildling armies are massing for an assault.",
+            "On all sides bitter conflicts are reigniting, played out by a grand cast of outlaws and priests, soldiers and skinchangers, nobles and slaves. The tides of destiny will inevitably lead to the greatest dance of all...",
+        ],
+    },
+    {
+        id: 80,
+        title: "Prelude to Foundation",
+        series: ['Foundation'],
+        author: 'Isaac Asimov',
+        year: 1988,
+        categories: ['Science Fiction'],
+        price: 13.80,
+        img: "https://http2.mlstatic.com/D_NQ_NP_682719-MLA40684387564_022020-O.webp",
+        stock: 52,
+        desc: [
+            "In a time before the Foundations, psychohistory's creator Hari Seldon is made to stand before the Emperor of the crumbling Galactic Empire to present how his scientific theory of predicting the future might be applied to the real world.",
+            "However, Hari refuses to deploy his theory for political gain, setting off instead with reporter Chetter Hummin in quest of a place to safely apply his theory: Earth, the original home of humanity.",
+            "All records of Earth have been lost to time. Hari will therefore have to look back into the past, in order to seal the future of humanity for ever.",
+        ],
+    },
+    {
+        id: 81,
+        title: "Forward the Foundation",
+        series: ['Foundation'],
+        author: 'Isaac Asimov',
+        year: 1993,
+        categories: ['Science Fiction'],
+        price: 14.23,
+        img: "https://www.penguin.co.uk/content/dam/prh/books/100/1004501/9780553404883.jpg",
+        stock: 52,
+        desc: [
+            "As Hari Seldon struggles to perfect his revolutionary theory of psychohistory and ensure a place for humanity among the stars, the great Galactic Empire totters on the brink of apocalyptic collapse. Caught in the maelstrom are Seldon and all he holds dear, pawns in the struggle for dominance. Whoever can control Seldon will control psychohistory--and with it the future of the Galaxy.",
+            "Among those seeking to turn psychohistory into the greatest weapon known to man are a populist political demagogue, the weak-willed Emperor Cleon I, and a ruthless militaristic general. In his last act of service to humankind, Hari Seldon must somehow save his life's work from their grasp as he searches for its true heirs--a search that begins with his own granddaughter and the dream of a new Foundation.",
+        ],
+    },
+    {
+        id: 82,
+        title: "Foundation",
+        series: ['Foundation'],
+        author: 'Isaac Asimov',
+        year: 1951,
+        categories: ['Science Fiction'],
+        price: 12.11,
+        img: "https://cdn-images-1.medium.com/max/341/0*RMqOSyC-kzH-po5Y.",
+        stock: 52,
+        desc: [
+            "The Galactic Empire has prospered for twelve thousand years. Nobody suspects that the heart of the thriving Empire is rotten, until psychohistorian Hari Seldon uses his new science to foresee its terrible fate.",
+            "Exiled to the desolate planet Terminus, Seldon establishes a colony of the greatest minds in the Empire, a Foundation which holds the key to changing the fate of the galaxy.",
+            "However, the death throes of the Empire breed hostile new enemies, and the young Foundation's fate will be threatened first.",
+        ],
+    },
+    {
+        id: 83,
+        title: "Foundation and Empire",
+        series: ['Foundation'],
+        author: 'Isaac Asimov',
+        year: 1952,
+        categories: ['Science Fiction'],
+        price: 14.76,
+        img: "https://images-na.ssl-images-amazon.com/images/I/81HODJq2BBL.jpg",
+        stock: 52,
+        desc: [
+            "The First Foundation survived two centuries of barbarism as the once-mighty Galactic Empire descended into chaos. Now it mist prepare for war against the remnants of the Empire as the Imperial fleet advances on their planet, Terminus.",
+            "Hari Seldon predicted this war; he even prepared his Foundation for it. But he couldn't foresee the birth of the mutant Mule. In possession of a power which reduces fearsome opposition to devoted slaves, the Mule poses a terrible threat to Seldon's Foundation.",
+        ],
+    },
+    {
+        id: 84,
+        title: "Second Foundation",
+        series: ['Foundation'],
+        author: 'Isaac Asimov',
+        year: 1953,
+        categories: ['Science Fiction'],
+        price: 12.38,
+        img: "https://www.unitheque.com/Intermediaire3/CouvertureS/E/9780586017135-second-foundation_g.jpg",
+        stock: 52,
+        desc: [
+            "The First Foundation has been defeated, crushed by the formidable mental powers of the Mule. But whispers of the mysterious Second Foundation, the only hope of defeating the Mule, are beginning to spread...",
+            "Surviving members of the First Foundation also fear the secret powers of the Second Foundation, vowing to find and destroy it. However, the location of the Second Foundation remains shrouded in mystery. Finding it will lead the Foundation to the opposite end of the Galaxy, where the fate of Seldon's two Foundations awaits.",
+        ],
+    },
+    {
+        id: 85,
+        title: "Foundation's Edge",
+        series: ['Foundation'],
+        author: 'Isaac Asimov',
+        year: 1982,
+        categories: ['Science Fiction'],
+        price: 13.94,
+        img: "https://jeroenthoughts.files.wordpress.com/2020/11/a558ffcfda98b0c74384ceb7d7ff6bd5.jpg",
+        stock: 52,
+        desc: [
+            "After a long war which saw the First Foundation emerge victorious, the Second Foundation is now believed to be extinct, and all records of planet Earth's existence have been erased.",
+            "No one suspects that the Second Foundation could still exist. None, except Council member Golan Trevize, who finds himself ordered to leave Terminus, accompanied by historian Janov Pelorat, in order to find it.",
+            "Yet this quest will lead an unsuspecting Golan further than he could have possibly imagined - closer than ever to Earth, where the fate of the whole galaxy awaits him.",
+        ],
+    },
+    {
+        id: 86,
+        title: "Foundation and Earth",
+        series: ['Foundation'],
+        author: 'Isaac Asimov',
+        year: 1986,
+        categories: ['Science Fiction'],
+        price: 14.36,
+        img: "https://i.harperapps.com/hcanz/covers/9780586071106/x293.jpg",
+        stock: 52,
+        desc: [
+            "Faced with determining the fate of the galaxy, Golan Trevize hesitantly chose to hand over the rule of the galaxy to planet Gaia. Two mysteries now remain: who has erased the records of Earth - and why?",
+            "Determined to ensure his choice was right, Golan sets off with Janov Pelorat and Bliss, to answer these questions once and for all. But nothing could prepare them for the secrets which await them on Earth. Secrets which predate history as they know it, and will change its significance forever...",
+        ],
+    },
+    {
+        id: 87,
+        title: "The Dark Tower V: Wolves of the Calla",
+        series: ['The Dark Tower'],
+        author: 'Stephen King',
+        year: 2003,
+        categories: ['Horror', 'Fiction', 'Crime & Thriller', 'Fantasy'],
+        price: 21.81,
+        img: "https://kbimages1-a.akamaihd.net/f3fbe2cb-6ec5-4860-8a62-92d14934c619/1200/1200/False/the-dark-tower-v-wolves-of-the-calla.jpg",
+        stock: 52,
+        desc: [
+            "In the fifth novel in StephenKing's bestselling fantasy series, Roland and his ka-tet are bearing through the forests of the Mid-World on their journey to the Dark Tower.",
+            "Tracking their every move is a group of farmers from the town of Calla Bryn Sturgis. The trackers have been warned that the Wolves, a band of masked riders, are about to gallop out of the dark land of Thunderclap and raid their town. And they want to enlist the help of the four gunslingers.",
+            "How can Roland and his tet both protect the innocent community and return to New York to save our world's incarnation of the Dark Tower from the machinations of the evil Sombra Corporation?",
+        ],
+    },
+    {
+        id: 88,
+        title: "The Dark Tower VI: Song of Susannah",
+        series: ['The Dark Tower'],
+        author: 'Stephen King',
+        year: 2004,
+        categories: ['Horror', 'Fiction', 'Crime & Thriller', 'Fantasy'],
+        price: 20.12,
+        img: "https://m.media-amazon.com/images/I/51orbtE0y7L.jpg",
+        stock: 52,
+        desc: [
+            "The pivotal sixth novel in Stephen King's bestselling epic fantasy saga provides the key to the quest that defines Roland's life.",
+            "Susannah has used the power of Black Thirteen to get to New York where she can give birth to a child fated to grow up as Roland's nemesis. Jake and Father Callahan set out to break her date with destiny and to find Calvin Tower, owner of the vacant lot where a magical rose grows - a rose that must be saved at all costs.",
+            "Meanwhile, Roland and Eddie tumble into Maine in the Summer of 1977. Here they are greeted by the gangster Balazar and must face their maker, a man called Stephen King...",
+        ],
+    },
+    {
+        id: 89,
+        title: "The Dark Tower VII: The Dark Tower",
+        series: ['The Dark Tower'],
+        series: ['The Dark Tower'],
+        author: 'Stephen King',
+        year: 2004,
+        categories: ['Horror', 'Fiction', 'Crime & Thriller', 'Fantasy'],
+        price: 21.02,
+        img: "https://m.media-amazon.com/images/I/51GUI8Q+RAL.jpg",
+        stock: 52,
+        desc: [
+            "The final book in King's epic The Dark Tower series, sees gunslinger Roland on a roller-coaster ride of exhilarating triumph and aching loss in his unrelenting quest to reach the dark tower.",
+            "Roland Deschain and his ka-tet have journeyed together and apart, scattered far and wide across multilayered worlds of wheres and whens. The destinies of Roland, Susannah, Jake, Father Callahan, Oy, and Eddie are bound in the Dark Tower itself, which now pulls them ever closer to their own endings and beginnings and into a maelstrom of emotion, violence, and discovery.",
+            "And as he closes in on the Tower, Roland's every step is shadowed by a terrible and sinister creation. Finally, he realises, he may have to walk the last dark strait alone...",
         ],
     },
 ];
@@ -1034,7 +1491,7 @@ export const topCategories = [
 export const topAuthors = [
     {
         id: 1001,
-        name: 'J.K. Rowling',
+        name: 'J. K. Rowling',
         img: 'https://cloudfront-us-east-1.images.arcpublishing.com/copesa/HJENPANR7VBIBMKOCS4ZWXYVUI.jpg'
     },
     {
@@ -1087,15 +1544,25 @@ export const topAuthors = [
         name: 'Winston S. Churchill',
         img: 'https://upload.wikimedia.org/wikipedia/commons/b/bc/Sir_Winston_Churchill_-_19086236948.jpg'
     },
+    {
+        id: 1012,
+        name: 'George R. R. Martin',
+        img: 'https://areajugones.sport.es/wp-content/uploads/2020/07/george-rr-martin-finish-book-coronavirus-lockdown.jpg'
+    },
+    {
+        id: 1013,
+        name: 'Isaac Asimov',
+        img: 'https://www.nationalgeographic.com.es/medio/2018/04/06/robots-domesticos_e092a578.png'
+    },
 ];
 
 export const bestselling = [
     'Harry Potter',
-    'Game Of Thrones',
-    'Lego',
-    'Divergent',
-    'Throne Of Glass',
-    'Star Wars',
+    'Game of Thrones',
+    'Foundation',
+    'Sapiens',
+    "The Hitchhiker's Guide to the Galaxy",
+    "The Dark Tower",
 ];
 
 export const languages = [

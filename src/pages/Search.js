@@ -16,8 +16,10 @@ const Search = () => {
         book.categories.some(c => c.toLowerCase(). includes(search))
     )); 
 
+    const results = booksBySearch.length;
+
     return (
-        <ItemListContainer title={`Search: ${input}`} prod={booksBySearch} />
+        <ItemListContainer title={`Search: "${input}"`} results={results} prod={booksBySearch} />
     )
 }
 
