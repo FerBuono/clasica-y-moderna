@@ -1,7 +1,6 @@
 import { Favorite, FavoriteBorder, ShoppingCart } from '@mui/icons-material';
 import { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { CartContext, CurrencyContext, WishlistContext } from '../../contexts';
 import { handleLike, handleWishlist, isLiked } from '../../helpers/likeHelpers';
 import ItemCount from '../ItemCount/ItemCount';
 import { useSnackbar } from 'notistack';
@@ -23,52 +22,43 @@ import {
     Buttons, 
     BuyButton, 
 } from './ItemDetailStyle';
-
-
+import { CartContext } from '../../context/CartContext';
+import { CurrencyContext } from '../../context/CurrencyContext';
+import { WishlistContext } from '../../context/WishlistContext';
 
 const ItemDetail = ({item}) => {
 
     const {title, author, categories, year, img, stock, desc, price} = item;
-
     const [productStock, setProductStock] = useState(stock);
-    
     const [count, setCount] = useState(0);
-    
     const [liked, setLiked] = useState(false);
+    const {addItem, cartItems} = useContext(CartContext);
+    const {isLiked, addRemove} = useContext(WishlistContext);
+    const {currency, changeItemPrice} = useContext(CurrencyContext);
+    const { enqueueSnackbar, closeSnackbar } = useSnackbar();
 
-    const {cart, setCart} = useContext(CartContext);
-
-    const {currency} = useContext(CurrencyContext);
-
-    const {wishlist, setWishlist} = useContext(WishlistContext);
-
-    const addToCart = (item, count, setCount) => {
+    const addToCart = () => {
         if (count > 0) {
-            if(cart.some(product => product.title === item.title)) {
-                cart.find(product => product.title === item.title).c += count;
-                setCart([...cart]);
-            } else {
-                setCart([...cart, {...item, c: count}]);
-            };
+            addItem(item, count);
         };
 
         setProductStock(productStock - count);
         setCount(0);
     };
     
-    useEffect(() => {
-        isLiked(item, setLiked, wishlist);
-    }, []);
-
-    const { enqueueSnackbar, closeSnackbar } = useSnackbar();
-
     const handleClick = () => {
         count > 0 &&
-            enqueueSnackbar(`${count} ${count > 1 ? 'items' : 'item'} added to the Cart`, {
-                variant: 'success',
-            });
+        enqueueSnackbar(`${count} ${count > 1 ? 'items' : 'item'} added to the Cart`, {
+            variant: 'success',
+        });
     };
-
+  
+    useEffect(() => {
+        isLiked(item)
+            ? setLiked(true)
+            : setLiked(false);
+    }, []);
+    
     return (
         <Container>
             <Book>
@@ -110,8 +100,8 @@ const ItemDetail = ({item}) => {
                 </Info>
                 <Button 
                     onClick={() => {
-                        handleLike(liked, setLiked);
-                        handleWishlist(item, wishlist, setWishlist);
+                        addRemove(item);
+                        setLiked(!liked);
                     }}
                     title="Add to Your Wishlist"
                 >
@@ -122,32 +112,21 @@ const ItemDetail = ({item}) => {
             </Book>
             <Buy>
                 <Price>
-                    {currency} {(() => {
-                        switch (currency) {
-                            case 'ARS$': 
-                                return (Number(item.price) * 200).toFixed(0);
-                            case 'US$': 
-                                return Number(item.price);
-                            case '€':
-                                return (Number(item.price) * 0.88).toFixed(2);
-                            default:
-                                return;
-                        };
-                    })()}
+                    {currency} {changeItemPrice(item)}
                 </Price>
                 <p>Stock: {productStock}</p>
                 <Amount>Amount: <ItemCount stock={productStock} count={count} setCount={setCount} /></Amount>
                 <Buttons>
                     <BuyButton 
                         onClick={() => {
-                            addToCart(item, count, setCount);
+                            addToCart();
                             handleClick();
                         }}
                     >
                         Add to Cart ({count})
                     </BuyButton>
                     {
-                        cart.length > 0 && 
+                        cartItems.length > 0 && 
                             <Link to={'/cart'} style={{width: '32px', height: '32px'}} title="Buy Now!">
                                 <Button>
                                     <ShoppingCart />

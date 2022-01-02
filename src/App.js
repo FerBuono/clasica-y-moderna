@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -13,11 +12,11 @@ import Categories from "./pages/Categories";
 import Authors from "./pages/Authors";
 import Search from './pages/Search';
 import BestsellingSerie from './pages/BestsellingSerie';
-import { CartContext, CurrencyContext, WishlistContext } from './contexts';
 import { SnackbarProvider } from 'notistack';
 import { makeStyles } from '@mui/styles';
 
 import './App.css';
+import WrapperContext from './components/WrapperContext';
 
 const useStyles = makeStyles(() => ({
   success: {
@@ -29,20 +28,12 @@ const App = () => {
 
   const classes = useStyles()
 
-  const [cart, setCart] = useState([]);
-
-  const [wishlist, setWishlist] = useState(JSON.parse(localStorage.getItem('wishlist')) || []);
-
-  const [currency, setCurrency] = useState('US$');
-
   return (
     <SnackbarProvider 
       maxSnack={3}
       classes={{variantSuccess: classes.success}}
     >
-      <CartContext.Provider value={{cart, setCart}}>
-        <WishlistContext.Provider value={{wishlist, setWishlist}}>
-          <CurrencyContext.Provider value={{currency, setCurrency}}>
+      <WrapperContext>
             <BrowserRouter>
               <Navbar />
               <Routes>
@@ -61,9 +52,7 @@ const App = () => {
               </Routes>
               <Footer />
             </BrowserRouter>
-          </CurrencyContext.Provider>
-        </WishlistContext.Provider>
-      </CartContext.Provider>
+      </WrapperContext>
     </SnackbarProvider>
   )
 }

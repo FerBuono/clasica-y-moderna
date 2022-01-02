@@ -1,17 +1,17 @@
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
 import { sort } from '../helpers/sortHelper';
 import { useContext } from 'react';
-import { WishlistContext } from '../contexts';
+import { WishlistContext } from '../context/WishlistContext';
 
 const Wishlist = () => {
 
-    const {wishlist} = useContext(WishlistContext);
+    const {wishlistItems} = useContext(WishlistContext);
 
-    const results = wishlist.length;
+    const results = wishlistItems.length;
 
     return (
         <>
-            <ItemListContainer title="Your Wishlist" results={results} prod={sort(wishlist)} />
+            <ItemListContainer title="Your Wishlist" results={results} prod={sort(wishlistItems)} />
         </>
     )
 }

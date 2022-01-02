@@ -16,7 +16,7 @@ const Midbar = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        search.length > 0 ? navigate(`/search=${search}`) : navigate('/')
+        search.length > 0 ? navigate(`/search=${search}`) : navigate('/');
     };
 
     return (

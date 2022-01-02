@@ -2,32 +2,23 @@ import { FavoriteBorder, Favorite } from '@mui/icons-material';
 import { useContext, useEffect, useState } from 'react';
 import { Container, Title, Author, Year, Image, Info, BookInfo, Price, Buttons, BuyButton, Btn } from './ItemStyle';
 import { NavLink } from 'react-router-dom'
-import { handleWishlist, isLiked, handleLike } from '../../helpers/likeHelpers';
-import { CartContext, CurrencyContext, WishlistContext } from '../../contexts';
 import { useSnackbar } from 'notistack';
+import { CartContext } from '../../context/CartContext';
+import { WishlistContext } from '../../context/WishlistContext';
+import { CurrencyContext } from '../../context/CurrencyContext';
 
 
 const Item = ({item}) => {
 
-    const {cart, setCart} = useContext(CartContext);
-
-    const {currency} = useContext(CurrencyContext);
-
-    const {wishlist, setWishlist} = useContext(WishlistContext);
-
+    const {addItem} = useContext(CartContext);
+    const {isLiked, addRemove} = useContext(WishlistContext);
+    const {currency, changeItemPrice} = useContext(CurrencyContext);
     const [liked, setLiked] = useState(false);
 
-    const addToCart = (item) => {
-        if(cart.some(product => product.title === item.title)) {
-            cart.find(product => product.title === item.title).c += 1;
-            setCart([...cart]);
-        } else {
-            setCart([...cart, {...item, c: 1}]);
-        }
-    };
-    
     useEffect(() => {
-        isLiked(item, setLiked, wishlist);
+        isLiked(item.id)
+            ? setLiked(true)
+            : setLiked(false);
     }, []);
 
     const { enqueueSnackbar, closeSnackbar } = useSnackbar();
@@ -37,7 +28,6 @@ const Item = ({item}) => {
             variant: 'success',
         });
     };
-
 
     return (
         <Container>
@@ -68,32 +58,20 @@ const Item = ({item}) => {
                     <Year>{item.year}</Year>
                 </BookInfo>
                 <Price>
-                    {currency} {(() => {
-                        switch (currency) {
-                            case 'ARS$': 
-                                return (Number(item.price) * 200).toFixed(0);
-                            case 'US$': 
-                                return Number(item.price);
-                            case '€':
-                                return (Number(item.price) * 0.88).toFixed(2);
-                            default:
-                                return;
-                        };
-                    })()}
+                    {currency} {changeItemPrice(item)}
                 </Price>
             </Info>
             <Buttons>
-                <BuyButton onClick={(e) => {
-                    e.preventDefault();
-                    addToCart(item);
+                <BuyButton onClick={() => {
+                    addItem(item, 1)
                     handleClick();
                 }}>
                     Add to Cart
                 </BuyButton>
                 <Btn 
                     onClick={() => {
-                        handleLike(liked, setLiked);
-                        handleWishlist(item, wishlist, setWishlist);
+                        addRemove(item);
+                        setLiked(!liked);
                     }}
                     title="Add to Your Wishlist"
                 >
