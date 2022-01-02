@@ -1,28 +1,16 @@
 import { Add, Remove } from '@mui/icons-material';
 import { Container, Counter, Button, Count} from './ItemCountStyle';
 
-const ItemCount = ({stock, count, setCount}) => {
-
-    const handleAdd = () => {
-        if(count < stock) {
-            setCount(count + 1);
-        }
-    };
-
-    const handleRemove = () => {
-        if(count > 0) {
-            setCount(count - 1);
-        }
-    };
+const ItemCount = ({count, handleAdd, handleRemove}) => {
 
     return (
         <Container>
             <Counter>
-                <Button onClick={handleRemove}>
+                <Button onClick={handleRemove} style={{borderRadius: '20px 0 0 20px'}}>
                     <Remove />
                 </Button>
                 <Count>{count}</Count>
-                <Button onClick={handleAdd}>
+                <Button onClick={handleAdd} style={{borderRadius: '0 20px 20px 0'}}>
                     <Add />
                 </Button>
             </Counter>

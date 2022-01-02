@@ -11,10 +11,9 @@ export const CurrencyContextProvider = ({children}) => {
     };
 
     const changeCartPrice = (cartItems) => {
-        console.log(cartItems)
         switch (currency) {
             case 'ARS$': 
-                return cartItems.reduce((acc, {price, amount}) => Number((price*200 * amount + acc).toFixed(0)) , 0);
+                return cartItems.reduce((acc, {price, amount}) => Number((price*208 * amount + acc).toFixed(2)) , 0);
             case 'US$': 
                 return cartItems.reduce((acc, {price, amount}) => Number((price * amount + acc).toFixed(2)), 0);
             case '€':
@@ -27,7 +26,7 @@ export const CurrencyContextProvider = ({children}) => {
     const changeItemPrice = (item) => {
         switch (currency) {
             case 'ARS$': 
-                return (Number(item.price) * 200).toFixed(0);
+                return (Number(item.price) * 208).toFixed(2);
             case 'US$': 
                 return Number(item.price);
             case '€':

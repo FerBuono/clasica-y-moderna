@@ -1,7 +1,6 @@
 import { Favorite, FavoriteBorder, ShoppingCart } from '@mui/icons-material';
 import { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { handleLike, handleWishlist, isLiked } from '../../helpers/likeHelpers';
 import ItemCount from '../ItemCount/ItemCount';
 import { useSnackbar } from 'notistack';
 import { 
@@ -28,31 +27,30 @@ import { WishlistContext } from '../../context/WishlistContext';
 
 const ItemDetail = ({item}) => {
 
-    const {title, author, categories, year, img, stock, desc, price} = item;
+    const {title, author, categories, year, img, stock, desc} = item;
     const [productStock, setProductStock] = useState(stock);
     const [count, setCount] = useState(0);
     const [liked, setLiked] = useState(false);
     const {addItem, cartItems} = useContext(CartContext);
     const {isLiked, addRemove} = useContext(WishlistContext);
     const {currency, changeItemPrice} = useContext(CurrencyContext);
-    const { enqueueSnackbar, closeSnackbar } = useSnackbar();
+    const {enqueueSnackbar} = useSnackbar();
 
     const addToCart = () => {
         if (count > 0) {
             addItem(item, count);
+            enqueueSnackbar(`${count} ${count > 1 ? 'items' : 'item'} added to the Cart`, {
+                variant: 'success',
+            });
         };
-
         setProductStock(productStock - count);
         setCount(0);
     };
+
+    const handleAdd = () => count < productStock && setCount(count + 1);
+        
+    const handleRemove = () => count > 0 && setCount(count - 1);
     
-    const handleClick = () => {
-        count > 0 &&
-        enqueueSnackbar(`${count} ${count > 1 ? 'items' : 'item'} added to the Cart`, {
-            variant: 'success',
-        });
-    };
-  
     useEffect(() => {
         isLiked(item)
             ? setLiked(true)
@@ -115,14 +113,9 @@ const ItemDetail = ({item}) => {
                     {currency} {changeItemPrice(item)}
                 </Price>
                 <p>Stock: {productStock}</p>
-                <Amount>Amount: <ItemCount stock={productStock} count={count} setCount={setCount} /></Amount>
+                <Amount>Amount: <ItemCount count={count} handleRemove={handleRemove} handleAdd={handleAdd} /></Amount>
                 <Buttons>
-                    <BuyButton 
-                        onClick={() => {
-                            addToCart();
-                            handleClick();
-                        }}
-                    >
+                    <BuyButton onClick={addToCart}>
                         Add to Cart ({count})
                     </BuyButton>
                     {

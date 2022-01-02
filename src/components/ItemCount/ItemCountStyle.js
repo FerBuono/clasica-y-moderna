@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 50%;
+    width: 150px;
     display: flex;
     flex-direction: column;
     margin-left: 1rem;
@@ -10,7 +10,6 @@ export const Container = styled.div`
 export const Counter = styled.div`
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 `;
 
@@ -18,7 +17,6 @@ export const Button = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
     border: 1px solid #EFEFEF;
     background-color: white;
     cursor: pointer;
@@ -30,6 +28,10 @@ export const Button = styled.div`
 `;
 
 export const Count = styled.div`
-    font-weight: 600;
+    font-weight: 500;
     font-size: 20px;
+    border-top: 1px solid #EFEFEF;
+    border-bottom: 1px solid #EFEFEF;
+    width: 100px;
+    text-align: center;
 `;

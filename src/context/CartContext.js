@@ -19,7 +19,7 @@ export const CartContextProvider = ({children}) => {
     const removeItem = (itemId) => {
 
         if(isInCart(itemId)) {
-            setCartItems([...cartItems.filter(element => element.id !== itemId) || []]);
+            setCartItems([...cartItems.filter(element => element.id !== itemId)]);
         };
     };
     

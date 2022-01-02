@@ -14,20 +14,19 @@ const Item = ({item}) => {
     const {isLiked, addRemove} = useContext(WishlistContext);
     const {currency, changeItemPrice} = useContext(CurrencyContext);
     const [liked, setLiked] = useState(false);
-
-    useEffect(() => {
-        isLiked(item.id)
-            ? setLiked(true)
-            : setLiked(false);
-    }, []);
-
-    const { enqueueSnackbar, closeSnackbar } = useSnackbar();
+    const {enqueueSnackbar} = useSnackbar();
 
     const handleClick = () => {
         enqueueSnackbar(`1 item added to the Cart`, {
             variant: 'success',
         });
     };
+
+    useEffect(() => {
+        isLiked(item.id)
+            ? setLiked(true)
+            : setLiked(false);
+    }, []);
 
     return (
         <Container>

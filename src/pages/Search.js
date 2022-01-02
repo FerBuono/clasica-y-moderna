@@ -13,7 +13,7 @@ const Search = () => {
         book.title.toLowerCase().includes(search) || 
         book.author.toLowerCase().includes(search) || 
         book.desc.some(desc => desc.toLowerCase().includes(search)) ||
-        book.categories.some(c => c.toLowerCase(). includes(search))
+        book.categories.some(c => c.toLowerCase().includes(search))
     )); 
 
     const results = booksBySearch.length;

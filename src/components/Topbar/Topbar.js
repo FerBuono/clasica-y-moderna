@@ -1,8 +1,13 @@
 import { AccountCircle, Explore, FavoriteBorder, Home, Info, Mail } from '@mui/icons-material';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { WishlistContext } from '../../context/WishlistContext';
 import { Container, Wrapper, Left, Right, Nav, Text } from './TopbarStyle';
 
 const Topbar = () => {
+
+    const {wishlistItems} = useContext(WishlistContext);
+
     return (
         <Container>
             <Wrapper>
@@ -33,7 +38,7 @@ const Topbar = () => {
                         <Nav>
                             <FavoriteBorder />
                                 <Text>
-                                    Wishlist
+                                    Wishlist ({wishlistItems.length})
                                 </Text>
                         </Nav>
                     </Link>

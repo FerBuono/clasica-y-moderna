@@ -1404,7 +1404,6 @@ export const products = [
         id: 89,
         title: "The Dark Tower VII: The Dark Tower",
         series: ['The Dark Tower'],
-        series: ['The Dark Tower'],
         author: 'Stephen King',
         year: 2004,
         categories: ['Horror', 'Fiction', 'Crime & Thriller', 'Fantasy'],
