@@ -1416,6 +1416,22 @@ export const products = [
             "And as he closes in on the Tower, Roland's every step is shadowed by a terrible and sinister creation. Finally, he realises, he may have to walk the last dark strait alone...",
         ],
     },
+    {
+        id: 90,
+        title: "Me",
+        series: [],
+        author: 'Elton John',
+        year: 2019,
+        categories: ['Art & Photography', 'Biography & Memoirs'],
+        price: 32.85,
+        img: "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/5098/9781509853311.jpg",
+        stock: 52,
+        desc: [
+            "Christened Reginald Dwight, he was a shy boy with Buddy Holly glasses who grew up in the London suburb of Pinner and dreamed of becoming a pop star. By the age of twenty-three, he was performing his first gig in America, facing an astonished audience in his bright yellow dungarees, a star-spangled T-shirt and boots with wings. Elton John had arrived and the music world would never be the same again.",
+            "His life has been full of drama, from the early rejection of his work with songwriting partner Bernie Taupin to spinning out of control as a chart-topping superstar; from half-heartedly trying to drown himself in his LA swimming pool to disco-dancing with the Queen; from friendships with John Lennon, Freddie Mercury and George Michael to setting up his AIDS Foundation. All the while, Elton was hiding a drug addiction that would grip him for over a decade.",
+            "In Me Elton also writes powerfully about getting clean and changing his life, about finding love with David Furnish and becoming a father. In a voice that is warm, humble and open, this is Elton on his music and his relationships, his passions and his mistakes. This is a story that will stay with you, by a living legend.",
+        ],
+    },
 ];
 
 export const topCategories = [
@@ -1552,6 +1568,11 @@ export const topAuthors = [
         id: 1013,
         name: 'Isaac Asimov',
         img: 'https://www.nationalgeographic.com.es/medio/2018/04/06/robots-domesticos_e092a578.png'
+    },
+    {
+        id: 1014,
+        name: 'Elton John',
+        img: 'https://estaticos-cdn.elperiodico.com/clip/f2c80487-43ae-4ebe-96b4-d6db29ee55d1_alta-libre-aspect-ratio_default_0.jpg'
     },
 ];
 

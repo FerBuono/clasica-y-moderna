@@ -11,7 +11,7 @@ const Wishlist = () => {
 
     return (
         <>
-            <ItemListContainer title="Your Wishlist" results={results} prod={sort(wishlistItems)} />
+            <ItemListContainer title="Your Wishlist" results={results} prod={sort(wishlistItems)} noResults="Your wishlist is empty."/>
         </>
     )
 }

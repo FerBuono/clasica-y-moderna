@@ -2,6 +2,7 @@ import { Container, Title } from './CartDetailContainerStyle';
 import Spinner from '../Spinner/Spinner';
 import { useState, useEffect } from 'react';
 import CartDetail from '../CartDetail/CartDetail';
+import CartNoResults from '../NoResults/CartNoResults';
 
 const CartDetailContainer = ({cart, amount}) => {
 
@@ -38,7 +39,7 @@ const CartDetailContainer = ({cart, amount}) => {
                     ? list 
                         ? <CartDetail cart={cart} />
                         : <Spinner />
-                    : <Title>No hay libros</Title>
+                    : <CartNoResults />
             }
         </Container>
     )

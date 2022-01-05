@@ -18,12 +18,14 @@ export const Button = styled.div`
     justify-content: center;
     align-items: center;
     border: 1px solid #EFEFEF;
-    background-color: white;
     cursor: pointer;
-    transition: all .3s ease;
+    background-color: #EFEFEF;
+    
 
     &:hover {
-        background-color: #EFEFEF;
+        background-color: #85aac5;
+        color: white;
+        border-color: #85aac5;
     }
 `;
 

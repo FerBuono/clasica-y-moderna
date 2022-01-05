@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import ItemList from '../ItemList/ItemList';
+import NoResults from '../NoResults/NoResults';
 import Spinner from '../Spinner/Spinner';
 import { Container, Title } from './ItemListContainerStyle';
 
-const ItemListContainer = ({title, prod, results}) => {
+const ItemListContainer = ({title, prod, results, noResults}) => {
 
     const [list, setList] = useState(null);
     
@@ -38,7 +39,7 @@ const ItemListContainer = ({title, prod, results}) => {
                     ? list 
                         ? <ItemList list={list}/> 
                         : <Spinner />
-                    : <Title>No hay libros</Title>
+                    : <NoResults noResults={noResults} />
             }
         </Container>
     )
