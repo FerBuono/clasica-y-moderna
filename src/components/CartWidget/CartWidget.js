@@ -13,7 +13,7 @@ const CartWidget = () => {
     return (
         <Cart>
             <Total>
-                {currency} {(changeCartPrice(cartItems))}
+                {currency} {changeCartPrice(cartItems)}
             </Total>
             <Divisor></Divisor>
             <Link to={'/cart'} style={{display:'flex', height:'100%', color:'white', width:'40%', justifyContent: 'center'}}>

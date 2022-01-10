@@ -1,19 +1,26 @@
+import ItemListContainer from '../components/ItemListContainer/ItemListContainer'
+import { useEffect, useState } from 'react';
+import { collection, getDocs, getFirestore,  query, where } from 'firebase/firestore';
 import { useParams } from 'react-router-dom';
-import { products } from '../assets/data/data';
-import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
-import { sort } from '../helpers/sortHelper';
 
 const Author = () => {
 
     const {author} = useParams();
+    const [products, setProducts] = useState();
 
-    const booksByAuthor = sort(products.filter(book => book.author === author), "title");
-
-    const results = booksByAuthor.length;
+    useEffect(() => {
+        setProducts(null);
+        const db = getFirestore();
+        const data = collection(db, 'items');
+        const q = query(data, where("author", "==", author));
+        getDocs(q).then(res => {
+            setProducts(res.docs.map(doc => ({id: doc.id, ...doc.data()})))
+        })
+    }, [author]);
 
     return (
         <>
-            <ItemListContainer title={`Books by: ${author}`} results={results} prod={booksByAuthor}/>
+            <ItemListContainer title={`Books by: ${author}`} prod={products}/>
         </>
     )
 }

@@ -7,11 +7,9 @@ const Wishlist = () => {
 
     const {wishlistItems} = useContext(WishlistContext);
 
-    const results = wishlistItems.length;
-
     return (
         <>
-            <ItemListContainer title="Your Wishlist" results={results} prod={sort(wishlistItems)} noResults="Your wishlist is empty."/>
+            <ItemListContainer title="Your Wishlist" prod={sort(wishlistItems)} noResults="Your wishlist is empty."/>
         </>
     )
 }

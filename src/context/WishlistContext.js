@@ -10,11 +10,11 @@ export const WishlistContextProvider = ({children}) => {
 
         if(isLiked(item.id)) {
             setWishlistItems([...wishlistItems.filter(element => element.id !== item.id)]);
+            localStorage.setItem('wishlist', JSON.stringify([...wishlistItems.filter(element => element.id !== item.id)]));
         } else {
             setWishlistItems([...wishlistItems, item]);
+            localStorage.setItem('wishlist', JSON.stringify([...wishlistItems, item]));
         };
-
-        localStorage.setItem('wishlist', JSON.stringify(wishlistItems));
     };
 
     const isLiked = (id) => wishlistItems && wishlistItems.some(element => element.id === id);
