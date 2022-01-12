@@ -4,6 +4,7 @@ export const Container = styled.div`
     width: 100%;
     display: flex;
     align-items: flex-start;
+    margin-bottom: 1rem;
 `;
 
 export const Book = styled.div`

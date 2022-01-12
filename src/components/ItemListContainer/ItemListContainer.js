@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { sort } from '../../helpers/sortHelper';
 import ItemList from '../ItemList/ItemList';
 import NoResults from '../NoResults/NoResults';
 import Spinner from '../Spinner/Spinner';
 import { Container, Title } from './ItemListContainerStyle';
+
 
 const ItemListContainer = ({title, prod, noResults}) => {
 
@@ -23,7 +25,7 @@ const ItemListContainer = ({title, prod, noResults}) => {
             {
                 prod
                     ? prod.length > 0
-                        ? <ItemList list={prod}/>
+                        ? <ItemList list={sort(prod, 'title')}/>
                         : <NoResults noResults={noResults} />
                     : <Spinner />
             }
