@@ -26,7 +26,7 @@ const Item = ({item}) => {
         isLiked(item.id)
             ? setLiked(true)
             : setLiked(false);
-    }, []);
+    }, [isLiked(item.id)]);
 
     return (
         <Container>

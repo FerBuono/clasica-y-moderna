@@ -1,5 +1,5 @@
 import React from 'react'
-import { CarouselContainer } from '../components/CarouselContainer/CarouselContainer'
+import CarouselListContainer from '../components/CarouselListContainer/CarouselListContainer'
 
 const Products = () => {
     return (

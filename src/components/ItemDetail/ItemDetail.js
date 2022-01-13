@@ -52,10 +52,10 @@ const ItemDetail = ({item}) => {
     const handleRemove = () => count > 0 && setCount(count - 1);
     
     useEffect(() => {
-        isLiked(item)
+        isLiked(item.id)
             ? setLiked(true)
             : setLiked(false);
-    }, []);
+    }, [isLiked(item.id)]);
     
     return (
         <Container>
@@ -104,7 +104,7 @@ const ItemDetail = ({item}) => {
                     title="Add to Your Wishlist"
                 >
                     {
-                        liked === false ? <FavoriteBorder /> : <Favorite style={{color: '#efd091'}} />
+                        !liked ? <FavoriteBorder /> : <Favorite style={{color: '#efd091'}} />
                     }
                 </Button>
             </Book>

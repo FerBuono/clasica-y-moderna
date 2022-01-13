@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import CarouselContainer from "../CarouselContainer/CarouselContainer";
+import CarouselListContainer from "../CarouselListContainer/CarouselListContainer";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import NoResults from "../NoResults/NoResults";
 import Spinner from "../Spinner/Spinner";
@@ -11,8 +11,6 @@ const ItemDetailContainer = ({item}) => {
         window.scrollTo(0, 0);  
     }, []);
 
-    console.log(item && item.hasOwnProperty('title'))
-
     return (
      
         <Container>
@@ -22,7 +20,7 @@ const ItemDetailContainer = ({item}) => {
                         ? 
                             (<>
                                 <ItemDetail item={item} />
-                                <CarouselContainer item={item} />
+                                <CarouselListContainer item={item} />
                             </>)
                         : <NoResults />
                     : <Spinner />
