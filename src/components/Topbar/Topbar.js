@@ -44,10 +44,15 @@ const Topbar = () => {
                     </Nav>
                 </Left>
                 <Right>
-                    <Nav style={{borderLeft: "2px solid #050814"}}>
-                        <Explore />
-                        <Text>My Orders</Text>
-                    </Nav>
+                    <Link 
+                        to={'/orders'}
+                        style={{color:'white', textDecoration:'none'}}
+                        >
+                        <Nav>
+                            <Explore />
+                            <Text>My Orders</Text>
+                        </Nav>
+                    </Link>
                     <Link 
                         to={'/wishlist'}
                         style={{color:'white', textDecoration:'none'}}

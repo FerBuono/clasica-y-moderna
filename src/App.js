@@ -18,6 +18,7 @@ import { makeStyles } from '@mui/styles';
 import WrapperContext from './components/WrapperContext';
 
 import './App.css';
+import Orders from "./pages/Orders";
 
 const useStyles = makeStyles(() => ({
   success: {
@@ -49,6 +50,7 @@ const App = () => {
                 <Route exact path="/authors/:author" element={<Author />} />
                 <Route exact path="/series/:serie" element={<BestsellingSerie />} />
                 <Route exact path="/search=:input" element={<Search />} />
+                <Route exact path="/orders" element={<Orders />} />
                 <Route exact path="/checkout" element={<Checkout />} />
                 <Route path="/*" element={<Home />} />
               </Routes>
