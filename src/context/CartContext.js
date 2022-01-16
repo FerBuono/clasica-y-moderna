@@ -23,13 +23,13 @@ export const CartContextProvider = ({children}) => {
                 updateDoc(userRef, {
                     cart: [...cartItems]
                 });
-                localStorage.setItem('user', JSON.stringify([{...user, cart: [...cartItems]}]));
+                sessionStorage.setItem('user', JSON.stringify([{...user, cart: [...cartItems]}]));
             } else {
                 setUser([{...user, cart: [...cartItems, {...item, amount: amount}]}]);
                 updateDoc(userRef, {
                     cart: [...cartItems, {...item, amount: amount}]
                 });
-                localStorage.setItem('user', JSON.stringify([{...user, cart: [...cartItems, {...item, amount: amount}]}]));
+                sessionStorage.setItem('user', JSON.stringify([{...user, cart: [...cartItems, {...item, amount: amount}]}]));
             };
         }
     };
@@ -42,7 +42,7 @@ export const CartContextProvider = ({children}) => {
             updateDoc(userRef, {
                 cart: [...cartItems.filter(element => element.id !== itemId)]
             });
-            localStorage.setItem('user', JSON.stringify([{...user, cart: [...cartItems.filter(element => element.id !== itemId)]}]));
+            sessionStorage.setItem('user', JSON.stringify([{...user, cart: [...cartItems.filter(element => element.id !== itemId)]}]));
         };
     };
     
@@ -52,7 +52,7 @@ export const CartContextProvider = ({children}) => {
         updateDoc(userRef, {
             cart: []
         });
-        localStorage.setItem('user', JSON.stringify([{...user, cart: []}]));
+        sessionStorage.setItem('user', JSON.stringify([{...user, cart: []}]));
     };
     
     const isInCart = (id) => cartItems && cartItems.some(element => element.id === id);
@@ -69,7 +69,7 @@ export const CartContextProvider = ({children}) => {
                     updateDoc(userRef, {
                         cart: [...cartItems]
                     });
-                    localStorage.setItem('user', JSON.stringify([{...user, cart: [...cartItems]}]));
+                    sessionStorage.setItem('user', JSON.stringify([{...user, cart: [...cartItems]}]));
                     break;
                 case 'remove':
                     if(cartItems.find(item => item.id === id).amount > 1) {
@@ -78,7 +78,7 @@ export const CartContextProvider = ({children}) => {
                         updateDoc(userRef, {
                             cart: [...cartItems]
                         });
-                        localStorage.setItem('user', JSON.stringify([{...user, cart: [...cartItems]}]));
+                        sessionStorage.setItem('user', JSON.stringify([{...user, cart: [...cartItems]}]));
                         break;
                     } else {
                         return removeItem(id);

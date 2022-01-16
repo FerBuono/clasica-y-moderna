@@ -21,13 +21,13 @@ export const WishlistContextProvider = ({children}) => {
                 updateDoc(userRef, {
                     wishlist: [...wishlistItems.filter(element => element.id !== item.id)]
                 });
-                localStorage.setItem('user', JSON.stringify([{...user, wishlist: [...wishlistItems.filter(element => element.id !== item.id)]}]));
+                sessionStorage.setItem('user', JSON.stringify([{...user, wishlist: [...wishlistItems.filter(element => element.id !== item.id)]}]));
             } else {
                 setUser([{...user, wishlist: [...wishlistItems, item]}]);
                 updateDoc(userRef, {
                     wishlist: [...wishlistItems, item]
                 });
-                localStorage.setItem('user', JSON.stringify([{...user, wishlist: [...wishlistItems, item]}]));
+                sessionStorage.setItem('user', JSON.stringify([{...user, wishlist: [...wishlistItems, item]}]));
             };
         };
     };
