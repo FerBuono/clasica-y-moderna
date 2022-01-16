@@ -24,6 +24,7 @@ import {
 import { CartContext } from '../../context/CartContext';
 import { CurrencyContext } from '../../context/CurrencyContext';
 import { WishlistContext } from '../../context/WishlistContext';
+import { UserContext } from '../../context/UserContext';
 
 const ItemDetail = ({item}) => {
 
@@ -32,6 +33,7 @@ const ItemDetail = ({item}) => {
     const [count, setCount] = useState(0);
     const [liked, setLiked] = useState(false);
     const {addItem, cartItems} = useContext(CartContext);
+    const {isSignedIn} = useContext(UserContext);
     const {isLiked, addRemove} = useContext(WishlistContext);
     const {currency, changeItemPrice} = useContext(CurrencyContext);
     const {enqueueSnackbar} = useSnackbar();
@@ -52,9 +54,7 @@ const ItemDetail = ({item}) => {
     const handleRemove = () => count > 0 && setCount(count - 1);
     
     useEffect(() => {
-        isLiked(item.id)
-            ? setLiked(true)
-            : setLiked(false);
+        isSignedIn() && isLiked(item.id) ? setLiked(true) : setLiked(false);
     }, [isLiked(item.id)]);
     
     return (
@@ -96,28 +96,56 @@ const ItemDetail = ({item}) => {
                         ))    
                     }
                 </Info>
-                <Button 
-                    onClick={() => {
-                        addRemove(item);
-                        setLiked(!liked);
-                    }}
-                    title="Add to Your Wishlist"
-                >
-                    {
-                        !liked ? <FavoriteBorder /> : <Favorite style={{color: '#efd091'}} />
-                    }
-                </Button>
+                {
+                    isSignedIn()
+                        ?
+                            <Button 
+                                onClick={() => {
+                                    addRemove(item);
+                                    setLiked(!liked);
+                                }}
+                                title="Add to Your Wishlist"
+                            >
+                                {
+                                    liked === false ? <FavoriteBorder /> : <Favorite style={{color: '#efd091'}} />
+                                }
+                            </Button>
+                        :
+                            <Button 
+                                onClick={() => {
+                                    enqueueSnackbar(`Sorry, you need to be signed in in order to add items to your wishlist.`, {
+                                        variant: 'error',
+                                    });
+                                }}
+                                title="Add to Your Wishlist"
+                            >
+                                <FavoriteBorder />
+                            </Button>
+                }
             </Book>
             <Buy>
                 <Price>
                     {currency} {changeItemPrice(item)}
                 </Price>
                 <p>Stock: {productStock}</p>
-                <Amount>Amount: <ItemCount count={count} handleRemove={handleRemove} handleAdd={handleAdd} /></Amount>
+                <Amount>Quantity: <ItemCount count={count} handleRemove={handleRemove} handleAdd={handleAdd} /></Amount>
                 <Buttons>
-                    <BuyButton onClick={addToCart}>
-                        Add to Cart ({count})
-                    </BuyButton>
+                    {
+                        isSignedIn()
+                            ?
+                                <BuyButton onClick={addToCart}>
+                                    Add to Cart ({count})
+                                </BuyButton>
+                            :
+                                <BuyButton onClick={() => {
+                                    enqueueSnackbar(`Sorry, you need to be signed in in order to add items to your cart.`, {
+                                        variant: 'error',
+                                    });
+                                }}>
+                                    Add to Cart ({count})
+                                </BuyButton>
+                    }
+                    
                     {
                         cartItems.length > 0 && 
                             <Link to={'/cart'} style={{width: '32px', height: '32px'}} title="Buy Now!">

@@ -12,11 +12,12 @@ import Categories from "./pages/Categories";
 import Authors from "./pages/Authors";
 import Search from './pages/Search';
 import BestsellingSerie from './pages/BestsellingSerie';
+import Checkout from "./pages/Checkout";
 import { SnackbarProvider } from 'notistack';
 import { makeStyles } from '@mui/styles';
+import WrapperContext from './components/WrapperContext';
 
 import './App.css';
-import WrapperContext from './components/WrapperContext';
 
 const useStyles = makeStyles(() => ({
   success: {
@@ -48,6 +49,7 @@ const App = () => {
                 <Route exact path="/authors/:author" element={<Author />} />
                 <Route exact path="/series/:serie" element={<BestsellingSerie />} />
                 <Route exact path="/search=:input" element={<Search />} />
+                <Route exact path="/checkout" element={<Checkout />} />
                 <Route path="/*" element={<Home />} />
               </Routes>
               <Footer />

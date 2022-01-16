@@ -48,7 +48,7 @@ const CartItem = ({item}) => {
                         {author}
                     </NavLink>    
                 </Author>
-                <Amount>Amount: <ItemCount count={amount} handleRemove={handleRemove} handleAdd={handleAdd} /></Amount>
+                <Amount>Quantity: <ItemCount count={amount} handleRemove={handleRemove} handleAdd={handleAdd} /></Amount>
                 <Links>
                     <Btn onClick={() => removeItem(id)}>Remove</Btn>
                     <Btn><NavLink to={`/authors/${author}`} style={{color: 'inherit'}}>More from {author}</NavLink></Btn>

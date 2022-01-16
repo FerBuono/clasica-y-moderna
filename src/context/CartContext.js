@@ -1,30 +1,58 @@
-import { createContext, useState } from "react";
+import { doc, getFirestore, updateDoc } from "firebase/firestore";
+import { createContext, useContext } from "react";
+import { UserContext } from "./UserContext";
+
 
 export const CartContext = createContext({});
 
 export const CartContextProvider = ({children}) => {
 
-    const [cartItems, setCartItems] = useState([]);
+    const {user: [user], setUser, isSignedIn} = useContext(UserContext);
 
+    const cartItems = isSignedIn() && user.cart || [];
+
+    const db = getFirestore();
+    
     const addItem = (item, amount) => {
+        if(isSignedIn()) {
+            const userRef = doc(db, 'users', user.id);
 
-        if(isInCart(item.id)) {
-            cartItems.find(element => element.id === item.id).amount += amount;
-            setCartItems([...cartItems]);
-        } else {
-            setCartItems([...cartItems, {...item, amount: amount}]);
-        };
+            if(isInCart(item.id)) { 
+                cartItems.find(element => element.id === item.id).amount += amount;
+                setUser([{...user, cart: [...cartItems]}]);
+                updateDoc(userRef, {
+                    cart: [...cartItems]
+                });
+                localStorage.setItem('user', JSON.stringify([{...user, cart: [...cartItems]}]));
+            } else {
+                setUser([{...user, cart: [...cartItems, {...item, amount: amount}]}]);
+                updateDoc(userRef, {
+                    cart: [...cartItems, {...item, amount: amount}]
+                });
+                localStorage.setItem('user', JSON.stringify([{...user, cart: [...cartItems, {...item, amount: amount}]}]));
+            };
+        }
     };
 
     const removeItem = (itemId) => {
+        const userRef = doc(db, 'users', user.id);
 
         if(isInCart(itemId)) {
-            setCartItems([...cartItems.filter(element => element.id !== itemId)]);
+            setUser([{...user, cart: [...cartItems.filter(element => element.id !== itemId)]}]);
+            updateDoc(userRef, {
+                cart: [...cartItems.filter(element => element.id !== itemId)]
+            });
+            localStorage.setItem('user', JSON.stringify([{...user, cart: [...cartItems.filter(element => element.id !== itemId)]}]));
         };
     };
     
     const clear = () => {
-        setCartItems([]);
+        const userRef = doc(db, 'users', user.id);
+        setUser([{...user, cart: []}]);
+        updateDoc(userRef, {
+            cart: []
+        });
+        localStorage.setItem('user', JSON.stringify([{...user, cart: []}]));
     };
     
     const isInCart = (id) => cartItems && cartItems.some(element => element.id === id);
@@ -32,15 +60,26 @@ export const CartContextProvider = ({children}) => {
     const changeOneItem = (id, action) => {
         
         if(isInCart(id)) {
+            const userRef = doc(db, 'users', user.id);
 
             switch(action) {
                 case 'add':
                     cartItems.find(element => element.id === id).amount += 1;
-                    return setCartItems([...cartItems]);
+                    setUser([{...user, cart: [...cartItems]}]);
+                    updateDoc(userRef, {
+                        cart: [...cartItems]
+                    });
+                    localStorage.setItem('user', JSON.stringify([{...user, cart: [...cartItems]}]));
+                    break;
                 case 'remove':
                     if(cartItems.find(item => item.id === id).amount > 1) {
                         cartItems.find(element => element.id === id).amount -= 1;
-                        return setCartItems([...cartItems]);
+                        setUser([{...user, cart: [...cartItems]}]);
+                        updateDoc(userRef, {
+                            cart: [...cartItems]
+                        });
+                        localStorage.setItem('user', JSON.stringify([{...user, cart: [...cartItems]}]));
+                        break;
                     } else {
                         return removeItem(id);
                     };

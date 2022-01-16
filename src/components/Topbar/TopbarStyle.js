@@ -43,8 +43,68 @@ export const Nav = styled.div`
     }
 `;
 
+export const LogoutContainer = styled.div`
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    padding-left: 1rem;
+    padding-top: 5px;
+    align-items: center;
+    color: black;
+    z-index: 10;
+`;
+
+export const User = styled.div`
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
+    font-size: 14px;
+    color: white;
+    border-right: 2px solid #050814;
+    cursor: pointer;
+    transition: .2s ease;
+
+    &:hover ${LogoutContainer} {
+        display: flex;
+    }
+`;
+
+export const Logout = styled.div`
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: black;
+    padding: .2rem 1rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-top: 4px solid #85aac5;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: white;
+        z-index: -1;
+    }
+
+    &:hover {
+        background-color: #96969676;
+    }
+`;
+
 export const Text = styled.p`
     margin-left: .5em;
+    display: flex;
+    align-items: center;
 `;
 
 export const Right = styled.div`

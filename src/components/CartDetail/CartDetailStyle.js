@@ -8,8 +8,8 @@ export const Container = styled.div`
 
 export const Cart = styled.div`
     flex: 3;
-    /* max-height: 800px;
-    overflow: auto; */
+    max-height: 800px;
+    overflow: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

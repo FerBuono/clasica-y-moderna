@@ -1,19 +1,34 @@
-import { createContext, useState } from "react";
+import { doc, getFirestore, updateDoc } from "firebase/firestore";
+import { createContext, useContext } from "react";
+import { UserContext } from "./UserContext";
 
 export const WishlistContext = createContext({});
 
 export const WishlistContextProvider = ({children}) => {
 
-    const [wishlistItems, setWishlistItems] = useState(JSON.parse(localStorage.getItem('wishlist')) || []);
+    const {user: [user], setUser, isSignedIn} = useContext(UserContext);
 
+    const wishlistItems = isSignedIn() && user.wishlist || [];
+    
+    const db = getFirestore();
+    
     const addRemove = (item) => {
-
-        if(isLiked(item.id)) {
-            setWishlistItems([...wishlistItems.filter(element => element.id !== item.id)]);
-            localStorage.setItem('wishlist', JSON.stringify([...wishlistItems.filter(element => element.id !== item.id)]));
-        } else {
-            setWishlistItems([...wishlistItems, item]);
-            localStorage.setItem('wishlist', JSON.stringify([...wishlistItems, item]));
+        if(isSignedIn()) {
+            const userRef = doc(db, 'users', user.id);
+            
+            if(isLiked(item.id)) {
+                setUser([{...user, wishlist: [...wishlistItems.filter(element => element.id !== item.id)]}]);
+                updateDoc(userRef, {
+                    wishlist: [...wishlistItems.filter(element => element.id !== item.id)]
+                });
+                localStorage.setItem('user', JSON.stringify([{...user, wishlist: [...wishlistItems.filter(element => element.id !== item.id)]}]));
+            } else {
+                setUser([{...user, wishlist: [...wishlistItems, item]}]);
+                updateDoc(userRef, {
+                    wishlist: [...wishlistItems, item]
+                });
+                localStorage.setItem('user', JSON.stringify([{...user, wishlist: [...wishlistItems, item]}]));
+            };
         };
     };
 

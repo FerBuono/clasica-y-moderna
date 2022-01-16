@@ -6,11 +6,13 @@ import { useSnackbar } from 'notistack';
 import { CartContext } from '../../context/CartContext';
 import { WishlistContext } from '../../context/WishlistContext';
 import { CurrencyContext } from '../../context/CurrencyContext';
+import { UserContext } from '../../context/UserContext';
 
 
 const Item = ({item}) => {
 
     const {addItem} = useContext(CartContext);
+    const {isSignedIn} = useContext(UserContext);
     const {isLiked, addRemove} = useContext(WishlistContext);
     const {currency, changeItemPrice} = useContext(CurrencyContext);
     const [liked, setLiked] = useState(false);
@@ -23,9 +25,7 @@ const Item = ({item}) => {
     };
 
     useEffect(() => {
-        isLiked(item.id)
-            ? setLiked(true)
-            : setLiked(false);
+        isSignedIn() && isLiked(item.id) ? setLiked(true) : setLiked(false);
     }, [isLiked(item.id)]);
 
     return (
@@ -60,25 +60,50 @@ const Item = ({item}) => {
                     {currency} {changeItemPrice(item)}
                 </Price>
             </Info>
-            <Buttons>
-                <BuyButton onClick={() => {
-                    addItem(item, 1)
-                    handleClick();
-                }}>
-                    Add to Cart
-                </BuyButton>
-                <Btn 
-                    onClick={() => {
-                        addRemove(item);
-                        setLiked(!liked);
-                    }}
-                    title="Add to Your Wishlist"
-                >
-                    {
-                        liked === false ? <FavoriteBorder /> : <Favorite style={{color: '#efd091'}} />
-                    }
-                </Btn>
-            </Buttons>
+            {
+                isSignedIn()
+                    ?
+                        <Buttons>
+                            <BuyButton onClick={() => {
+                                addItem(item, 1)
+                                handleClick();
+                            }}>
+                                Add to Cart
+                            </BuyButton>
+                            <Btn 
+                                onClick={() => {
+                                    addRemove(item);
+                                    setLiked(!liked);
+                                }}
+                                title="Add to Your Wishlist"
+                            >
+                                {
+                                    liked === false ? <FavoriteBorder /> : <Favorite style={{color: '#efd091'}} />
+                                }
+                            </Btn>
+                        </Buttons>      
+                    :
+                        <Buttons>
+                            <BuyButton onClick={() => {
+                                enqueueSnackbar(`Sorry, you need to be signed in in order to add items to your cart.`, {
+                                    variant: 'error',
+                                });
+                            }}>
+                                Add to Cart
+                            </BuyButton>
+                            <Btn 
+                                onClick={() => {
+                                    enqueueSnackbar(`Sorry, you need to be signed in in order to add items to your wishlist.`, {
+                                        variant: 'error',
+                                    });
+                                }}
+                                title="Add to Your Wishlist"
+                            >
+                                <FavoriteBorder />
+                            </Btn>
+                        </Buttons>
+            }
+                
         </Container>
     )
 }

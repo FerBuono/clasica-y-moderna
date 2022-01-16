@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 import { CurrencyContext } from '../../context/CurrencyContext';
 import CartItem from '../CartItem/CartItem';
@@ -27,7 +28,7 @@ const CartDetail = ({cart}) => {
                     ))
                 }
                 <TotalPrice>Total: <span>{currency} {(changeCartPrice(cart)).toFixed(2)}</span></TotalPrice>
-                <BuyBtn>Go to checkout</BuyBtn>
+                <BuyBtn><Link to={'/checkout'} style={{color:'inherit'}}>Go to checkout</Link></BuyBtn>
                 <ClearBtn onClick={clear}>Clear cart</ClearBtn>
             </Summary>
         </Container>

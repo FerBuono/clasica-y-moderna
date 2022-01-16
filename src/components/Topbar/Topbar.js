@@ -1,12 +1,29 @@
-import { AccountCircle, Explore, FavoriteBorder, Home, Info, Mail } from '@mui/icons-material';
+import { AccountCircle, Explore, FavoriteBorder, Home, Info, KeyboardArrowDown, Mail, Logout as LogoutIcon } from '@mui/icons-material';
+import { useState } from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../context/UserContext';
 import { WishlistContext } from '../../context/WishlistContext';
-import { Container, Wrapper, Left, Right, Nav, Text } from './TopbarStyle';
+import UserModal from '../UserModal/UserModal';
+import { useSnackbar } from 'notistack';
+import { Container, Wrapper, Left, Right, Nav, Text, User, Logout, LogoutContainer } from './TopbarStyle';
 
 const Topbar = () => {
 
     const {wishlistItems} = useContext(WishlistContext);
+    const {user: [user], signOut, isSignedIn} = useContext(UserContext);
+    const [open, setOpen] = useState(false);
+    const {enqueueSnackbar} = useSnackbar();
+
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+    const handleSignOut = () => {
+        signOut();
+        enqueueSnackbar('Signed out successfully', {
+            variant: 'success',
+        });
+    };
 
     return (
         <Container>
@@ -29,25 +46,43 @@ const Topbar = () => {
                 <Right>
                     <Nav style={{borderLeft: "2px solid #050814"}}>
                         <Explore />
-                        <Text>Order Status</Text>
+                        <Text>My Orders</Text>
                     </Nav>
                     <Link 
                         to={'/wishlist'}
                         style={{color:'white', textDecoration:'none'}}
-                    >
+                        >
                         <Nav>
                             <FavoriteBorder />
                                 <Text>
-                                    Wishlist ({wishlistItems.length})
+                                    Wishlist {isSignedIn() ? `(${wishlistItems.length})` : ''}
                                 </Text>
                         </Nav>
                     </Link>
-                    <Nav style={{paddingRight: "0", borderRight: "none"}}>
-                        <AccountCircle />
-                        <Text>Sign In/Join</Text>
-                    </Nav>
+                    {
+                        isSignedIn()
+                            ? 
+                                <User style={{paddingRight: "0", borderRight: "none"}}>
+                                    <AccountCircle />
+                                    <Text>Hi, {user.firstName}!</Text>
+                                    <KeyboardArrowDown />
+                                    <LogoutContainer>
+                                        <Logout  onClick={handleSignOut}>
+                                            <LogoutIcon />
+                                            <Text>Sign Out</Text>
+                                        </Logout>
+                                    </LogoutContainer>
+                                </User>
+                            : 
+                                <Nav style={{paddingRight: "0", borderRight: "none"}} onClick={handleOpen}>
+                                    <AccountCircle />
+                                    <Text>Sign In/Join</Text>
+                                </Nav>
+                            
+                    }
                 </Right>
             </Wrapper>
+            <UserModal open={open} handleClose={handleClose} user={user} />
         </Container>
     )
 }
