@@ -1,5 +1,6 @@
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 import { useContext, useEffect, useState } from 'react';
+import OrdersContainer from '../components/OrdersContainer/OrdersContainer';
 import { UserContext } from '../context/UserContext';
 
 
@@ -7,7 +8,7 @@ const Orders = () => {
 
     const {isSignedIn, user: [user]} = useContext(UserContext);
 
-    const [state, setState] = useState([])
+    const [orders, setOrders] = useState(null);
 
     useEffect(() => {
         if(isSignedIn()) {
@@ -15,15 +16,13 @@ const Orders = () => {
             const orders = collection(db, 'orders')
             const q = query(orders, where("buyer.userId", "==", user.id));
             getDocs(q).then(res => {
-                setState(res.docs.map(doc => ({id: doc.id, ...doc.data()})))
+                setOrders(res.docs.map(doc => ({id: doc.id, ...doc.data()})))
             });
         }
     }, [])
 
     return (
-        <div>
-            <pre>{JSON.stringify(state, null, 2) }</pre>
-        </div>
+        <OrdersContainer orders={orders} />
     )
 }
 

@@ -34,6 +34,19 @@ export const CurrencyContextProvider = ({children}) => {
             default:
                 return;
         };
+    };
+
+    const changeItemPriceTo = (item, currency) => {
+        switch (currency) {
+            case 'ARS$': 
+                return (Number(item.price) * 208).toFixed(2);
+            case 'US$': 
+                return Number(item.price);
+            case '€':
+                return (Number(item.price) * 0.88).toFixed(2);
+            default:
+                return;
+        };
     }
 
     return (
@@ -44,6 +57,7 @@ export const CurrencyContextProvider = ({children}) => {
                 changeItemPrice,
                 selectCurrency,
                 setCurrency,
+                changeItemPriceTo
             }}
         >
             {children}

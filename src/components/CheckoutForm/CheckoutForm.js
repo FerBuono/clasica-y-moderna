@@ -1,13 +1,14 @@
 import * as React from 'react';
 import { useState, useContext } from 'react';
 import { Stepper, Box, Step, StepLabel, Button, Typography } from '@mui/material';
-import { addDoc, collection, doc, getFirestore, updateDoc } from "firebase/firestore";
+import { addDoc, collection, doc, getFirestore } from "firebase/firestore";
 import { UserContext } from '../../context/UserContext';
 import { CurrencyContext } from '../../context/CurrencyContext';
 import AddressForm from '../AddressForm/AddressForm';
 import PaymentForm from '../PaymentForm/PaymentForm';
 import styled from 'styled-components';
 import { CartContext } from '../../context/CartContext';
+import { useSnackbar } from 'notistack';
 import { useNavigate } from 'react-router-dom';
 
 const steps = ['Shipping address', 'Payment details'];
@@ -20,7 +21,7 @@ export const Container = styled.div`
   margin-right: 2rem;
 `;
 
-const HorizontalLinearStepper = ({cart}) => {
+const CheckoutForm = ({cart}) => {
   
   const {clear} = useContext(CartContext);
   const {user: [user]} = useContext(UserContext);
@@ -28,6 +29,7 @@ const HorizontalLinearStepper = ({cart}) => {
   const [activeStep, setActiveStep] = useState(0);
   const [campsFilled, setCampsFilled] = useState(false);
   const [data, setData] = useState({});
+  const {enqueueSnackbar} = useSnackbar();
   const navigate = useNavigate();
   
   const handleNext = () => setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -64,6 +66,7 @@ const HorizontalLinearStepper = ({cart}) => {
       ],
       date: `${today.getDate()>9?today.getDate():'0'+today.getDate()}/${(today.getMonth()+1)>10?today.getMonth()+1:'0'+(today.getMonth()+1)}/${today.getFullYear()}`,
       total: `${changeCartPrice(cart)}`,
+      currency: `${currency}`,
       orderNumber: `${Date.now()}`,
     };
 
@@ -72,7 +75,10 @@ const HorizontalLinearStepper = ({cart}) => {
     addDoc(orders, order);
     clear();
     
-    navigate('/');
+    enqueueSnackbar('Your purchase was successful! Check its status in My Orders', {
+      variant: 'success',
+    });
+    navigate('/orders');
   };
 
   return (
@@ -124,4 +130,4 @@ const HorizontalLinearStepper = ({cart}) => {
   );
 }
 
-export default HorizontalLinearStepper
+export default CheckoutForm

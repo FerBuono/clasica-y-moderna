@@ -1,7 +1,7 @@
 import { AccountCircle, Explore, FavoriteBorder, Home, Info, KeyboardArrowDown, Mail, Logout as LogoutIcon } from '@mui/icons-material';
 import { useState } from 'react';
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
 import { WishlistContext } from '../../context/WishlistContext';
 import UserModal from '../UserModal/UserModal';
@@ -14,6 +14,7 @@ const Topbar = () => {
     const {user: [user], signOut, isSignedIn} = useContext(UserContext);
     const [open, setOpen] = useState(false);
     const {enqueueSnackbar} = useSnackbar();
+    const navigate = useNavigate();
 
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -23,6 +24,7 @@ const Topbar = () => {
         enqueueSnackbar('Signed out successfully', {
             variant: 'success',
         });
+        navigate('/');
     };
 
     return (

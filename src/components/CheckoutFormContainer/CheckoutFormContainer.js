@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import HorizontalLinearStepper from '../HorizontalLinearStepper/HorizontalLinearStepper';
+import CheckoutForm from '../CheckoutForm/CheckoutForm';
 import pattern from '../../assets/images/patterns/home.png';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
@@ -66,7 +66,7 @@ export const TotalPrice = styled.h3`
     justify-content: space-between;
 `;
 
-const CheckoutDetailContainer = () => {
+const CheckoutFormContainer = () => {
 
     const {cartItems} = useContext(CartContext);
     const {currency, changeItemPrice, changeCartPrice} = useContext(CurrencyContext);
@@ -75,7 +75,7 @@ const CheckoutDetailContainer = () => {
         <Container>
             <Title>Checkout</Title>
             <CheckoutDetail>
-                <HorizontalLinearStepper cart={cartItems}/>
+                <CheckoutForm cart={cartItems}/>
                 <Summary>
                     <PurchaseTitle>Purchase Summary</PurchaseTitle>
                     {
@@ -93,4 +93,4 @@ const CheckoutDetailContainer = () => {
     )
 }
 
-export default CheckoutDetailContainer
+export default CheckoutFormContainer
