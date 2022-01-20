@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import CarouselListContainer from "../CarouselListContainer/CarouselListContainer";
-import ItemDetail from "../ItemDetail/ItemDetail";
+import ItemDetail from "./ItemDetail/ItemDetail";
 import NoResults from "../NoResults/NoResults";
 import Spinner from "../Spinner/Spinner";
 import { Container } from './ItemDetailContainerStyle';

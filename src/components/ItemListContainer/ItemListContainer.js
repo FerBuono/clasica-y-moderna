@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { sort } from '../../helpers/sortHelper';
-import ItemList from '../ItemList/ItemList';
+import ItemList from './ItemList/ItemList';
 import NoResults from '../NoResults/NoResults';
 import Spinner from '../Spinner/Spinner';
 import { Container, Title } from './ItemListContainerStyle';

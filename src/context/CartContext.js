@@ -20,6 +20,7 @@ export const CartContextProvider = ({children}) => {
             if(isInCart(item.id)) { 
                 cartItems.find(element => element.id === item.id).amount += amount;
                 setUser([{...user, cart: [...cartItems]}]);
+       
                 updateDoc(userRef, {
                     cart: [...cartItems]
                 });

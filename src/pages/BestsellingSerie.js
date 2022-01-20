@@ -1,22 +1,27 @@
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer'
 import { useEffect, useState } from 'react';
-import { collection, getDocs, getFirestore,  query, where } from 'firebase/firestore';
+import { FirebaseClient } from '../firebase/client';
 import { useParams } from 'react-router-dom';
 
 const BestsellingSerie = () => {
 
     const {serie} = useParams();
     const [products, setProducts] = useState();
+    const firebase = new FirebaseClient();
 
     useEffect(() => {
         setProducts(null);
-        const db = getFirestore();
-        const data = collection(db, 'items');
-        const q = query(data, where("series", "array-contains", serie));
-        getDocs(q).then(res => {
-            setProducts(res.docs.map(doc => ({id: doc.id, ...doc.data()})))
-        })
+        getProductsFromDb();
     }, [serie]);
+
+    const getProductsFromDb = async () => {
+		try {
+			const value = await firebase.getProductsByGroup('series', serie);
+			setProducts(value.filter(book => book.stock > 0));
+		} catch (error) {
+			console.error('pages/BestsellingSerie/getProductsFromDb', error);
+		}
+	};
 
     return (
         <>

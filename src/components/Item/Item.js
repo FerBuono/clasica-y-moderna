@@ -64,12 +64,18 @@ const Item = ({item}) => {
                 isSignedIn()
                     ?
                         <Buttons>
-                            <BuyButton onClick={() => {
-                                addItem(item, 1)
-                                handleClick();
-                            }}>
-                                Add to Cart
-                            </BuyButton>
+                            {
+                                item.stock > 0 
+                                    ?
+                                        <BuyButton onClick={() => {
+                                            addItem(item, 1)
+                                            handleClick();
+                                        }}>
+                                            Add to Cart
+                                        </BuyButton>
+                                    :
+                                        <h3 style={{marginRight:"20px", color:"grey"}}>Out of stock</h3>
+                            }
                             <Btn 
                                 onClick={() => {
                                     addRemove(item);
@@ -84,13 +90,20 @@ const Item = ({item}) => {
                         </Buttons>      
                     :
                         <Buttons>
-                            <BuyButton onClick={() => {
-                                enqueueSnackbar(`Sorry, you need to be signed in in order to add items to your cart.`, {
-                                    variant: 'error',
-                                });
-                            }}>
-                                Add to Cart
-                            </BuyButton>
+                            {
+                                item.stock > 0
+                                    ?
+                                        <BuyButton onClick={() => {
+                                            enqueueSnackbar(`Sorry, you need to be signed in in order to add items to your cart.`, {
+                                                variant: 'error',
+                                            });
+                                        }}>
+                                            Add to Cart
+                                        </BuyButton>
+                                    :
+                                        <h3 style={{marginRight:"20px", color:"grey"}}>Out of stock</h3>
+
+                            }
                             <Btn 
                                 onClick={() => {
                                     enqueueSnackbar(`Sorry, you need to be signed in in order to add items to your wishlist.`, {

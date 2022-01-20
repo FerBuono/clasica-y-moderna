@@ -1,7 +1,6 @@
 import { Container, Title } from './CartDetailContainerStyle';
-import Spinner from '../Spinner/Spinner';
 import { useEffect } from 'react';
-import CartDetail from '../CartDetail/CartDetail';
+import CartDetail from './CartDetail/CartDetail';
 import CartNoResults from '../NoResults/CartNoResults';
 
 const CartDetailContainer = ({cart, amount}) => {

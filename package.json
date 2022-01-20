@@ -1,4 +1,5 @@
 {
+  "homepage": "https://ferbuono.github.io/clasica-y-moderna/",
   "name": "clasica-y-moderna-libros",
   "version": "0.1.0",
   "private": true,
@@ -15,17 +16,16 @@
     "i": "^0.3.7",
     "notistack": "^2.0.3",
     "react": "^17.0.2",
-    "react-credit-card-input": "^1.1.5",
     "react-dom": "^17.0.2",
-    "react-elastic-carousel": "^0.11.5",
     "react-multi-carousel": "^2.6.5",
-    "react-payment-inputs": "^1.1.8",
     "react-router-dom": "^6.1.1",
     "react-scripts": "4.0.3",
     "styled-components": "^5.3.3",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -48,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }

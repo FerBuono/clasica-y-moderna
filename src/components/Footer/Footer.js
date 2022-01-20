@@ -1,5 +1,5 @@
-import FooterInfo from "../FooterInfo/FooterInfo"
-import Newsletter from "../Newsletter/Newsletter";
+import FooterInfo from "./FooterInfo/FooterInfo"
+import Newsletter from "./Newsletter/Newsletter";
 import { Container } from './FooterStyle';
 
 const Footer = () => {

@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { Modal } from '@mui/material';
-import SignInModal from '../SignInModal/SignInModal';
-import JoinModal from '../JoinModal/JoinModal';
+import SignInModal from './SignInModal/SignInModal';
+import JoinModal from './JoinModal/JoinModal';
 import { useSnackbar } from 'notistack';
 import { UserContext } from '../../context/UserContext';
 

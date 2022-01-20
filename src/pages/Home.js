@@ -1,20 +1,24 @@
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer'
-import { sort } from '../helpers/sortHelper';
 import { useEffect, useState } from 'react';
-import { collection, getDocs, getFirestore } from 'firebase/firestore';
+import { FirebaseClient } from '../firebase/client';
 
 const Home = () => {
 
     const [products, setProducts] = useState(null);
+    const firebase = new FirebaseClient();
 
     useEffect(() => {
-        const db = getFirestore();
+        getProductsFromDb();
+    }, []);
 
-        const data = collection(db, 'items')
-        getDocs(data).then(res => {
-            setProducts(res.docs.map(doc => ({id: doc.id, ...doc.data()})))
-        })
-    }, [])
+    const getProductsFromDb = async () => {
+		try {
+			const value = await firebase.getProducts();
+			setProducts(value.filter(book => book.stock > 0));
+		} catch (error) {
+			console.error('pages/Category/getProductsFromDb', error);
+		}
+	};
 
     return (
         <>

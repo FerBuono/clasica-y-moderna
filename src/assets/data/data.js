@@ -1486,7 +1486,7 @@ export const topCategories = [
     {
         id: 111,
         name: 'Science Fiction',
-        img: 'https://scontent.faep17-1.fna.fbcdn.net/v/t31.18172-8/15994728_1828287580761514_7115477698436389648_o.jpg?_nc_cat=109&ccb=1-5&_nc_sid=6e5ad9&_nc_ohc=_b8JYMBkTVcAX9cQRgi&_nc_ht=scontent.faep17-1.fna&oh=dc1196f752cb3962db36473252f4f8d0&oe=61CCE04C',
+        img: 'https://wallpaperaccess.com/full/1224031.jpg',
     },
     {
         id: 112,

@@ -1,10 +1,6 @@
 import { useEffect } from 'react';
-import styled from 'styled-components';
-import CarouselList from '../CarouselList/CarouselList';
-
-export const Container = styled.div`
-    width: 100%;
-`;
+import CarouselList from './CarouselList/CarouselList';
+import { Container } from './CarouselListContainerStyle';
 
 const CarouselListContainer = ({item}) => {
 
