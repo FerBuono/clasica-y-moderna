@@ -36,7 +36,7 @@ const App = () => {
       classes={{variantSuccess: classes.success}}
     >
       <WrapperContext>
-            <HashRouter>
+            <HashRouter basename='/clasica-y-moderna'>
               <Navbar />
               <Routes>
                 <Route exact path="/" element={<Home />} />
