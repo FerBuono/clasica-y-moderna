@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/clasica-y-moderna/static/css/main.fe2c910c.chunk.css",
+    "main.css": "/clasica-y-moderna/static/css/main.012b4832.chunk.css",
     "main.js": "/clasica-y-moderna/static/js/main.a11d9958.chunk.js",
     "main.js.map": "/clasica-y-moderna/static/js/main.a11d9958.chunk.js.map",
     "runtime-main.js": "/clasica-y-moderna/static/js/runtime-main.e1ec2024.js",
@@ -10,7 +10,7 @@
     "static/js/2.8bc464ae.chunk.js.map": "/clasica-y-moderna/static/js/2.8bc464ae.chunk.js.map",
     "index.html": "/clasica-y-moderna/index.html",
     "static/css/2.496e96b9.chunk.css.map": "/clasica-y-moderna/static/css/2.496e96b9.chunk.css.map",
-    "static/css/main.fe2c910c.chunk.css.map": "/clasica-y-moderna/static/css/main.fe2c910c.chunk.css.map",
+    "static/css/main.012b4832.chunk.css.map": "/clasica-y-moderna/static/css/main.012b4832.chunk.css.map",
     "static/js/2.8bc464ae.chunk.js.LICENSE.txt": "/clasica-y-moderna/static/js/2.8bc464ae.chunk.js.LICENSE.txt",
     "static/media/home.918d9ac5.png": "/clasica-y-moderna/static/media/home.918d9ac5.png",
     "static/media/logo-blanco.5e211bfc.png": "/clasica-y-moderna/static/media/logo-blanco.5e211bfc.png",
@@ -22,7 +22,7 @@
     "static/js/runtime-main.e1ec2024.js",
     "static/css/2.496e96b9.chunk.css",
     "static/js/2.8bc464ae.chunk.js",
-    "static/css/main.fe2c910c.chunk.css",
+    "static/css/main.012b4832.chunk.css",
     "static/js/main.a11d9958.chunk.js"
   ]
 }
