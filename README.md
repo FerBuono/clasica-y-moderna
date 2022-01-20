@@ -1,7 +1,6 @@
 <div align="center">
-    <img src="src/assets/images/logos/logo-blanco-simple.png" height='100px'>
-    <br/>
-    <h1>CLÁSICA Y MODERNA <br/>- LIBROS -</h1>
+    <img src="src/assets/images/logos/logo-blanco.png" height='100px'>
+    <hr/>
 </div>
 
 Ecommerce created with ReactJS for the CoderHouse FullStack Web Developer career.
