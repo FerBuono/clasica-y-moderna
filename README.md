@@ -51,8 +51,10 @@ This project was created with:
 ## Pending...
 
 Pending tasks:
-* Responsiveness
-* Allow user to add items to the cart without being signed in
-* Checkout form validation
-* Include a payment api
-* User registration validation
+- [ ] Responsiveness
+- [ ] Allow user to add items to the cart without being signed in
+- [ ] Checkout form validation
+- [ ] Include a payment api
+- [ ] User registration validation
+- [ ] Upload all 90 books to firestore database
+- [ ] Add Advanced Search, Bestsellers, New Releases, FAQs and Contact Us pages

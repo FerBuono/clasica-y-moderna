@@ -24,14 +24,15 @@ const FooterInfo = () => {
                 <List>
                     <ListItem><Link to={'/'}>Home</Link></ListItem>
                     <ListItem><Link to={'/cart'}>Cart</Link></ListItem>
-                    <ListItem><Link to={'/wishlist'}>Wishlist</Link></ListItem>
-                    <ListItem>Most Popular Books</ListItem>
-                    <ListItem>Most Popular Categories</ListItem>
-                    <ListItem>Most Popular Writers</ListItem>
-                    <ListItem>Accessories</ListItem>
-                    <ListItem>My Account</ListItem>
-                    <ListItem>Order Tracking</ListItem>
-                    <ListItem>Terms</ListItem>
+                    <ListItem><Link to={'/orders'}>My Orders</Link></ListItem>
+                    <ListItem><Link to={'/authors'}>Top Authors</Link></ListItem>
+                    <ListItem><Link to={'/categories'}>Top Categories</Link></ListItem>
+                    <ListItem><Link to={'/'}>Most Popular Books</Link></ListItem>
+                    <ListItem>Bestsellers</ListItem>
+                    <ListItem>New Releases</ListItem>
+                    <ListItem>FAQs</ListItem>
+                    <ListItem>Contact Us</ListItem>
+                    <ListItem>Help</ListItem>
                 </List>
             </Left>
             <Center>

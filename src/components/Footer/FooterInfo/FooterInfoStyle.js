@@ -36,12 +36,18 @@ export const List = styled.ul`
     padding: 0;
     list-style: none;
     display: flex;
+    flex-direction: column;
+    height: 200px;
     flex-wrap: wrap;
 `;
 
 export const ListItem = styled.li`
-    width: 50%;
+    width: fit-content;
     margin-bottom: 10px;
+
+    &:hover {
+        text-decoration: underline;
+    }
 `;
 
 
