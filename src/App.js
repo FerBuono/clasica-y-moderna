@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
@@ -36,7 +36,7 @@ const App = () => {
       classes={{variantSuccess: classes.success}}
     >
       <WrapperContext>
-            <HashRouter basename='/clasica-y-moderna'>
+            <BrowserRouter basename='/clasica-y-moderna'>
               <Navbar />
               <Routes>
                 <Route exact path="/" element={<Home />} />
@@ -55,7 +55,7 @@ const App = () => {
                 <Route path="/*" element={<Home />} />
               </Routes>
               <Footer />
-            </HashRouter>
+            </BrowserRouter>
       </WrapperContext>
     </SnackbarProvider>
   )
