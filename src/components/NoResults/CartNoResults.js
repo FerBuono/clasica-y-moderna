@@ -38,7 +38,7 @@ const CartNoResults = () => {
     return (
         <Container>
             <Title>Your cart is empty!</Title>
-            <Img src={logo} />
+            <Img src={logo} alt='logo'/>
             <Text>Find your favorite books:</Text>
             <List>
                 <Item><Link to={'/authors'} style={{textDecoration:'underline'}}>Authors</Link></Item>

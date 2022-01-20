@@ -8,7 +8,7 @@ export const WishlistContextProvider = ({children}) => {
 
     const {user: [user], setUser, isSignedIn} = useContext(UserContext);
 
-    const wishlistItems = isSignedIn() && user.wishlist || [];
+    const wishlistItems = (isSignedIn() && user.wishlist) || [];
     
     const db = getFirestore();
     

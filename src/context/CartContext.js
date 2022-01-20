@@ -9,7 +9,7 @@ export const CartContextProvider = ({children}) => {
 
     const {user: [user], setUser, isSignedIn} = useContext(UserContext);
 
-    const cartItems = isSignedIn() && user.cart || [];
+    const cartItems = (isSignedIn() && user.cart) || [];
 
     const db = getFirestore();
     

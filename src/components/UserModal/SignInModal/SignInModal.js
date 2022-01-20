@@ -31,9 +31,9 @@ const SignInModal = ({logIn, signIn, setSignIn, handleChange, setModal, loading,
     return (
         <Container onSubmit={logIn}>
             <Title>
-                <Img src={logo} /> 
+                <Img src={logo} alt='logo'/> 
                 Sign In 
-                <Img src={logo} />
+                <Img src={logo} alt='logo'/>
             </Title>
             <InputContainer>
                 <TextField
@@ -83,7 +83,7 @@ const SignInModal = ({logIn, signIn, setSignIn, handleChange, setModal, loading,
                     Sign In                        
                 </Button>
             </ButtonContainer>
-            <SpinnerContainer loading={loading}>
+            <SpinnerContainer loading={loading ? 1 : 0}>
                 <div className="sk-circle">
                     <div className="sk-circle1 sk-child"></div>
                     <div className="sk-circle2 sk-child"></div>

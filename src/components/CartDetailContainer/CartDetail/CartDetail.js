@@ -14,14 +14,14 @@ const CartDetail = ({cart}) => {
         <Container>
             <Cart>
                 {
-                    cart.map(item => <CartItem item={item}/>)
+                    cart.map(item => <CartItem item={item} key={item.title}/>)
                 }
             </Cart>
             <Summary>
                 <Title>Purchase Summary</Title>
                 {
                     cart.map(item => (
-                        <Product>
+                        <Product key={item.title}>
                             <Name>{item.title} <span style={{color: 'grey', fontSize: '12px', marginLeft:'5px'}}>(x{item.amount})</span></Name>
                             <Price>{currency} {(changeItemPrice(item) * item.amount).toFixed(2)}</Price>
                         </Product>

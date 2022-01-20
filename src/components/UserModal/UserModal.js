@@ -73,29 +73,31 @@ const UserModal = ({handleClose, open}) => {
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
         >
-            {
-                modal === 'sign in' 
-                    ? <SignInModal 
-                        logIn={logIn}
-                        signIn={signIn}
-                        setSignIn={setSignIn}
-                        handleChange={handleChange}
-                        setModal={setModal}
-                        loading={loading}
-                        setCampsFilled={setCampsFilled}
-                        campsFilled={campsFilled}
-                        /> 
-                    : <JoinModal 
-                        register={register}
-                        join={join}
-                        setJoin={setJoin}
-                        handleChange={handleChange}
-                        setModal={setModal}
-                        loading={loading}
-                        setCampsFilled={setCampsFilled}
-                        campsFilled={campsFilled}
-                    />
-            }
+            <>
+                {
+                    modal === 'sign in' 
+                        ? <SignInModal 
+                            logIn={logIn}
+                            signIn={signIn}
+                            setSignIn={setSignIn}
+                            handleChange={handleChange}
+                            setModal={setModal}
+                            loading={loading}
+                            setCampsFilled={setCampsFilled}
+                            campsFilled={campsFilled}
+                            /> 
+                        : <JoinModal 
+                            register={register}
+                            join={join}
+                            setJoin={setJoin}
+                            handleChange={handleChange}
+                            setModal={setModal}
+                            loading={loading}
+                            setCampsFilled={setCampsFilled}
+                            campsFilled={campsFilled}
+                        />
+                }
+            </>
         </Modal>
     )
 }

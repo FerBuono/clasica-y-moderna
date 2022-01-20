@@ -41,7 +41,7 @@ const ItemDetail = ({item}) => {
     return (
         <Container>
             <Book>
-                <Img src={img} />
+                <Img src={img} alt='book image'/>
                 <Info>
                     <Title>{title}</Title>
                     <Author>

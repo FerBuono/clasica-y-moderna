@@ -28,8 +28,8 @@ const Categories = () => {
                         <TopCategories>
                             {
                                 topCategories.map(category => (
-                                    <NavLink to={`/categories/${category.name}`} style={{width: '100%'}}>
-                                        <Category key={category.id}>
+                                    <NavLink to={`/categories/${category.name}`} style={{width: '100%'}} key={category.id}>
+                                        <Category>
                                             {category.name}
                                         </Category>
                                     </NavLink>
@@ -45,8 +45,8 @@ const Categories = () => {
                         <TopAuthors>
                             {
                                 topAuthors.map(author => (
-                                    <NavLink to={`/authors/${author.name}`} style={{width: '100%'}}>
-                                        <Category key={author.id}>
+                                    <NavLink to={`/authors/${author.name}`} style={{width: '100%'}} key={author.id}>
+                                        <Category>
                                             {author.name}
                                         </Category>
                                     </NavLink>
@@ -62,8 +62,8 @@ const Categories = () => {
                         <Bestsellers>
                             {
                                 bestselling.map(serie => (
-                                    <NavLink to ={`/series/${serie}`} style={{width: '100%'}}>
-                                        <Category key={serie}>
+                                    <NavLink to ={`/series/${serie}`} style={{width: '100%'}} key={serie}>
+                                        <Category>
                                             {serie}
                                         </Category>
                                     </NavLink>

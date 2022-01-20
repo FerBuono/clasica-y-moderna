@@ -42,7 +42,7 @@ const NoResults = ({noResults}) => {
                     noResults ? noResults : 'No products found'
                 }
             </Title>
-            <Img src={logo} />
+            <Img src={logo} alt='logo'/>
             <Text>
                 {
                     noResults ? 'Find your favorite books:' : 'Instead, you can search by:'

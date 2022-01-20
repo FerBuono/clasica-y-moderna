@@ -14,9 +14,9 @@ const JoinModal = ({register, join, setJoin, handleChange, setModal, loading, ca
     return ( 
         <Container onSubmit={register}>
             <Title>
-                <Img src={logo} /> 
+                <Img src={logo} alt='logo'/> 
                 Join 
-                <Img src={logo} />
+                <Img src={logo} alt='logo'/>
             </Title>
             <InputContainer>
                 <TextField
@@ -95,7 +95,7 @@ const JoinModal = ({register, join, setJoin, handleChange, setModal, loading, ca
                     Join                     
                 </Button>
             </ButtonContainer>
-            <SpinnerContainer loading={loading}>
+            <SpinnerContainer loading={loading ? 1 : 0}>
                 <div className="sk-circle">
                     <div className="sk-circle1 sk-child"></div>
                     <div className="sk-circle2 sk-child"></div>

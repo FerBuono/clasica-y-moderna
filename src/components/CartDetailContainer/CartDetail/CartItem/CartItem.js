@@ -39,7 +39,7 @@ const CartItem = ({item}) => {
                 to={`/products/${id}`} 
                 style={{height: '100%', marginRight: '15px', flex: 1}}
             >
-                <Img src={img}/>
+                <Img src={img} alt='product image'/>
             </NavLink>
             <Details>
                 <Title>

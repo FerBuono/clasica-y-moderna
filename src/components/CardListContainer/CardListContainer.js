@@ -9,9 +9,9 @@ const CardListContainer = ({title, list, name}) => {
             <CardsContainer>
                 {
                     list.map(item => (
-                        <NavLink to={`/${name}/${item.name}`} style={{width:'31%', margin:'1rem 10px'}}>
+                        <NavLink to={`/${name}/${item.name}`} style={{width:'31%', margin:'1rem 10px'}} key={item.name}>
                             <Card>
-                                <Img src={item.img} />
+                                <Img src={item.img} alt='product image'/>
                                 <Text>{item.name.toUpperCase()}</Text>
                             </Card>
                         </NavLink>

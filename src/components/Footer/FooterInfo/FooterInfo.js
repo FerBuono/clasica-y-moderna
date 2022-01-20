@@ -37,7 +37,7 @@ const FooterInfo = () => {
             <Center>
                 <Logo>
                     <Link to={'/'}>
-                        <img src={logo} style={{height:'100%'}} alt="Clasica y Moderna"/>
+                        <img src={logo} style={{height:'100%'}} alt="logo"/>
                     </Link>
                 </Logo>
                 <SocialContainer>
@@ -72,7 +72,7 @@ const FooterInfo = () => {
                     <MailOutline style={{marginRight:"10px"}}/>
                     contact@cym.com
                 </ContactItem>
-                <Payment src="https://aroaro.es/wp-content/uploads/2020/04/accepted-payment-methods.png" />
+                <Payment src="https://aroaro.es/wp-content/uploads/2020/04/accepted-payment-methods.png" alt='payment methods'/>
             </Right>
         </Container>
     )

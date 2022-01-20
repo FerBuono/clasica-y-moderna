@@ -22,7 +22,7 @@ const Midbar = () => {
     return (
         <Container>
             <Wrapper>
-                <Link to='/' style={{height: '100%'}}><Logo src={logo}/></Link>
+                <Link to='/' style={{height: '100%'}}><Logo src={logo} alt='logo' /></Link>
                 <SearchContainer onSubmit={handleSubmit}>
                     <InputContainer>
                         <Search style={{color:"grey"}}/>

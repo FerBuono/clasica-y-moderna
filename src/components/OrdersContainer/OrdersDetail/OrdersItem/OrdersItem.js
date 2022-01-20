@@ -59,7 +59,7 @@ const OrdersItem = ({order}) => {
                                 <TableBody>
                                 {items.map((item) => (
                                     <TableRow key={item.id}>
-                                        <TableCell sx={{height: '100px'}}><img src={item.img} style={{height: '100%'}}/></TableCell>
+                                        <TableCell sx={{height: '100px'}}><img src={item.img} style={{height: '100%'}} alt='book image'/></TableCell>
                                         <TableCell>{item.title}</TableCell>
                                         <TableCell>{item.author}</TableCell>
                                         <TableCell>{item.amount}</TableCell>

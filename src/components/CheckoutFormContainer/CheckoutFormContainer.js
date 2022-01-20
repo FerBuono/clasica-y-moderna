@@ -18,7 +18,7 @@ const CheckoutFormContainer = () => {
                     <PurchaseTitle>Purchase Summary</PurchaseTitle>
                     {
                         cartItems.map(item => (
-                            <Product>
+                            <Product key={item.title}>
                                 <Name>{item.title} <span style={{color: 'grey', fontSize: '12px', marginLeft:'5px'}}>(x{item.amount})</span></Name>
                                 <Price>{currency} {(changeItemPrice(item) * item.amount).toFixed(2)}</Price>
                             </Product>

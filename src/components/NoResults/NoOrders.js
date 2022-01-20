@@ -38,7 +38,7 @@ const NoOrders = () => {
     return (
         <Container>
             <Title>Your have no orders yet.</Title>
-            <Img src={logo} />
+            <Img src={logo} alt='logo'/>
             <Text>Start buying:</Text>
             <List>
                 <Item><Link to={'/authors'} style={{textDecoration:'underline'}}>Authors</Link></Item>
