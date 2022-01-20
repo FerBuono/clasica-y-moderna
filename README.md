@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="src/assets/images/logos/logo-blanco.png" height='100px'>
+    <img src="src/assets/images/logos/logo-blanco.png">
     <hr/>
 </div>
 
@@ -52,6 +52,7 @@ This project was created with:
 
 Pending tasks:
 * Responsiveness
-* Allow user to add items to the cart without being signed
-* Checkout form validation, including a payment api integration
+* Allow user to add items to the cart without being signed in
+* Checkout form validation
+* Include a payment api
 * User registration validation

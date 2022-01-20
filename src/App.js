@@ -36,7 +36,7 @@ const App = () => {
       classes={{variantSuccess: classes.success}}
     >
       <WrapperContext>
-            <BrowserRouter basename="/clasica-y-moderna">
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
               <Navbar />
               <Routes>
                 <Route exact path="/" element={<Home />} />
