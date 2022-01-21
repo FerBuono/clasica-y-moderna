@@ -2,6 +2,7 @@ import { FirebaseClient } from '../firebase/client';
 import { useContext, useEffect, useState } from 'react';
 import OrdersContainer from '../components/OrdersContainer/OrdersContainer';
 import { UserContext } from '../context/UserContext';
+import { sort } from '../helpers/sortHelper';
 
 const Orders = () => {
 
@@ -21,9 +22,8 @@ const Orders = () => {
 			console.error('pages/Orders/getOrdersFromDb', error);
 		}
 	};
-
     return (
-        <OrdersContainer orders={orders} />
+        <OrdersContainer orders={orders && sort(orders, "orderNumber")} />
     )
 }
 

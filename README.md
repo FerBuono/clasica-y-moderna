@@ -56,5 +56,5 @@ Pending tasks:
 - [ ] Checkout form validation
 - [ ] Include a payment api
 - [ ] User registration validation
-- [ ] Upload all 90 books to firestore database
+- [x] Upload all 90 books to firestore database
 - [ ] Add Advanced Search, Bestsellers, New Releases, FAQs and Contact Us pages

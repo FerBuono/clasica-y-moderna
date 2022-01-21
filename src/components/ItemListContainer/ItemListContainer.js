@@ -25,7 +25,7 @@ const ItemListContainer = ({title, prod, noResults}) => {
             {
                 prod
                     ? prod.length > 0
-                        ? <ItemList list={sort(prod, 'title')}/>
+                        ? <ItemList list={prod}/>
                         : <NoResults noResults={noResults} />
                     : <Spinner />
             }

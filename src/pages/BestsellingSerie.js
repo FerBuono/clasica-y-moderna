@@ -2,7 +2,7 @@ import ItemListContainer from '../components/ItemListContainer/ItemListContainer
 import { useEffect, useState } from 'react';
 import { FirebaseClient } from '../firebase/client';
 import { useParams } from 'react-router-dom';
-
+import { sort } from '../helpers/sortHelper';
 const BestsellingSerie = () => {
 
     const {serie} = useParams();
@@ -25,7 +25,7 @@ const BestsellingSerie = () => {
 
     return (
         <>
-            <ItemListContainer title={`Bestselling Serie: ${serie}`} prod={products}/>
+            <ItemListContainer title={`Bestselling Serie: ${serie}`} prod={products && sort(products, 'year', 'decreasing')}/>
         </>
     )
 }

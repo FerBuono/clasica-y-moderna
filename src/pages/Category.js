@@ -2,6 +2,7 @@ import ItemListContainer from '../components/ItemListContainer/ItemListContainer
 import { useEffect, useState } from 'react';
 import { FirebaseClient } from '../firebase/client';
 import { useParams } from 'react-router-dom';
+import { sort } from '../helpers/sortHelper';
 
 const Category = () => {
 
@@ -25,7 +26,7 @@ const Category = () => {
 
     return (
         <>
-            <ItemListContainer title={`Category: ${category}`} prod={products}/>
+            <ItemListContainer title={`Category: ${category}`} prod={products && sort(products, 'title', 'decreasing')}/>
         </>
     )
 }
