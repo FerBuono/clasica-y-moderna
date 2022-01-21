@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/clasica-y-moderna/static/css/main.012b4832.chunk.css",
-    "main.js": "/clasica-y-moderna/static/js/main.40044628.chunk.js",
-    "main.js.map": "/clasica-y-moderna/static/js/main.40044628.chunk.js.map",
+    "main.js": "/clasica-y-moderna/static/js/main.d96d74ed.chunk.js",
+    "main.js.map": "/clasica-y-moderna/static/js/main.d96d74ed.chunk.js.map",
     "runtime-main.js": "/clasica-y-moderna/static/js/runtime-main.e1ec2024.js",
     "runtime-main.js.map": "/clasica-y-moderna/static/js/runtime-main.e1ec2024.js.map",
     "static/css/2.496e96b9.chunk.css": "/clasica-y-moderna/static/css/2.496e96b9.chunk.css",
@@ -23,6 +23,6 @@
     "static/css/2.496e96b9.chunk.css",
     "static/js/2.397e0755.chunk.js",
     "static/css/main.012b4832.chunk.css",
-    "static/js/main.40044628.chunk.js"
+    "static/js/main.d96d74ed.chunk.js"
   ]
 }
